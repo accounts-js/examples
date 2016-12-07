@@ -1,0 +1,37 @@
+{
+  "env": {
+    "es6": true,
+    "mocha": true,
+    "node": true,
+    "browser": true
+  },
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "brace-style": 0,
+    "import/no-extraneous-dependencies": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "linebreak-style": 0,
+    "new-cap": 0,
+    "newline-per-chained-call": 1,
+    "no-mixed-operators": 0,
+    "radix": 1,
+    "react/forbid-prop-types": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "react/jsx-no-bind": [
+      "error"
+    ],
+    "strict": 0
+  }
+}

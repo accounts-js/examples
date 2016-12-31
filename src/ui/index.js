@@ -14,6 +14,8 @@ injectTapEventPlugin();
 
 AccountsClient.config({
   title: 'rest-example',
+  loginPath: '/login',
+  signUpPath: '/signup',
 }, {});
 
 const Home = () => <div />;
@@ -35,6 +37,7 @@ render((
     />
     <MuiThemeProvider>
       <Router history={browserHistory}>
+        <Route path="/" component={Home} />
         {accountRoutes()}
       </Router>
     </MuiThemeProvider>

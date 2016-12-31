@@ -1,5 +1,10 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import { AccountsServer } from '@accounts/accounts';
+
+AccountsServer.config({
+
+}, {});
 
 let PORT = 3010;
 if (process.env.PORT) {

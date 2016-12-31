@@ -5,9 +5,16 @@ import { render } from 'react-dom';
 import { Router, Route, browserHistory } from 'react-router';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import { MuiThemeProvider } from 'material-ui';
+import { AccountsClient } from '@accounts/accounts';
+import '@accounts/react-material-ui';
+import { accountRoutes } from '@accounts/react';
 import packageConf from '../../package.json';
 
 injectTapEventPlugin();
+
+AccountsClient.config({
+  title: 'rest-example',
+}, {});
 
 const Home = () => <div />;
 
@@ -28,7 +35,7 @@ render((
     />
     <MuiThemeProvider>
       <Router history={browserHistory}>
-        <Route path="/" component={Home} />
+        {accountRoutes()}
       </Router>
     </MuiThemeProvider>
   </div>

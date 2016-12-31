@@ -6,6 +6,7 @@ import { Router, Route, browserHistory } from 'react-router';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import { MuiThemeProvider } from 'material-ui';
 import { AccountsClient } from '@accounts/accounts';
+import restClient from '@accounts/rest';
 import '@accounts/react-material-ui';
 import { accountRoutes } from '@accounts/react';
 import packageConf from '../../package.json';
@@ -13,10 +14,19 @@ import packageConf from '../../package.json';
 injectTapEventPlugin();
 
 AccountsClient.config({
+  server: 'http://localhost:3010',
   title: 'rest-example',
   loginPath: '/login',
   signUpPath: '/signup',
-}, {});
+}, restClient);
+
+(async () => {
+  const res = await AccountsClient.createUser({
+    username: 'test',
+    password: '1234567',
+  });
+  console.log(res);
+})();
 
 const Home = () => <div />;
 

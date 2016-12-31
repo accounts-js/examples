@@ -41,7 +41,7 @@ module.exports = {
       safe: true,
     }),
     new WatchIgnorePlugin([
-      path.resolve(__dirname, './node_modules/'),
+      // path.resolve(__dirname, './node_modules/'),
       path.resolve(__dirname, './src/api/'),
     ]),
     new HtmlWebpackPlugin({

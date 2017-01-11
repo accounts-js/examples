@@ -21,14 +21,6 @@ AccountsClient.config({
   signUpPath: '/signup',
 }, restClient);
 
-(async () => {
-  const res = await AccountsClient.createUser({
-    username: 'test',
-    password: '1234567',
-  });
-  console.log(res);
-})();
-
 const Home = () => <div />;
 
 render((

@@ -11,6 +11,7 @@
     "react"
   ],
   "rules": {
+    "camelcase/properties": 0,
     "brace-style": 0,
     "import/no-extraneous-dependencies": 0,
     "jsx-a11y/no-static-element-interactions": 0,

@@ -2,13 +2,11 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import { AccountsServer } from '@accounts/accounts';
 import { accountsExpress } from '@accounts/rest-api';
+import RedisDBInterface from '@accounts/redis';
 
 AccountsServer.config({
-}, {
-  findUserByEmail: () => Promise.resolve(true),
-  findUserByUsername: () => Promise.resolve(true),
-  createUser: () => Promise.resolve(true),
-});
+}, new RedisDBInterface());
+
 
 let PORT = 3010;
 if (process.env.PORT) {

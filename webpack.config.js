@@ -27,11 +27,6 @@ module.exports = {
       },
     ],
   },
-  resolve: {
-    alias: {
-      react: path.resolve('./node_modules/react'),
-    },
-  },
   resolveLoader: {
     root: path.join(__dirname, 'node_modules'),
   },
@@ -41,7 +36,6 @@ module.exports = {
       safe: true,
     }),
     new WatchIgnorePlugin([
-      // path.resolve(__dirname, './node_modules/'),
       path.resolve(__dirname, './src/api/'),
     ]),
     new HtmlWebpackPlugin({
@@ -54,5 +48,9 @@ module.exports = {
     historyApiFallback: {
       index: '/',
     },
+  },
+  node: {
+    dns: 'mock',
+    net: 'mock',
   },
 };

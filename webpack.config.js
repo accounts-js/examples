@@ -27,6 +27,11 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    alias: {
+      react: path.resolve('./node_modules/react'),
+    },
+  },
   resolveLoader: {
     root: path.join(__dirname, 'node_modules'),
   },
@@ -50,7 +55,7 @@ module.exports = {
     },
   },
   node: {
-    dns: 'mock',
     net: 'mock',
+    dns: 'mock',
   },
 };

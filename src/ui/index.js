@@ -9,19 +9,25 @@ import { MuiThemeProvider } from 'material-ui';
 import { AccountsClient } from '@accounts/accounts';
 import restClient from '@accounts/rest';
 import '@accounts/react-material-ui';
-import { accountRoutes } from '@accounts/react';
+import { accountRoutes, withUser, Authenticated } from '@accounts/react';
 import packageConf from '../../package.json';
 
 injectTapEventPlugin();
 
 AccountsClient.config({
   server: 'http://localhost:3010',
+  history: browserHistory,
   title: 'rest-example',
   loginPath: '/login',
   signUpPath: '/signup',
+  homePath: '/home',
 }, restClient);
 
-const Home = () => <div />;
+const Home = withUser(({ user }) =>
+  <div>
+    Signed in as: {user.username}
+  </div>,
+);
 
 render((
   <div>
@@ -40,7 +46,9 @@ render((
     />
     <MuiThemeProvider>
       <Router history={browserHistory}>
-        <Route path="/" component={Home} />
+        <Route path="/" component={Authenticated}>
+          <Route path="/home" component={Home} />
+        </Route>
         {accountRoutes()}
       </Router>
     </MuiThemeProvider>

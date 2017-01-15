@@ -25,7 +25,9 @@ AccountsClient.config({
 
 const Home = withUser(({ user }) =>
   <div>
-    Signed in as: {user.username}
+    Signed in user info
+    <br />
+    {Object.keys(user).map(key => <div key={key}>{key} : {user[key]} </div>)}
   </div>,
 );
 

@@ -3,12 +3,13 @@ import 'isomorphic-fetch';
 import React from 'react';
 import Helmet from 'react-helmet';
 import { render } from 'react-dom';
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import { MuiThemeProvider } from 'material-ui';
 import { AccountsClient } from '@accounts/accounts';
 import restClient from '@accounts/rest';
 import '@accounts/react-material-ui';
+import createLogger from 'redux-logger';
 import { accountRoutes, withUser, Authenticated } from '@accounts/react';
 import packageConf from '../../package.json';
 
@@ -21,6 +22,7 @@ AccountsClient.config({
   loginPath: '/login',
   signUpPath: '/signup',
   homePath: '/home',
+  reduxLogger: createLogger(),
 }, restClient);
 
 const Home = withUser(({ user }) =>
@@ -49,6 +51,7 @@ render((
     <MuiThemeProvider>
       <Router history={browserHistory}>
         <Route path="/" component={Authenticated}>
+          <IndexRoute component={Home} />
           <Route path="/home" component={Home} />
         </Route>
         {accountRoutes()}

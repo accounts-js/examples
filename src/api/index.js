@@ -1,12 +1,11 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import { AccountsServer } from '@accounts/accounts';
-import { accountsExpress } from '@accounts/rest-api';
+import AccountsServer from '@accounts/server';
+import { accountsExpress } from '@accounts/rest-express';
 import RedisDBInterface from '@accounts/redis';
 
 AccountsServer.config({
 }, new RedisDBInterface());
-
 
 let PORT = 3010;
 if (process.env.PORT) {

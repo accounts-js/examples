@@ -6,8 +6,8 @@ import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import { MuiThemeProvider } from 'material-ui';
-import { AccountsClient } from '@accounts/accounts';
-import restClient from '@accounts/rest';
+import AccountsClient from '@accounts/client';
+import restClient from '@accounts/rest-client';
 import '@accounts/react-material-ui';
 import createLogger from 'redux-logger';
 import { accountRoutes, withUser, Authenticated } from '@accounts/react';
@@ -15,15 +15,19 @@ import packageConf from '../../package.json';
 
 injectTapEventPlugin();
 
-AccountsClient.config({
-  server: 'http://localhost:3010',
-  history: browserHistory,
-  title: 'rest-example',
-  loginPath: '/login',
-  signUpPath: '/signup',
-  homePath: '/home',
-  reduxLogger: createLogger(),
-}, restClient);
+(async () => {
+  AccountsClient.config({
+    server: 'http://localhost:3010',
+    history: browserHistory,
+    title: 'rest-example',
+    loginPath: '/login',
+    signUpPath: '/signup',
+    homePath: '/home',
+    reduxLogger: createLogger(),
+  }, restClient);
+
+  await AccountsClient.resumeSession();
+})();
 
 const Home = withUser(({ user }) =>
   <div>

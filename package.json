@@ -47,9 +47,16 @@
     "watch-ignore-webpack-plugin": "^1.0.0",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2",
-    "yarn": "^0.17.8"
+    "yarn": "^0.19.1"
   },
   "dependencies": {
+    "@accounts/client": "^0.0.2",
+    "@accounts/react": "^0.0.2",
+    "@accounts/react-material-ui": "^0.0.2",
+    "@accounts/redis": "^0.0.1",
+    "@accounts/rest-client": "^0.0.2",
+    "@accounts/rest-express": "^0.0.2",
+    "@accounts/server": "^0.0.2",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "isomorphic-fetch": "^2.2.1",

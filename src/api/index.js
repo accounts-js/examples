@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import AccountsServer from '@accounts/server';
-import { accountsExpress } from '@accounts/rest-express';
+import accountsExpress from '@accounts/rest-express';
 import RedisDBInterface from '@accounts/redis';
 
 AccountsServer.config({

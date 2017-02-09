@@ -5,7 +5,9 @@ import Helmet from 'react-helmet';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import { MuiThemeProvider } from 'material-ui';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AppBar from 'material-ui/AppBar';
+import FlatButton from 'material-ui/FlatButton';
 import AccountsClient from '@accounts/client';
 import restClient from '@accounts/rest-client';
 import '@accounts/react-material-ui';
@@ -29,13 +31,27 @@ injectTapEventPlugin();
   await AccountsClient.resumeSession();
 })();
 
+const logout = () => {
+  AccountsClient.logout();
+};
+
 const Home = withUser(({ user }) =>
   <div>
-    Signed in user info
-    <br />
-    {Object.keys(user).map(key => <div key={key}>{key} : {user[key]} </div>)}
+    <AppBar
+      title="js-accounts rest example"
+      showMenuIconButton={false}
+      iconElementRight={<FlatButton label="Logout" onTouchTap={logout} />}
+    />
+    <div style={{ marginTop: 40, textAlign: 'center' }}>
+      Signed in user info:
+      <br />
+      <div>id : {user.id}</div>
+      <div>email : {user.emails[0].address}</div>
+    </div>
   </div>,
 );
+
+// <Button onTap={logout}>Logout</Button>
 
 render((
   <div>

@@ -1,11 +1,14 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import mongoose from 'mongoose';
 import AccountsServer from '@accounts/server';
 import accountsExpress from '@accounts/rest-express';
-import RedisDBInterface from '@accounts/redis';
+import MongoDBInterface from '@accounts/mongo';
 
-AccountsServer.config({
-}, new RedisDBInterface());
+mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost:27017/js-accounts-rest-example');
+const db = mongoose.connection;
+
+AccountsServer.config({}, new MongoDBInterface(db));
 
 let PORT = 3010;
 if (process.env.PORT) {

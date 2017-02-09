@@ -51,8 +51,6 @@ const Home = withUser(({ user }) =>
   </div>,
 );
 
-// <Button onTap={logout}>Logout</Button>
-
 render((
   <div>
     <Helmet

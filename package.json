@@ -50,13 +50,11 @@
     "yarn": "^0.19.1"
   },
   "dependencies": {
-    "@accounts/client": "0.0.3",
+    "@accounts/client": "0.0.5",
     "@accounts/mongo": "0.0.5",
-    "@accounts/react": "0.0.3",
-    "@accounts/react-material-ui": "0.0.3",
     "@accounts/rest-client": "0.0.3",
     "@accounts/rest-express": "0.0.3",
-    "@accounts/server": "0.0.4",
+    "@accounts/server": "0.0.5",
     "body-parser": "^1.15.2",
     "express": "^4.14.1",
     "isomorphic-fetch": "^2.2.1",
@@ -67,6 +65,7 @@
     "react-helmet": "^4.0.0",
     "react-router": "^3.0.0",
     "react-tap-event-plugin": "^2.0.1",
+    "recompose": "^0.22.0",
     "redux-logger": "^2.8.1"
   }
 }

@@ -10,9 +10,10 @@ import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
 import AccountsClient from '@accounts/client';
 import restClient from '@accounts/rest-client';
-import '@accounts/react-material-ui';
+import Accounts, { loginComponents } from '@accounts/react-material-ui';
 import createLogger from 'redux-logger';
 import { accountRoutes, withUser, Authenticated } from '@accounts/react';
+import { withProps } from 'recompose';
 import packageConf from '../../package.json';
 
 injectTapEventPlugin();
@@ -29,6 +30,8 @@ injectTapEventPlugin();
   }, restClient);
 
   await AccountsClient.resumeSession();
+
+  console.log(AccountsClient);
 })();
 
 const logout = () => {
@@ -68,11 +71,23 @@ render((
     />
     <MuiThemeProvider>
       <Router history={browserHistory}>
-        <Route path="/" component={Authenticated}>
-          <IndexRoute component={Home} />
-          <Route path="/home" component={Home} />
-        </Route>
-        {accountRoutes()}
+        {accountRoutes({
+          accounts: AccountsClient,
+          component: Accounts,
+          container: ({ children }) => //eslint-disable-line
+          (
+            <div
+              style={{
+                height: '80vh',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+              }}
+            >
+              {children}
+            </div>
+          ),
+        })}
       </Router>
     </MuiThemeProvider>
   </div>

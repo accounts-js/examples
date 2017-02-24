@@ -8,7 +8,14 @@ import MongoDBInterface from '@accounts/mongo';
 mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost:27017/js-accounts-rest-example');
 const db = mongoose.connection;
 
-AccountsServer.config({}, new MongoDBInterface(db));
+AccountsServer.config({
+  title: 'MaxTime 2.0',
+  // TODO write usage documentation for customer
+  // TODO Read secret from env
+  tokenSecret: 'terrible secret',
+  forbidClientAccountCreation: false,
+  passwordSignupFields: 'USERNAME_AND_EMAIL',
+}, new MongoDBInterface(db));
 
 let PORT = 3010;
 if (process.env.PORT) {

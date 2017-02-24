@@ -57,7 +57,20 @@ const Home = authenticate({
   accounts: AccountsClient,
   Loading: () => <div>loading</div>,
   Dialog: Accounts,
-})(() => <div>home</div>);
+})(({ user }) =>
+  <div>
+    <AppBar
+      title="js-accounts rest example"
+      showMenuIconButton={false}
+      iconElementRight={<FlatButton label="Logout" onTouchTap={logout} />}
+    />
+    <div style={{ marginTop: 40, textAlign: 'center' }}>
+      Signed in user info:
+      <br />
+      <div>id : {user.id}</div>
+      <div>email : {user.emails[0].address}</div>
+    </div>
+  </div>);
 
 render((
   <div>

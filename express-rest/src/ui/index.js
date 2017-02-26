@@ -20,9 +20,9 @@ injectTapEventPlugin();
 (async () => {
   AccountsClient.config({
     server: 'http://localhost:3010',
-    tokenStoragePrefix: 'rest-example',
+    tokenStoragePrefix: 'express-rest',
     history: browserHistory,
-    title: 'rest-example',
+    title: 'express-rest',
     loginPath: '/login',
     signUpPath: '/signup',
     homePath: '/home',

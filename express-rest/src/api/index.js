@@ -5,15 +5,12 @@ import AccountsServer from '@accounts/server';
 import accountsExpress from '@accounts/rest-express';
 import MongoDBInterface from '@accounts/mongo';
 
-mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost:27017/js-accounts-rest-example');
+mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost:27017/js-accounts-express-rest');
 const db = mongoose.connection;
 
 AccountsServer.config({
-  title: 'MaxTime 2.0',
-  // TODO write usage documentation for customer
-  // TODO Read secret from env
+  title: 'express-rest',
   tokenSecret: 'terrible secret',
-  forbidClientAccountCreation: false,
   passwordSignupFields: 'USERNAME_AND_EMAIL',
 }, new MongoDBInterface(db));
 

@@ -12,7 +12,7 @@ import AccountsClient from '@accounts/client';
 import RestClient from '@accounts/rest-client';
 import Accounts from '@accounts/react-material-ui';
 import createLogger from 'redux-logger';
-import { accountRoutes, authenticate } from '@accounts/react';
+import { accountRoutes, Authenticate, withCurrentUser } from '@accounts/react';
 import packageConf from '../../package.json';
 
 injectTapEventPlugin();
@@ -20,6 +20,7 @@ injectTapEventPlugin();
 (async () => {
   AccountsClient.config({
     server: 'http://localhost:3010',
+    tokenStoragePrefix: 'rest-example',
     history: browserHistory,
     title: 'rest-example',
     loginPath: '/login',
@@ -33,42 +34,19 @@ injectTapEventPlugin();
   }));
 })();
 
-const logout = () => {
-  AccountsClient.logout();
-};
-
-// const Home = withUser(({ user }) =>
-//   <div>
-//     <AppBar
-//       title="js-accounts rest example"
-//       showMenuIconButton={false}
-//       iconElementRight={<FlatButton label="Logout" onTouchTap={logout} />}
-//     />
-//     <div style={{ marginTop: 40, textAlign: 'center' }}>
-//       Signed in user info:
-//       <br />
-//       <div>id : {user.id}</div>
-//       <div>email : {user.emails[0].address}</div>
-//     </div>
-//   </div>,
-// );
-
-const Home = authenticate({
-  accounts: AccountsClient,
-  Loading: () => <div>loading</div>,
-  Dialog: Accounts,
-})(({ user }) =>
+const Home = withCurrentUser(AccountsClient)(({ currentUser }) =>
   <div>
     <AppBar
       title="js-accounts rest example"
       showMenuIconButton={false}
-      iconElementRight={<FlatButton label="Logout" onTouchTap={logout} />}
+      iconElementRight={<FlatButton label="Logout" onTouchTap={() => AccountsClient.logout()} />}
     />
     <div style={{ marginTop: 40, textAlign: 'center' }}>
       Signed in user info:
       <br />
-      <div>id : {user.id}</div>
-      <div>email : {user.emails[0].address}</div>
+      <div>id : {currentUser.id}</div>
+      <div>username : {currentUser.username}</div>
+      <div>email : {currentUser.emails[0].address}</div>
     </div>
   </div>);
 
@@ -89,7 +67,16 @@ render((
     />
     <MuiThemeProvider>
       <Router history={browserHistory}>
-        <Route path="/">
+        <Route
+          path="/" component={({ children }) =>
+            <Authenticate
+              accounts={AccountsClient}
+              Loading={() => <div>loading</div>}
+              Dialog={Accounts}
+            >
+              {children}
+            </Authenticate>}
+        >
           <IndexRoute component={Home} />
           <Route path="/home" component={Home} />
           {accountRoutes({

@@ -17,22 +17,20 @@ import packageConf from '../../package.json';
 
 injectTapEventPlugin();
 
-(async () => {
-  AccountsClient.config({
-    server: 'http://localhost:3010',
-    tokenStoragePrefix: 'express-rest',
-    history: browserHistory,
-    title: 'express-rest',
-    loginPath: '/login',
-    signUpPath: '/signup',
-    homePath: '/home',
-    reduxLogger: createLogger(),
-    passwordSignupFields: 'USERNAME_AND_EMAIL',
-  }, new RestClient({
-    server: 'http://localhost:3010',
-    path: '/accounts',
-  }));
-})();
+AccountsClient.config({
+  server: 'http://localhost:3010',
+  tokenStoragePrefix: 'express-rest',
+  history: browserHistory,
+  title: 'express-rest',
+  loginPath: '/login',
+  signUpPath: '/signup',
+  homePath: '/home',
+  reduxLogger: createLogger(),
+  passwordSignupFields: 'USERNAME_AND_EMAIL',
+}, new RestClient({
+  server: 'http://localhost:3010',
+  path: '/accounts',
+}));
 
 const Home = withCurrentUser(AccountsClient)(({ currentUser }) =>
   <div>

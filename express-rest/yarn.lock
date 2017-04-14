@@ -50,18 +50,17 @@
     recompose "^0.20.2"
     redux "^3.6.0"
 
-"@accounts/rest-client@^0.0.11":
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.0.11.tgz#a7d98bdc4180276f08b526d9da9cac8e4ad178c9"
+"@accounts/rest-client@^0.0.12":
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.0.12.tgz#51a73b5f39899d4e5a94ebff28924cb2561d7548"
   dependencies:
     es6-promise "^4.0.5"
     lodash "^4.16.4"
 
-"@accounts/rest-express@^0.0.11":
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.0.11.tgz#7d68674cd2096b3c16433eb46ff00fb12ae15802"
+"@accounts/rest-express@^0.0.12":
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.0.12.tgz#10d960af0d34d8e35017e1a303c0549ab1ffd6f2"
   dependencies:
-    cors "^2.8.1"
     lodash "^4.16.4"
     request-ip "^1.2.3"
   optionalDependencies:
@@ -1454,12 +1453,6 @@ core-js@^2.4.0:
 core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
-
-cors@^2.8.1:
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/cors/-/cors-2.8.1.tgz#6181aa56abb45a2825be3304703747ae4e9d2383"
-  dependencies:
-    vary "^1"
 
 cors@^2.8.3:
   version "2.8.3"

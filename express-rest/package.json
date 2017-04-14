@@ -57,6 +57,7 @@
     "@accounts/rest-express": "^0.0.11",
     "@accounts/server": "^0.0.16",
     "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
     "express": "^4.15.2",
     "isomorphic-fetch": "^2.2.1",
     "material-ui": "^0.17.3",

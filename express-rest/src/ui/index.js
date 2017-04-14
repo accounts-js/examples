@@ -24,12 +24,12 @@ AccountsClient.config({
   title: 'express-rest',
   loginPath: '/login',
   signUpPath: '/signup',
-  homePath: '/home',
+  homePath: '/',
   reduxLogger: createLogger(),
   passwordSignupFields: 'USERNAME_AND_EMAIL',
 }, new RestClient({
-  server: 'http://localhost:3010',
-  path: '/accounts',
+  apiHost: 'http://localhost:3010',
+  rootPath: '/accounts',
 }));
 
 const Home = withCurrentUser(AccountsClient)(({ currentUser }) =>
@@ -47,6 +47,8 @@ const Home = withCurrentUser(AccountsClient)(({ currentUser }) =>
       <div>email : {currentUser.emails[0].address}</div>
     </div>
   </div>);
+
+const Loading = () => <div>Loading ...</div>;
 
 render((
   <div>
@@ -69,14 +71,13 @@ render((
           path="/" component={({ children }) =>
             <Authenticate
               accounts={AccountsClient}
-              Loading={() => <div>loading</div>}
+              Loading={Loading}
               Dialog={Accounts}
             >
               {children}
             </Authenticate>}
         >
           <IndexRoute component={Home} />
-          <Route path="/home" component={Home} />
           {accountRoutes({
             accounts: AccountsClient,
             component: Accounts,

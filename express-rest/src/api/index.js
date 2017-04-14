@@ -12,6 +12,14 @@ AccountsServer.config({
   title: 'express-rest',
   tokenSecret: 'terrible secret',
   passwordSignupFields: 'USERNAME_AND_EMAIL',
+  tokenConfigs: {
+    accessToken: {
+      expiresIn: '1d',
+    },
+    refreshToken: {
+      expiresIn: '14d',
+    },
+  },
 }, new MongoDBInterface(db));
 
 let PORT = 3010;
@@ -23,7 +31,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(accountsExpress(AccountsServer));
+app.use(accountsExpress(AccountsServer, {}));
 
 app.listen(PORT, () => console.log( // eslint-disable-line no-console
   `API Server is now running on http://localhost:${PORT}`,

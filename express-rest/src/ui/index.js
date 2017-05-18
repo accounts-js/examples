@@ -3,57 +3,67 @@ import 'isomorphic-fetch';
 import React from 'react';
 import Helmet from 'react-helmet';
 import { render } from 'react-dom';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import createBrowserHistory from 'history/createBrowserHistory';
+import { Router, Route } from 'react-router-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
-import AccountsClient from '@accounts/client';
+import CircularProgress from 'material-ui/CircularProgress';
+import { AccountsClient } from '@accounts/client';
 import RestClient from '@accounts/rest-client';
-import Accounts from '@accounts/react-material-ui';
-import createLogger from 'redux-logger';
-import { accountRoutes, Authenticate, withCurrentUser } from '@accounts/react';
+import { AccountsProvider, withCurrentUser } from '@accounts/react';
+import { LogInForm, SignUpForm } from '@accounts/react-material-ui';
 import packageConf from '../../package.json';
 
 injectTapEventPlugin();
+const history = createBrowserHistory();
 
-(async () => {
-  await AccountsClient.config({
+const accountsClient = new AccountsClient(
+  {
     server: 'http://localhost:3010',
     tokenStoragePrefix: 'express-rest',
-    history: browserHistory,
     title: 'express-rest',
     loginPath: '/login',
     signUpPath: '/signup',
     homePath: '/',
-    reduxLogger: createLogger(),
-    passwordSignupFields: 'USERNAME_AND_EMAIL',
-  }, new RestClient({
+    changeRoute: path => history.push(path),
+    passwordSignupFields: 'EMAIL_ONLY',
+  },
+  new RestClient({
     apiHost: 'http://localhost:3010',
     rootPath: '/accounts',
-  }));
-  await AccountsClient.resumeSession();
-})();
+  }),
+);
 
-const Home = withCurrentUser(AccountsClient)(({ currentUser }) =>
-  <div>
-    <AppBar
+const Home = withCurrentUser(({ currentUser, loading }) => (
+  <div style={{ textAlign: 'center' }}>
+    {loading && <CircularProgress />}
+    {!loading && <AppBar
       title="js-accounts rest example"
       showMenuIconButton={false}
-      iconElementRight={<FlatButton label="Logout" onTouchTap={() => AccountsClient.logout()} />}
-    />
-    <div style={{ marginTop: 40, textAlign: 'center' }}>
-      Signed in user info:
-      <br />
-      <div>id : {currentUser.id}</div>
-      <div>username : {currentUser.username}</div>
-      <div>email : {currentUser.emails[0].address}</div>
-    </div>
-  </div>);
+      iconElementRight={
+        !currentUser
+          ? <FlatButton label="Login" onTouchTap={() => history.push('/login')} />
+          : <FlatButton label="Logout" onTouchTap={() => accountsClient.logout()} />
+      }
+    />}
+    {!loading &&
+      !currentUser &&
+      <div style={{ marginTop: 40 }}>
+        <p>Hey you are not logged in</p>
+      </div>}
+    {!loading &&
+      currentUser &&
+      <div style={{ marginTop: 40 }}>
+        <p>Signed in user info:</p>
+        <p>id : {currentUser.id}</p>
+        <p>email : {currentUser.emails[0].address}</p>
+      </div>}
+  </div>
+));
 
-const Loading = () => <div>Loading ...</div>;
-
-render((
+render(
   <div>
     <Helmet
       title={`${packageConf.name} ${packageConf.version}`}
@@ -69,37 +79,16 @@ render((
       ]}
     />
     <MuiThemeProvider>
-      <Router history={browserHistory}>
-        <Route
-          path="/" component={({ children }) =>
-            <Authenticate
-              accounts={AccountsClient}
-              Loading={Loading}
-              Dialog={Accounts}
-            >
-              {children}
-            </Authenticate>}
-        >
-          <IndexRoute component={Home} />
-          {accountRoutes({
-            accounts: AccountsClient,
-            component: Accounts,
-            container: ({ children }) => //eslint-disable-line
-            (
-              <div
-                style={{
-                  height: '85vh',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                }}
-              >
-                {children}
-              </div>
-            ),
-          })}
-        </Route>
-      </Router>
+      <AccountsProvider accountsClient={accountsClient}>
+        <Router history={history}>
+          <div>
+            <Route exact path="/" component={Home} />
+            <Route path="/login" component={LogInForm} />
+            <Route path="/signup" component={SignUpForm} />
+          </div>
+        </Router>
+      </AccountsProvider>
     </MuiThemeProvider>
-  </div>
-), document.getElementById('root')); //eslint-disable-line
+  </div>,
+  document.getElementById('root'),
+); //eslint-disable-line

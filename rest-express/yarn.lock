@@ -2,13 +2,13 @@
 # yarn lockfile v1
 
 
-"@accounts/common@^0.1.0-alpha.b5d6f4ab":
+"@accounts/common@^0.1.0-alpha.55f51f1c":
   version "0.1.0-alpha.f9ef5e7f"
   resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-alpha.f9ef5e7f.tgz#cdaa5bee1bcd9476858756eb21b7b514fe7c1bd8"
 
 "@accounts/common@canary":
-  version "0.1.0-alpha.b5d6f4ab"
-  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-alpha.b5d6f4ab.tgz#ed1ddb111a4a2b022e49933755b85e945f0097ed"
+  version "0.1.0-alpha.55f51f1c"
+  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-alpha.55f51f1c.tgz#b4a7518d9dcf5db4eeeeefe1a11589f31c2824d2"
   dependencies:
     lodash "^4.16.4"
 
@@ -20,25 +20,25 @@
     mongodb "^2.2.29"
 
 "@accounts/password@canary":
-  version "0.1.0-alpha.b5d6f4ab"
-  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.1.0-alpha.b5d6f4ab.tgz#6ea11d35de25ab0d3484931f4d3814aee78b98f7"
+  version "0.1.0-alpha.55f51f1c"
+  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.1.0-alpha.55f51f1c.tgz#b0620db8ac91e362e117392c630f96eab089fd69"
   dependencies:
     bcryptjs "^2.4.3"
     lodash "^4.17.4"
 
-"@accounts/rest-express@canary":
-  version "0.1.0-alpha.d0fb5b34"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.1.0-alpha.d0fb5b34.tgz#ee22b6cdbb146f7846d642d2b075e21b493a3405"
+"@accounts/rest-express@0.1.0-alpha.68298bf4":
+  version "0.1.0-alpha.68298bf4"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.1.0-alpha.68298bf4.tgz#f9c898dec2cf3ece758a6d016b8a1a316033896e"
   dependencies:
     express "^4.16.2"
     lodash "^4.17.4"
     request-ip "^2.0.2"
 
 "@accounts/server@canary":
-  version "0.1.0-alpha.b5d6f4ab"
-  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.1.0-alpha.b5d6f4ab.tgz#cc49ffb174fc98cc123ce7775228a66366995fe4"
+  version "0.1.0-alpha.55f51f1c"
+  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.1.0-alpha.55f51f1c.tgz#a507920cee655b78f6d3e122eee629cef0a7c025"
   dependencies:
-    "@accounts/common" "^0.1.0-alpha.b5d6f4ab"
+    "@accounts/common" "^0.1.0-alpha.55f51f1c"
     babel-polyfill "^6.23.0"
     bcryptjs "^2.4.0"
     crypto "^0.0.3"
@@ -279,9 +279,9 @@ hoek@2.x.x:
   version "2.16.3"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
 
-hooks-fixed@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/hooks-fixed/-/hooks-fixed-2.0.0.tgz#a01d894d52ac7f6599bbb1f63dfc9c411df70cba"
+hooks-fixed@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/hooks-fixed/-/hooks-fixed-2.0.2.tgz#20076daa07e77d8a6106883ce3f1722e051140b0"
 
 http-errors@1.6.2, http-errors@~1.6.2:
   version "1.6.2"
@@ -360,6 +360,10 @@ kareem@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/kareem/-/kareem-1.5.0.tgz#e3e4101d9dcfde299769daf4b4db64d895d17448"
 
+lodash.get@4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+
 lodash.once@^4.0.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lodash.once/-/lodash.once-4.1.1.tgz#0dd3971213c7c56df880977d504c88fb471a97ac"
@@ -425,13 +429,14 @@ mongodb@2.2.33, mongodb@^2.2.29:
     readable-stream "2.2.7"
 
 mongoose@^4.12.4:
-  version "4.12.4"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-4.12.4.tgz#502a2c037376a6c6356eee89128e75653612127c"
+  version "4.13.0"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-4.13.0.tgz#81bb266e045d66ac8dfdd84fc6749c873d7a6ac4"
   dependencies:
     async "2.1.4"
     bson "~1.0.4"
-    hooks-fixed "2.0.0"
+    hooks-fixed "2.0.2"
     kareem "1.5.0"
+    lodash.get "4.4.2"
     mongodb "2.2.33"
     mpath "0.3.0"
     mpromise "0.5.5"
@@ -636,8 +641,8 @@ type-is@~1.6.15:
     mime-types "~2.1.15"
 
 typescript@^2.5.3:
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.5.3.tgz#df3dcdc38f3beb800d4bc322646b04a3f6ca7f0d"
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.6.1.tgz#ef39cdea27abac0b500242d6726ab90e0c846631"
 
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"

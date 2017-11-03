@@ -9,7 +9,7 @@
     "@accounts/common": "canary",
     "@accounts/mongo": "canary",
     "@accounts/password": "canary",
-    "@accounts/rest-express": "canary",
+    "@accounts/rest-express": "0.1.0-alpha.68298bf4",
     "@accounts/server": "canary",
     "express": "^4.16.2",
     "mongoose": "^4.12.4"

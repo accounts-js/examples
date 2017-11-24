@@ -1,4 +1,3 @@
-const Dotenv = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const WatchIgnorePlugin = require('watch-ignore-webpack-plugin');
@@ -36,10 +35,6 @@ module.exports = {
     root: path.join(__dirname, 'node_modules'),
   },
   plugins: [
-    new Dotenv({
-      path: './.env',
-      safe: true,
-    }),
     new WatchIgnorePlugin([
       path.resolve(__dirname, './src/api/'),
     ]),

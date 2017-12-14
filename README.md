@@ -11,10 +11,12 @@ You must have a mongodb server running before starting the server.
 
 ## Getting Started
 ```
-git clone https://github.com/js-accounts/rest-example.git
-cd rest-example
+git clone https://github.com/js-accounts/examples.git
+cd examples
 yarn install
 ```
+
+Start Mongo.
 
 Start the app.
 ```

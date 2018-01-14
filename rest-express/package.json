@@ -1,20 +1,24 @@
 {
   "name": "rest-express",
   "private": true,
+  "version": "1.0.0",
+  "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "build": "tsc"
   },
   "dependencies": {
-    "@accounts/common": "canary",
+    "@accounts/common": "^0.1.0-alpha.55f51f1c",
     "@accounts/mongo": "canary",
-    "@accounts/password": "canary",
+    "@accounts/password": "^0.1.0-alpha.55f51f1c",
     "@accounts/rest-express": "0.1.0-alpha.68298bf4",
-    "@accounts/server": "canary",
+    "@accounts/server": "^0.1.0-alpha.55f51f1c",
     "express": "^4.16.2",
     "mongoose": "^4.12.4"
   },
   "devDependencies": {
+    "@types/node": "^9.3.0",
     "typescript": "^2.5.3"
   }
 }

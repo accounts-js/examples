@@ -19,7 +19,7 @@ const accountsServer = new AccountsServer(
     tokenSecret: 'secret',
   },
   {
-    password: new AccountsPassword({}),
+    password: new AccountsPassword(),
   }
 );
 app.use(accountsExpress(accountsServer));

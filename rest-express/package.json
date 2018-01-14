@@ -9,16 +9,16 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@accounts/common": "^0.1.0-alpha.55f51f1c",
+    "@accounts/common": "^0.1.0-alpha.42868044",
     "@accounts/mongo": "canary",
-    "@accounts/password": "^0.1.0-alpha.55f51f1c",
+    "@accounts/password": "^0.1.0-alpha.42868044",
     "@accounts/rest-express": "0.1.0-alpha.68298bf4",
-    "@accounts/server": "^0.1.0-alpha.55f51f1c",
+    "@accounts/server": "^0.1.0-alpha.42868044",
     "express": "^4.16.2",
-    "mongoose": "^4.12.4"
+    "mongoose": "^4.13.9"
   },
   "devDependencies": {
     "@types/node": "^9.3.0",
-    "typescript": "^2.5.3"
+    "typescript": "^2.6.2"
   }
 }

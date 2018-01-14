@@ -3,9 +3,13 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "prettier":
-      "prettier --single-quote --trailing-comma es5 --write \"./*/src/**/*.{ts,tsx,md}\"",
+    "prettier": "prettier --write \"./*/src/**/*.{ts,tsx,md}\"",
+    "test": "prettier --list-different \"./*/src/**/*.{ts,tsx,md}\"",
     "precommit": "pretty-quick --staged"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
   },
   "devDependencies": {
     "husky": "^0.14.3",

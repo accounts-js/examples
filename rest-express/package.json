@@ -8,13 +8,21 @@
   "dependencies": {
     "@accounts/common": "canary",
     "@accounts/mongo": "canary",
+    "@accounts/oauth": "^0.1.0-alpha.10cbdf05",
     "@accounts/password": "canary",
     "@accounts/rest-express": "0.1.0-alpha.68298bf4",
     "@accounts/server": "canary",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
-    "mongoose": "^4.12.4"
+    "express-session": "^1.15.6",
+    "grant-express": "^3.8.1",
+    "mongoose": "^4.12.4",
+    "morgan": "^1.9.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.3",
+    "@types/express-session": "^1.15.7",
+    "ts-node": "^4.1.0",
     "typescript": "^2.5.3"
   }
 }

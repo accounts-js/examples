@@ -11,7 +11,7 @@
   "dependencies": {
     "@accounts/common": "0.1.0-alpha.fb3effeb",
     "@accounts/mongo": "canary",
-    "@accounts/password": "0.1.0-alpha.fb3effeb",
+    "@accounts/password": "0.1.0-alpha.04203cca",
     "@accounts/rest-express": "^0.1.0-alpha.311f89da",
     "@accounts/server": "0.1.0-alpha.fb3effeb",
     "cors": "^2.8.4",

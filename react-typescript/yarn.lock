@@ -2,11 +2,11 @@
 # yarn lockfile v1
 
 
-"@accounts/client@^0.1.0-alpha.fb3effeb":
-  version "0.1.0-alpha.fb3effeb"
-  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.1.0-alpha.fb3effeb.tgz#41eeb8816b4f46faa28b9b7ec331a3a83763df96"
+"@accounts/client@^0.1.0-alpha.04203cca":
+  version "0.1.0-alpha.04203cca"
+  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.1.0-alpha.04203cca.tgz#74f8a0a2d623adfee18462603d4457fb626910ea"
   dependencies:
-    "@accounts/common" "^0.1.0-alpha.fb3effeb"
+    "@accounts/common" "^0.1.0-alpha.04203cca"
     crypto-js "^3.1.9-1"
     immutable "^3.8.1"
     jwt-decode "^2.1.0"
@@ -14,7 +14,7 @@
     redux "^3.6.0"
     redux-immutable "^3.0.8"
 
-"@accounts/common@^0.1.0-alpha.fb3effeb":
+"@accounts/common@^0.1.0-alpha.04203cca":
   version "0.1.0-alpha.fe08f703"
   resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-alpha.fe08f703.tgz#88970102ce9d9f18b464b3dfb8c6417087d4639c"
   dependencies:

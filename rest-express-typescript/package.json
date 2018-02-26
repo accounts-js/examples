@@ -1,5 +1,5 @@
 {
-  "name": "rest-express",
+  "name": "rest-express-typescript",
   "private": true,
   "version": "1.0.0",
   "main": "lib/index.js",
@@ -9,16 +9,17 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@accounts/common": "^0.1.0-alpha.42868044",
+    "@accounts/common": "0.1.0-alpha.fb3effeb",
     "@accounts/mongo": "canary",
-    "@accounts/password": "^0.1.0-alpha.42868044",
+    "@accounts/password": "0.1.0-alpha.fb3effeb",
     "@accounts/rest-express": "0.1.0-alpha.68298bf4",
-    "@accounts/server": "^0.1.0-alpha.42868044",
+    "@accounts/server": "0.1.0-alpha.fb3effeb",
     "express": "^4.16.2",
     "mongoose": "^4.13.9"
   },
   "devDependencies": {
     "@types/node": "^9.3.0",
+    "ts-node": "^5.0.0",
     "typescript": "^2.6.2"
   }
 }

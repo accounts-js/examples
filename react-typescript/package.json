@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@accounts/client": "^0.1.0-alpha.fb3effeb",
-    "@accounts/rest-client": "^0.1.0-alpha.336ca0b9",
+    "@accounts/rest-client": "^0.1.0-alpha.311f89da",
     "material-ui": "^1.0.0-beta.35",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

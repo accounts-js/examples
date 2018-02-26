@@ -1,9 +1,10 @@
 import { AccountsClient } from '@accounts/client';
 import { RestClient } from '@accounts/rest-client';
 
-const accountsRest = new RestClient({});
+const accountsRest = new RestClient({
+  apiHost: 'http://localhost:4000',
+  rootPath: '/accounts',
+});
 const accounts = new AccountsClient({}, accountsRest);
-
-// accounts.loginWithService('oauth', { provider: 'google' }).then(user => console.log(user));
 
 export { accounts, accountsRest };

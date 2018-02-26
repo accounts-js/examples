@@ -11,6 +11,8 @@ import {
   Typography,
 } from 'material-ui';
 
+import { accounts } from './accounts';
+
 const styles = () => ({
   container: {
     margin: 'auto',
@@ -21,6 +23,9 @@ const styles = () => ({
     flexDirection: 'column' as 'column',
     padding: 16,
   },
+  formError: {
+    color: 'red',
+  },
 });
 
 interface State {
@@ -30,7 +35,7 @@ interface State {
 }
 
 class Signup extends React.Component<
-  WithStyles<'container' | 'formContainer'>,
+  WithStyles<'container' | 'formContainer' | 'formError'>,
   State
 > {
   state = {
@@ -47,9 +52,17 @@ class Signup extends React.Component<
     this.setState({ password: target.value });
   };
 
-  onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // TODO call accounts-js client
+    this.setState({ error: null });
+    try {
+      await accounts.loginWithService('password', {
+        email: this.state.email,
+        password: this.state.email,
+      });
+    } catch (err) {
+      this.setState({ error: err.message });
+    }
   };
 
   render() {
@@ -76,7 +89,9 @@ class Signup extends React.Component<
               <Button variant="raised" color="primary" type="submit">
                 Sign Up
               </Button>
-              {error && <Typography>{error}</Typography>}
+              {error && (
+                <Typography className={classes.formError}>{error}</Typography>
+              )}
             </form>
           </Paper>
         </Grid>

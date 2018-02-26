@@ -1,10 +1,16 @@
 import * as React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { Reboot } from 'material-ui';
+
+import Signup from './Signup';
 
 const Router = () => {
   return (
     <BrowserRouter>
-      <div>hey</div>
+      <div>
+        <Reboot />
+        <Route path="/signup" component={Signup} />
+      </div>
     </BrowserRouter>
   );
 };

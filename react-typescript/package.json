@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@accounts/client": "^0.1.0-alpha.04203cca",
-    "@accounts/rest-client": "^0.1.0-alpha.311f89da",
+    "@accounts/client": "^0.1.0-alpha.29d07868",
+    "@accounts/common": "^0.1.0-alpha.04203cca",
+    "@accounts/rest-client": "0.1.0-alpha.311f89da",
     "material-ui": "^1.0.0-beta.35",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

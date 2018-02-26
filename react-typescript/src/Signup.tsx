@@ -8,6 +8,7 @@ import {
   InputLabel,
   Input,
   Button,
+  Typography,
 } from 'material-ui';
 
 const styles = () => ({
@@ -25,6 +26,7 @@ const styles = () => ({
 interface State {
   email: string;
   password: string;
+  error: string | null;
 }
 
 class Signup extends React.Component<
@@ -34,6 +36,7 @@ class Signup extends React.Component<
   state = {
     email: '',
     password: '',
+    error: null,
   };
 
   onChangeEmail = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
@@ -51,7 +54,7 @@ class Signup extends React.Component<
 
   render() {
     const { classes } = this.props;
-    const { email, password } = this.state;
+    const { email, password, error } = this.state;
     return (
       <Grid container className={classes.container}>
         <Grid item xs={12}>
@@ -73,6 +76,7 @@ class Signup extends React.Component<
               <Button variant="raised" color="primary" type="submit">
                 Sign Up
               </Button>
+              {error && <Typography>{error}</Typography>}
             </form>
           </Paper>
         </Grid>

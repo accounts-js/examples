@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { RouteComponentProps } from 'react-router-dom';
 import {
   withStyles,
   WithStyles,
@@ -35,7 +36,8 @@ interface State {
 }
 
 class Signup extends React.Component<
-  WithStyles<'container' | 'formContainer' | 'formError'>,
+  WithStyles<'container' | 'formContainer' | 'formError'> &
+    RouteComponentProps<{}>,
   State
 > {
   state = {
@@ -56,10 +58,11 @@ class Signup extends React.Component<
     e.preventDefault();
     this.setState({ error: null });
     try {
-      await accounts.loginWithService('password', {
+      await accounts.createUser({
         email: this.state.email,
-        password: this.state.email,
+        password: this.state.password,
       });
+      this.props.history.push('/login');
     } catch (err) {
       this.setState({ error: err.message });
     }
@@ -73,6 +76,9 @@ class Signup extends React.Component<
         <Grid item xs={12}>
           <Paper>
             <form onSubmit={this.onSubmit} className={classes.formContainer}>
+              <Typography variant="display1" gutterBottom>
+                Sign up
+              </Typography>
               <FormControl margin="normal">
                 <InputLabel htmlFor="email">Email</InputLabel>
                 <Input id="email" value={email} onChange={this.onChangeEmail} />

@@ -12,15 +12,15 @@
     "@accounts/common": "0.1.0-alpha.fb3effeb",
     "@accounts/mongo": "canary",
     "@accounts/password": "0.1.0-alpha.fb3effeb",
-    "@accounts/rest-express": "0.1.0-alpha.68298bf4",
+    "@accounts/rest-express": "^0.1.0-alpha.311f89da",
     "@accounts/server": "0.1.0-alpha.fb3effeb",
     "cors": "^2.8.4",
     "express": "^4.16.2",
-    "mongoose": "^4.13.9"
+    "mongoose": "^5.0.7"
   },
   "devDependencies": {
-    "@types/node": "^9.3.0",
+    "@types/node": "^9.4.6",
     "ts-node": "^5.0.0",
-    "typescript": "^2.6.2"
+    "typescript": "^2.7.2"
   }
 }

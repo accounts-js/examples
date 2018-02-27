@@ -5,6 +5,7 @@ import { Reboot, withStyles, WithStyles, Grid, Paper } from 'material-ui';
 import Signup from './Signup';
 import Login from './Login';
 import Home from './Home';
+import ResetPassword from './ResetPassword';
 
 const styles = () => ({
   root: {
@@ -27,6 +28,7 @@ const Router = ({ classes }: WithStyles<'root' | 'container'>) => {
             <Route exact path="/" component={Home} />
             <Route path="/signup" component={Signup} />
             <Route path="/login" component={Login} />
+            <Route path="/reset-password" component={ResetPassword} />
           </Paper>
         </Grid>
       </Grid>

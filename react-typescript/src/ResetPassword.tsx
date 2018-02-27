@@ -10,7 +10,7 @@ import {
   Typography,
 } from 'material-ui';
 
-import { accounts } from './accounts';
+import { accountsRest } from './accounts';
 import FormError from './components/FormError';
 
 const styles = () => ({
@@ -20,14 +20,10 @@ const styles = () => ({
   },
 });
 
-const SignUpLink = (props: any) => <Link to="/signup" {...props} />;
-const ResetPasswordLink = (props: any) => (
-  <Link to="/reset-password" {...props} />
-);
+const LogInLink = (props: any) => <Link to="/login" {...props} />;
 
 interface State {
   email: string;
-  password: string;
   error: string | null;
 }
 
@@ -45,53 +41,35 @@ class Login extends React.Component<
     this.setState({ email: target.value });
   };
 
-  onChangePassword = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
-    this.setState({ password: target.value });
-  };
-
   onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     this.setState({ error: null });
     try {
-      await accounts.loginWithService('password', {
-        user: {
-          email: this.state.email,
-        },
-        password: this.state.password,
-      });
-      this.props.history.push('/');
+      await accountsRest.sendResetPasswordEmail(this.state.email);
+      // TODO success message
     } catch (err) {
+      console.log(err);
       this.setState({ error: err.message });
     }
   };
 
   render() {
     const { classes } = this.props;
-    const { email, password, error } = this.state;
+    const { email, error } = this.state;
     return (
       <form onSubmit={this.onSubmit} className={classes.formContainer}>
         <Typography variant="display1" gutterBottom>
-          Login
+          Reset Password
         </Typography>
         <FormControl margin="normal">
           <InputLabel htmlFor="email">Email</InputLabel>
           <Input id="email" value={email} onChange={this.onChangeEmail} />
         </FormControl>
-        <FormControl margin="normal">
-          <InputLabel htmlFor="password">Password</InputLabel>
-          <Input
-            id="password"
-            type="password"
-            value={password}
-            onChange={this.onChangePassword}
-          />
-        </FormControl>
         <Button variant="raised" color="primary" type="submit">
-          Login
+          Reset Password
         </Button>
         {error && <FormError error={error} />}
-        <Button component={SignUpLink}>Sign Up</Button>
-        <Button component={ResetPasswordLink}>Reset Password</Button>
+        <Button component={LogInLink}>Log In</Button>
       </form>
     );
   }

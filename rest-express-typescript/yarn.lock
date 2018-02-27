@@ -14,12 +14,12 @@
   dependencies:
     lodash "^4.16.4"
 
-"@accounts/mongo@canary":
-  version "0.1.0-alpha.f9ef5e7f"
-  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-alpha.f9ef5e7f.tgz#81f07099017b3a302ae4e614a8afc7826788e2de"
+"@accounts/mongo@0.1.0-alpha.3b74316":
+  version "0.1.0-alpha.3b74316"
+  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-alpha.3b74316.tgz#5482d199c1efe583e55c01970035f29ce362aa17"
   dependencies:
     lodash "^4.17.4"
-    mongodb "^2.2.29"
+    mongodb "^2.2.33"
 
 "@accounts/password@0.1.0-alpha.04203cca":
   version "0.1.0-alpha.04203cca"
@@ -28,7 +28,7 @@
     bcryptjs "^2.4.3"
     lodash "^4.17.4"
 
-"@accounts/rest-express@^0.1.0-alpha.311f89da":
+"@accounts/rest-express@0.1.0-alpha.311f89da":
   version "0.1.0-alpha.311f89da"
   resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.1.0-alpha.311f89da.tgz#6f043f446c0a7cec04c59b94d7b46110a83fd893"
   dependencies:
@@ -439,9 +439,9 @@ moment@2.x.x:
   version "2.19.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.19.1.tgz#56da1a2d1cbf01d38b7e1afc31c10bcfa1929167"
 
-mongodb-core@2.1.17:
-  version "2.1.17"
-  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-2.1.17.tgz#a418b337a14a14990fb510b923dee6a813173df8"
+mongodb-core@2.1.19:
+  version "2.1.19"
+  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-2.1.19.tgz#00fbd5e5a3573763b9171cfd844e60a8f2a3a18b"
   dependencies:
     bson "~1.0.4"
     require_optional "~1.0.0"
@@ -459,12 +459,12 @@ mongodb@3.0.2:
   dependencies:
     mongodb-core "3.0.2"
 
-mongodb@^2.2.29:
-  version "2.2.33"
-  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-2.2.33.tgz#b537c471d34a6651b48f36fdbf29750340e08b50"
+mongodb@^2.2.33:
+  version "2.2.35"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-2.2.35.tgz#cd1b5af8a9463e3f9a787fa5b3d05565579730f9"
   dependencies:
     es6-promise "3.2.1"
-    mongodb-core "2.1.17"
+    mongodb-core "2.1.19"
     readable-stream "2.2.7"
 
 mongoose-legacy-pluralize@1.0.2:

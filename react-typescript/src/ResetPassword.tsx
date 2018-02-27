@@ -8,6 +8,7 @@ import {
   Input,
   Button,
   Typography,
+  Snackbar,
 } from 'material-ui';
 
 import { accountsRest } from './accounts';
@@ -30,6 +31,7 @@ interface State {
   email: string;
   newPassword: string;
   error: string | null;
+  snackbarMessage: string | null;
 }
 
 class Login extends React.Component<
@@ -40,6 +42,7 @@ class Login extends React.Component<
     email: '',
     newPassword: '',
     error: null,
+    snackbarMessage: null,
   };
 
   onChangeEmail = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
@@ -52,26 +55,33 @@ class Login extends React.Component<
 
   onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    this.setState({ error: null });
+    this.setState({ error: null, snackbarMessage: null });
     const token = this.props.match.params.token;
     try {
       // If no tokens send email to user
       if (!token) {
         await accountsRest.sendResetPasswordEmail(this.state.email);
+        this.setState({ snackbarMessage: 'Email sent' });
       } else {
         // If token try to change user password
         await accountsRest.resetPassword(token, this.state.newPassword);
+        this.setState({
+          snackbarMessage: 'Your password has been reset successfully',
+        });
       }
-      // TODO success message
     } catch (err) {
       console.log(err);
-      this.setState({ error: err.message });
+      this.setState({ error: err.message, snackbarMessage: null });
     }
+  };
+
+  onSanckbarClose = () => {
+    this.setState({ snackbarMessage: null });
   };
 
   render() {
     const { classes, match } = this.props;
-    const { email, newPassword, error } = this.state;
+    const { email, newPassword, error, snackbarMessage } = this.state;
     return (
       <form onSubmit={this.onSubmit} className={classes.formContainer}>
         <Typography variant="display1" gutterBottom>
@@ -99,6 +109,19 @@ class Login extends React.Component<
         </Button>
         {error && <FormError error={error} />}
         <Button component={LogInLink}>Log In</Button>
+        <Snackbar
+          anchorOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+          open={!!snackbarMessage}
+          autoHideDuration={4000}
+          onClose={this.onSanckbarClose}
+          SnackbarContentProps={{
+            'aria-describedby': 'message-id',
+          }}
+          message={<span id="message-id">{snackbarMessage}</span>}
+        />
       </form>
     );
   }

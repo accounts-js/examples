@@ -6,6 +6,7 @@ import Signup from './Signup';
 import Login from './Login';
 import Home from './Home';
 import ResetPassword from './ResetPassword';
+import VerifyEmail from './VerifyEmail';
 
 const styles = () => ({
   root: {
@@ -30,6 +31,7 @@ const Router = ({ classes }: WithStyles<'root' | 'container'>) => {
             <Route path="/login" component={Login} />
             <Route exact path="/reset-password" component={ResetPassword} />
             <Route path="/reset-password/:token" component={ResetPassword} />
+            <Route path="/verify-email/:token" component={VerifyEmail} />
           </Paper>
         </Grid>
       </Grid>

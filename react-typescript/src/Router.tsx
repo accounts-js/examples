@@ -1,22 +1,37 @@
 import * as React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import { Reboot } from 'material-ui';
+import { Reboot, withStyles, WithStyles, Grid, Paper } from 'material-ui';
 
 import Signup from './Signup';
 import Login from './Login';
 import Home from './Home';
 
-const Router = () => {
+const styles = () => ({
+  root: {
+    margin: 'auto',
+    maxWidth: 500,
+    marginTop: 50,
+  },
+  container: {
+    padding: 16,
+  },
+});
+
+const Router = ({ classes }: WithStyles<'root' | 'container'>) => {
   return (
     <BrowserRouter>
-      <div>
-        <Reboot />
-        <Route exact path="/" component={Home} />
-        <Route path="/signup" component={Signup} />
-        <Route path="/login" component={Login} />
-      </div>
+      <Grid container className={classes.root}>
+        <Grid item xs={12}>
+          <Paper className={classes.container}>
+            <Reboot />
+            <Route exact path="/" component={Home} />
+            <Route path="/signup" component={Signup} />
+            <Route path="/login" component={Login} />
+          </Paper>
+        </Grid>
+      </Grid>
     </BrowserRouter>
   );
 };
 
-export default Router;
+export default withStyles(styles)<{}>(Router);

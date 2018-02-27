@@ -1,20 +1,10 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
-import { withStyles, WithStyles, Grid, Paper, Button } from 'material-ui';
+import { Button } from 'material-ui';
 
 import { accounts } from './accounts';
 
-const styles = () => ({
-  container: {
-    margin: 'auto',
-    maxWidth: 700,
-  },
-});
-
-class Home extends React.Component<
-  WithStyles<'container'> & RouteComponentProps<{}>,
-  {}
-> {
+class Home extends React.Component<RouteComponentProps<{}>, {}> {
   async componentDidMount() {
     await accounts.config();
     const tokens = await accounts.tokens();
@@ -30,19 +20,12 @@ class Home extends React.Component<
   };
 
   render() {
-    const { classes } = this.props;
     return (
-      <Grid container className={classes.container}>
-        <Grid item xs={12}>
-          <Paper>
-            <Button variant="raised" color="primary" onClick={this.onLogout}>
-              Logout
-            </Button>
-          </Paper>
-        </Grid>
-      </Grid>
+      <Button variant="raised" color="primary" onClick={this.onLogout}>
+        Logout
+      </Button>
     );
   }
 }
 
-export default withStyles(styles)(Home);
+export default Home;

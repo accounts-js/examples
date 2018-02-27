@@ -3,8 +3,6 @@ import { RouteComponentProps } from 'react-router-dom';
 import {
   withStyles,
   WithStyles,
-  Grid,
-  Paper,
   FormControl,
   InputLabel,
   Input,
@@ -16,14 +14,9 @@ import { accounts } from './accounts';
 import FormError from './components/FormError';
 
 const styles = () => ({
-  container: {
-    margin: 'auto',
-    maxWidth: 700,
-  },
   formContainer: {
     display: 'flex',
     flexDirection: 'column' as 'column',
-    padding: 16,
   },
 });
 
@@ -34,7 +27,7 @@ interface State {
 }
 
 class Signup extends React.Component<
-  WithStyles<'container' | 'formContainer'> & RouteComponentProps<{}>,
+  WithStyles<'formContainer'> & RouteComponentProps<{}>,
   State
 > {
   state = {
@@ -69,34 +62,28 @@ class Signup extends React.Component<
     const { classes } = this.props;
     const { email, password, error } = this.state;
     return (
-      <Grid container className={classes.container}>
-        <Grid item xs={12}>
-          <Paper>
-            <form onSubmit={this.onSubmit} className={classes.formContainer}>
-              <Typography variant="display1" gutterBottom>
-                Sign up
-              </Typography>
-              <FormControl margin="normal">
-                <InputLabel htmlFor="email">Email</InputLabel>
-                <Input id="email" value={email} onChange={this.onChangeEmail} />
-              </FormControl>
-              <FormControl margin="normal">
-                <InputLabel htmlFor="password">Password</InputLabel>
-                <Input
-                  id="password"
-                  type="password"
-                  value={password}
-                  onChange={this.onChangePassword}
-                />
-              </FormControl>
-              <Button variant="raised" color="primary" type="submit">
-                Sign Up
-              </Button>
-              {error && <FormError error={error} />}
-            </form>
-          </Paper>
-        </Grid>
-      </Grid>
+      <form onSubmit={this.onSubmit} className={classes.formContainer}>
+        <Typography variant="display1" gutterBottom>
+          Sign up
+        </Typography>
+        <FormControl margin="normal">
+          <InputLabel htmlFor="email">Email</InputLabel>
+          <Input id="email" value={email} onChange={this.onChangeEmail} />
+        </FormControl>
+        <FormControl margin="normal">
+          <InputLabel htmlFor="password">Password</InputLabel>
+          <Input
+            id="password"
+            type="password"
+            value={password}
+            onChange={this.onChangePassword}
+          />
+        </FormControl>
+        <Button variant="raised" color="primary" type="submit">
+          Sign Up
+        </Button>
+        {error && <FormError error={error} />}
+      </form>
     );
   }
 }

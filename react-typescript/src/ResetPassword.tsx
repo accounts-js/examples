@@ -22,18 +22,23 @@ const styles = () => ({
 
 const LogInLink = (props: any) => <Link to="/login" {...props} />;
 
+interface RouteMatchProps {
+  token: string;
+}
+
 interface State {
   email: string;
+  newPassword: string;
   error: string | null;
 }
 
 class Login extends React.Component<
-  WithStyles<'formContainer'> & RouteComponentProps<{}>,
+  WithStyles<'formContainer'> & RouteComponentProps<RouteMatchProps>,
   State
 > {
   state = {
     email: '',
-    password: '',
+    newPassword: '',
     error: null,
   };
 
@@ -41,11 +46,22 @@ class Login extends React.Component<
     this.setState({ email: target.value });
   };
 
+  onChangeNewPassword = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+    this.setState({ newPassword: target.value });
+  };
+
   onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     this.setState({ error: null });
+    const token = this.props.match.params.token;
     try {
-      await accountsRest.sendResetPasswordEmail(this.state.email);
+      // If no tokens send email to user
+      if (!token) {
+        await accountsRest.sendResetPasswordEmail(this.state.email);
+      } else {
+        // If token try to change user password
+        await accountsRest.resetPassword(token, this.state.newPassword);
+      }
       // TODO success message
     } catch (err) {
       console.log(err);
@@ -54,17 +70,30 @@ class Login extends React.Component<
   };
 
   render() {
-    const { classes } = this.props;
-    const { email, error } = this.state;
+    const { classes, match } = this.props;
+    const { email, newPassword, error } = this.state;
     return (
       <form onSubmit={this.onSubmit} className={classes.formContainer}>
         <Typography variant="display1" gutterBottom>
           Reset Password
         </Typography>
-        <FormControl margin="normal">
-          <InputLabel htmlFor="email">Email</InputLabel>
-          <Input id="email" value={email} onChange={this.onChangeEmail} />
-        </FormControl>
+        {!match.params.token && (
+          <FormControl margin="normal">
+            <InputLabel htmlFor="email">Email</InputLabel>
+            <Input id="email" value={email} onChange={this.onChangeEmail} />
+          </FormControl>
+        )}
+        {match.params.token && (
+          <FormControl margin="normal">
+            <InputLabel htmlFor="new-password">New Password</InputLabel>
+            <Input
+              id="new-password"
+              type="password"
+              value={newPassword}
+              onChange={this.onChangeNewPassword}
+            />
+          </FormControl>
+        )}
         <Button variant="raised" color="primary" type="submit">
           Reset Password
         </Button>

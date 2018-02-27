@@ -28,7 +28,8 @@ const Router = ({ classes }: WithStyles<'root' | 'container'>) => {
             <Route exact path="/" component={Home} />
             <Route path="/signup" component={Signup} />
             <Route path="/login" component={Login} />
-            <Route path="/reset-password" component={ResetPassword} />
+            <Route exact path="/reset-password" component={ResetPassword} />
+            <Route path="/reset-password/:token" component={ResetPassword} />
           </Paper>
         </Grid>
       </Grid>

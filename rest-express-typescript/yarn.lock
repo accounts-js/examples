@@ -21,7 +21,7 @@
     lodash "^4.17.4"
     mongodb "^2.2.29"
 
-"@accounts/password@^0.1.0-alpha.04203cca":
+"@accounts/password@0.1.0-alpha.04203cca":
   version "0.1.0-alpha.04203cca"
   resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.1.0-alpha.04203cca.tgz#e7eb56e17cea959c10e30ecc143cbb73212b7401"
   dependencies:

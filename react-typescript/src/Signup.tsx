@@ -13,6 +13,7 @@ import {
 } from 'material-ui';
 
 import { accounts } from './accounts';
+import FormError from './components/FormError';
 
 const styles = () => ({
   container: {
@@ -24,9 +25,6 @@ const styles = () => ({
     flexDirection: 'column' as 'column',
     padding: 16,
   },
-  formError: {
-    color: 'red',
-  },
 });
 
 interface State {
@@ -36,8 +34,7 @@ interface State {
 }
 
 class Signup extends React.Component<
-  WithStyles<'container' | 'formContainer' | 'formError'> &
-    RouteComponentProps<{}>,
+  WithStyles<'container' | 'formContainer'> & RouteComponentProps<{}>,
   State
 > {
   state = {
@@ -95,9 +92,7 @@ class Signup extends React.Component<
               <Button variant="raised" color="primary" type="submit">
                 Sign Up
               </Button>
-              {error && (
-                <Typography className={classes.formError}>{error}</Typography>
-              )}
+              {error && <FormError error={error} />}
             </form>
           </Paper>
         </Grid>

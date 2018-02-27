@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { RouteComponentProps } from 'react-router-dom';
+import { RouteComponentProps, Link } from 'react-router-dom';
 import {
   withStyles,
   WithStyles,
@@ -19,6 +19,8 @@ const styles = () => ({
     flexDirection: 'column' as 'column',
   },
 });
+
+const SignUpLink = (props: any) => <Link to="/signup" {...props} />;
 
 interface State {
   email: string;
@@ -85,6 +87,7 @@ class Login extends React.Component<
           Login
         </Button>
         {error && <FormError error={error} />}
+        <Button component={SignUpLink}>Sign Up</Button>
       </form>
     );
   }

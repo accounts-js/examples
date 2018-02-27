@@ -26,6 +26,10 @@ const accountsServer = new AccountsServer(
 );
 app.use(accountsExpress(accountsServer));
 
+app.get('/user', (req, res) => {
+  res.json({ user: req.user });
+});
+
 app.listen(4000, () => {
   console.log('Server listening on port 4000');
 });

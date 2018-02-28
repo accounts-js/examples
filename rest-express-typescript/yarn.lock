@@ -2,45 +2,39 @@
 # yarn lockfile v1
 
 
-"@accounts/common@0.1.0-alpha.fb3effeb":
-  version "0.1.0-alpha.fb3effeb"
-  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-alpha.fb3effeb.tgz#ab43ad10542f7a1e5692efb4fd91f82cdfa4c9c9"
+"@accounts/common@0.1.0-beta.0", "@accounts/common@^0.1.0-beta.0":
+  version "0.1.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.0.tgz#04a9496c64bbd5ab22c2f6911cb621ba106421ca"
   dependencies:
     lodash "^4.16.4"
 
-"@accounts/common@^0.1.0-alpha.fb3effeb":
-  version "0.1.0-alpha.fe08f703"
-  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-alpha.fe08f703.tgz#88970102ce9d9f18b464b3dfb8c6417087d4639c"
-  dependencies:
-    lodash "^4.16.4"
-
-"@accounts/mongo@0.1.0-alpha.3b74316":
-  version "0.1.0-alpha.3b74316"
-  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-alpha.3b74316.tgz#5482d199c1efe583e55c01970035f29ce362aa17"
+"@accounts/mongo@0.1.0-beta.0":
+  version "0.1.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.0.tgz#3f957bc09cfa3fac3cb229734cc0a8ae0962dfe0"
   dependencies:
     lodash "^4.17.4"
     mongodb "^2.2.33"
 
-"@accounts/password@0.1.0-alpha.04203cca":
-  version "0.1.0-alpha.04203cca"
-  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.1.0-alpha.04203cca.tgz#e7eb56e17cea959c10e30ecc143cbb73212b7401"
+"@accounts/password@0.1.0-beta.0":
+  version "0.1.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.1.0-beta.0.tgz#510b17bd7567bc9e6b1019dd93f8f0533abb37df"
   dependencies:
     bcryptjs "^2.4.3"
     lodash "^4.17.4"
 
-"@accounts/rest-express@0.1.0-alpha.311f89da":
-  version "0.1.0-alpha.311f89da"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.1.0-alpha.311f89da.tgz#6f043f446c0a7cec04c59b94d7b46110a83fd893"
+"@accounts/rest-express@0.1.0-beta.0":
+  version "0.1.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.1.0-beta.0.tgz#1d4836341da303d1bb011425dfbfb7325d6d5a2f"
   dependencies:
     express "^4.16.2"
     lodash "^4.17.4"
     request-ip "^2.0.2"
 
-"@accounts/server@0.1.0-alpha.fb3effeb":
-  version "0.1.0-alpha.fb3effeb"
-  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.1.0-alpha.fb3effeb.tgz#4ccbf9c9936483e87cf25d90bd0d06c81a2de99c"
+"@accounts/server@0.1.0-beta.0":
+  version "0.1.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.1.0-beta.0.tgz#d13e7c76dc7fdfeb9cbc8e622915101db3041ff1"
   dependencies:
-    "@accounts/common" "^0.1.0-alpha.fb3effeb"
+    "@accounts/common" "^0.1.0-beta.0"
     babel-polyfill "^6.23.0"
     bcryptjs "^2.4.0"
     crypto "^0.0.3"

@@ -9,11 +9,11 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@accounts/common": "0.1.0-alpha.fb3effeb",
-    "@accounts/mongo": "0.1.0-alpha.3b74316",
-    "@accounts/password": "0.1.0-alpha.04203cca",
-    "@accounts/rest-express": "0.1.0-alpha.311f89da",
-    "@accounts/server": "0.1.0-alpha.fb3effeb",
+    "@accounts/common": "0.1.0-beta.0",
+    "@accounts/mongo": "0.1.0-beta.0",
+    "@accounts/password": "0.1.0-beta.0",
+    "@accounts/rest-express": "0.1.0-beta.0",
+    "@accounts/server": "0.1.0-beta.0",
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "mongoose": "^5.0.7"

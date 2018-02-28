@@ -8,7 +8,7 @@ You must have a mongodb server running before starting the server.
 
 ```
 git clone https://github.com/accounts-js/examples.git
-cd rest-express
+cd rest-express-typescript
 yarn install
 ```
 

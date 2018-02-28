@@ -1,4 +1,4 @@
-# rest-express
+# rest-express-typescript
 
 This example demonstrate how to use [accounts-js](https://github.com/accounts-js/accounts).
 
@@ -18,4 +18,4 @@ Start the app.
 yarn start
 ```
 
-Open a browser and navigate to [http://localhost:3000](http://localhost:3000).
+Open a browser and navigate to [http://localhost:4000](http://localhost:4000).

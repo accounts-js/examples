@@ -11,7 +11,7 @@
   "dependencies": {
     "@accounts/common": "0.1.0-beta.2",
     "@accounts/mongo": "0.1.0-beta.1",
-    "@accounts/password": "0.1.0-beta.0",
+    "@accounts/password": "0.1.0-beta.2",
     "@accounts/rest-express": "0.1.0-beta.1",
     "@accounts/server": "0.1.0-beta.0",
     "cors": "2.8.4",

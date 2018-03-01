@@ -15,9 +15,9 @@
     lodash "^4.17.4"
     mongodb "^2.2.33"
 
-"@accounts/password@0.1.0-beta.0":
-  version "0.1.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.1.0-beta.0.tgz#510b17bd7567bc9e6b1019dd93f8f0533abb37df"
+"@accounts/password@0.1.0-beta.2":
+  version "0.1.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.1.0-beta.2.tgz#b439ecb476b9db371cd3fb8f7c2c667f8051c208"
   dependencies:
     bcryptjs "^2.4.3"
     lodash "^4.17.4"

@@ -9,7 +9,7 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@accounts/common": "0.1.0-beta.0",
+    "@accounts/common": "0.1.0-beta.2",
     "@accounts/mongo": "0.1.0-beta.1",
     "@accounts/password": "0.1.0-beta.0",
     "@accounts/rest-express": "0.1.0-beta.1",

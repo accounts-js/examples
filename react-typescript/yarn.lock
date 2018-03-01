@@ -20,9 +20,9 @@
   dependencies:
     lodash "^4.16.4"
 
-"@accounts/rest-client@0.1.0-beta.0":
-  version "0.1.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.1.0-beta.0.tgz#2391162cb6c740c795757a7623a9a0bdbb4d5687"
+"@accounts/rest-client@0.1.0-beta.1":
+  version "0.1.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.1.0-beta.1.tgz#32d453a8a03af2eac2f3bcc64fcd8c5d6fe28137"
   dependencies:
     lodash "^4.17.4"
 

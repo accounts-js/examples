@@ -8,9 +8,9 @@
   dependencies:
     lodash "^4.16.4"
 
-"@accounts/mongo@0.1.0-beta.0":
-  version "0.1.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.0.tgz#3f957bc09cfa3fac3cb229734cc0a8ae0962dfe0"
+"@accounts/mongo@0.1.0-beta.1":
+  version "0.1.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.1.tgz#25e1f07e77c4e6a540b286d41df7d5c202b0533f"
   dependencies:
     lodash "^4.17.4"
     mongodb "^2.2.33"

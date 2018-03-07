@@ -35,8 +35,7 @@ class Home extends React.Component<RouteComponentProps<{}>, State> {
   };
 
   onLogout = async () => {
-    // TODO remove null as any when next published
-    await accounts.logout(null as any);
+    await accounts.logout();
     this.props.history.push('/login');
   };
 

@@ -2,7 +2,13 @@
 # yarn lockfile v1
 
 
-"@accounts/common@0.1.0-beta.2", "@accounts/common@^0.1.0-beta.2":
+"@accounts/common@0.1.0-beta.3":
+  version "0.1.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.3.tgz#311a9676526160b37fcb8aec3526f3d0e0cad9e6"
+  dependencies:
+    lodash "^4.16.4"
+
+"@accounts/common@^0.1.0-beta.2":
   version "0.1.0-beta.2"
   resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.2.tgz#5ea493fac393b4e045c6007ab67aa4bf3e27dcb1"
   dependencies:

@@ -4,7 +4,7 @@ import * as cors from 'cors';
 import * as mongoose from 'mongoose';
 import { AccountsServer } from '@accounts/server';
 import { AccountsPassword } from '@accounts/password';
-import accountsExpress from '@accounts/rest-express';
+import accountsExpress, { userLoader } from '@accounts/rest-express';
 import MongoDBInterface from '@accounts/mongo';
 
 mongoose.connect('mongodb://localhost:27017/accounts-js-rest-example');
@@ -26,7 +26,7 @@ const accountsServer = new AccountsServer(
 );
 app.use(accountsExpress(accountsServer));
 
-app.get('/user', (req, res) => {
+app.get('/user', userLoader(accountsServer), (req, res) => {
   res.json({ user: req.user });
 });
 

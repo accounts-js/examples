@@ -14,7 +14,10 @@ class Home extends React.Component<RouteComponentProps<{}>, State> {
   };
 
   async componentDidMount() {
+    // configure the module first
     await accounts.config();
+    // refresh the session to get a new accessToken if expired
+    await accounts.refreshSession();
     const tokens = await accounts.tokens();
     if (!tokens.accessToken) {
       this.props.history.push('/login');

@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
+    "test": "react-scripts-ts test --env=jsdom && yarn build",
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
@@ -23,6 +23,7 @@
     "@types/node": "9.4.6",
     "@types/react": "16.0.40",
     "@types/react-dom": "16.0.4",
+    "@types/react-router": "4.0.22",
     "@types/react-router-dom": "4.2.4",
     "typescript": "2.7.2"
   }

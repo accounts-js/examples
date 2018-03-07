@@ -8,9 +8,5 @@ jobs:
       - checkout
       - run: yarn install --frozen-lockfile
       - run: yarn test
-      # test react-typescript
-      - run: cd react-typescript && yarn install --frozen-lockfile
-      - run: yarn test
-      # test rest-express-typescript
-      - run: cd rest-express-typescript && yarn install --frozen-lockfile
-      - run: yarn test
+      - run: cd react-typescript && yarn install --frozen-lockfile && yarn test
+      - run: cd rest-express-typescript && yarn install --frozen-lockfile && yarn test

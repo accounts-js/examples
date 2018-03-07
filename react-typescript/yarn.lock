@@ -2,27 +2,21 @@
 # yarn lockfile v1
 
 
-"@accounts/client@0.1.0-beta.2":
-  version "0.1.0-beta.2"
-  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.1.0-beta.2.tgz#76c40057de4061776ee2cbf0040dcb48f210b7f0"
+"@accounts/client@0.1.0-beta.3":
+  version "0.1.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.1.0-beta.3.tgz#bf3dd94f3d85524ce504af4dd99252899c5da5e9"
   dependencies:
-    "@accounts/common" "^0.1.0-beta.2"
+    "@accounts/common" "^0.1.0-beta.3"
     crypto-js "^3.1.9-1"
     immutable "^3.8.1"
     jwt-decode "^2.1.0"
     lodash "^4.16.4"
     redux "^3.7.2"
-    redux-immutable "^3.0.8"
+    redux-immutable "^4.0.0"
 
-"@accounts/common@0.1.0-beta.3":
+"@accounts/common@0.1.0-beta.3", "@accounts/common@^0.1.0-beta.3":
   version "0.1.0-beta.3"
   resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.3.tgz#311a9676526160b37fcb8aec3526f3d0e0cad9e6"
-  dependencies:
-    lodash "^4.16.4"
-
-"@accounts/common@^0.1.0-beta.2":
-  version "0.1.0-beta.2"
-  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.2.tgz#5ea493fac393b4e045c6007ab67aa4bf3e27dcb1"
   dependencies:
     lodash "^4.16.4"
 
@@ -4943,11 +4937,9 @@ reduce-function-call@^1.0.1:
   dependencies:
     balanced-match "^0.4.2"
 
-redux-immutable@^3.0.8:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/redux-immutable/-/redux-immutable-3.1.0.tgz#cafbd686e0711261119b9c28960935dc47a49d0a"
-  dependencies:
-    immutable "^3.8.1"
+redux-immutable@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/redux-immutable/-/redux-immutable-4.0.0.tgz#3a1a32df66366462b63691f0e1dc35e472bbc9f3"
 
 redux@^3.7.2:
   version "3.7.2"

@@ -28,6 +28,7 @@ const ResetPasswordLink = (props: any) => (
 interface State {
   email: string;
   password: string;
+  code: string;
   error: string | null;
 }
 
@@ -38,6 +39,7 @@ class Login extends React.Component<
   state = {
     email: '',
     password: '',
+    code: '',
     error: null,
   };
 
@@ -49,6 +51,10 @@ class Login extends React.Component<
     this.setState({ password: target.value });
   };
 
+  onChangeCode = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+    this.setState({ code: target.value });
+  };
+
   onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     this.setState({ error: null });
@@ -58,6 +64,7 @@ class Login extends React.Component<
           email: this.state.email,
         },
         password: this.state.password,
+        code: this.state.code,
       });
       this.props.history.push('/');
     } catch (err) {
@@ -67,7 +74,7 @@ class Login extends React.Component<
 
   render() {
     const { classes } = this.props;
-    const { email, password, error } = this.state;
+    const { email, password, code, error } = this.state;
     return (
       <form onSubmit={this.onSubmit} className={classes.formContainer}>
         <Typography variant="display1" gutterBottom>
@@ -85,6 +92,10 @@ class Login extends React.Component<
             value={password}
             onChange={this.onChangePassword}
           />
+        </FormControl>
+        <FormControl margin="normal">
+          <InputLabel htmlFor="password">2fa code if enabled</InputLabel>
+          <Input id="code" value={code} onChange={this.onChangeCode} />
         </FormControl>
         <Button variant="raised" color="primary" type="submit">
           Login

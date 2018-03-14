@@ -14,9 +14,9 @@
   dependencies:
     lodash "^4.16.4"
 
-"@accounts/mongo@0.1.0-beta.3":
-  version "0.1.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.3.tgz#f54fd211a220d0227e70a4492d9fd1eee13f3f28"
+"@accounts/mongo@0.1.0-beta.5":
+  version "0.1.0-beta.5"
+  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.5.tgz#f79df9226c770c95df19f309e089cf30aa393e7a"
   dependencies:
     lodash "^4.17.4"
     mongodb "^3.0.0"

@@ -14,7 +14,13 @@
     redux "^3.7.2"
     redux-immutable "^4.0.0"
 
-"@accounts/common@0.1.0-beta.3", "@accounts/common@^0.1.0-beta.3":
+"@accounts/common@0.1.0-beta.5":
+  version "0.1.0-beta.5"
+  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.5.tgz#5f1a8df175930d6586f4e938bdf2aec80ca6ed3a"
+  dependencies:
+    lodash "^4.16.4"
+
+"@accounts/common@^0.1.0-beta.3":
   version "0.1.0-beta.3"
   resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.3.tgz#311a9676526160b37fcb8aec3526f3d0e0cad9e6"
   dependencies:

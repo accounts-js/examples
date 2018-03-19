@@ -2,11 +2,11 @@
 # yarn lockfile v1
 
 
-"@accounts/client@0.1.0-beta.3":
-  version "0.1.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.1.0-beta.3.tgz#bf3dd94f3d85524ce504af4dd99252899c5da5e9"
+"@accounts/client@0.1.0-beta.5":
+  version "0.1.0-beta.5"
+  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.1.0-beta.5.tgz#043c3aa806a813cf472efa69a7173982cd58f8b5"
   dependencies:
-    "@accounts/common" "^0.1.0-beta.3"
+    "@accounts/common" "^0.1.0-beta.5"
     crypto-js "^3.1.9-1"
     immutable "^3.8.1"
     jwt-decode "^2.1.0"
@@ -14,15 +14,15 @@
     redux "^3.7.2"
     redux-immutable "^4.0.0"
 
-"@accounts/common@0.1.0-beta.3", "@accounts/common@^0.1.0-beta.3":
-  version "0.1.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.3.tgz#311a9676526160b37fcb8aec3526f3d0e0cad9e6"
+"@accounts/common@0.1.0-beta.5", "@accounts/common@^0.1.0-beta.5":
+  version "0.1.0-beta.5"
+  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.5.tgz#5f1a8df175930d6586f4e938bdf2aec80ca6ed3a"
   dependencies:
     lodash "^4.16.4"
 
-"@accounts/rest-client@0.1.0-beta.2":
-  version "0.1.0-beta.2"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.1.0-beta.2.tgz#6e1b6314a1773e303771461839e9273acfa8997a"
+"@accounts/rest-client@0.1.0-beta.5":
+  version "0.1.0-beta.5"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.1.0-beta.5.tgz#aa2fc361ee535fa802529900b315f66ed95e6b0f"
   dependencies:
     lodash "^4.17.4"
 
@@ -59,17 +59,24 @@
     "@types/node" "*"
     "@types/react" "*"
 
-"@types/react-router-dom@4.2.4":
-  version "4.2.4"
-  resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-4.2.4.tgz#02c43274129ffe0ac42b348f7c8c4a9a4e127c8a"
+"@types/react-router-dom@4.2.5":
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-4.2.5.tgz#a6fc921f1008567eae35244e30f34f5f7655d5f0"
   dependencies:
     "@types/history" "*"
     "@types/react" "*"
     "@types/react-router" "*"
 
-"@types/react-router@*", "@types/react-router@4.0.22":
+"@types/react-router@*":
   version "4.0.22"
   resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-4.0.22.tgz#2b97336eddfdf5886973539539b8ce7037cf629b"
+  dependencies:
+    "@types/history" "*"
+    "@types/react" "*"
+
+"@types/react-router@4.0.23":
+  version "4.0.23"
+  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-4.0.23.tgz#d0509dcbdb1c686aed8f3d5cb186f42e5fbe7c2a"
   dependencies:
     "@types/history" "*"
     "@types/react" "*"

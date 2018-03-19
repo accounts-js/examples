@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@accounts/client": "0.1.0-beta.3",
-    "@accounts/common": "0.1.0-beta.3",
-    "@accounts/rest-client": "0.1.0-beta.2",
+    "@accounts/client": "0.1.0-beta.5",
+    "@accounts/common": "0.1.0-beta.5",
+    "@accounts/rest-client": "0.1.0-beta.5",
     "material-ui": "1.0.0-beta.36",
     "qrcode.react": "^0.8.0",
     "react": "16.2.0",
@@ -25,8 +25,8 @@
     "@types/qrcode.react": "^0.6.3",
     "@types/react": "16.0.40",
     "@types/react-dom": "16.0.4",
-    "@types/react-router": "4.0.22",
-    "@types/react-router-dom": "4.2.4",
+    "@types/react-router": "4.0.23",
+    "@types/react-router-dom": "4.2.5",
     "typescript": "2.7.2"
   }
 }

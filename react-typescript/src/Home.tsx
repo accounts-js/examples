@@ -1,16 +1,19 @@
 import * as React from 'react';
-import { RouteComponentProps } from 'react-router-dom';
+import { RouteComponentProps, Link } from 'react-router-dom';
 import { Button, Typography } from 'material-ui';
+import * as QRCode from 'qrcode.react';
 
 import { accounts, accountsRest } from './accounts';
 
 interface State {
   user: any;
+  twoFactorSecret: any;
 }
 
 class Home extends React.Component<RouteComponentProps<{}>, State> {
   state = {
-    user: null,
+    user: null as any,
+    twoFactorSecret: null as any,
   };
 
   async componentDidMount() {
@@ -33,7 +36,7 @@ class Home extends React.Component<RouteComponentProps<{}>, State> {
   }
 
   onResendEmail = async () => {
-    const { user }: State = this.state;
+    const { user } = this.state;
     await accountsRest.sendVerificationEmail(user.emails[0].address);
   };
 
@@ -43,7 +46,7 @@ class Home extends React.Component<RouteComponentProps<{}>, State> {
   };
 
   render() {
-    const { user }: State = this.state;
+    const { user, twoFactorSecret } = this.state;
     if (!user) {
       return null;
     }
@@ -58,6 +61,14 @@ class Home extends React.Component<RouteComponentProps<{}>, State> {
           <Button onClick={this.onResendEmail}>
             Resend verification email
           </Button>
+        )}
+
+        <Link to="two-factor">Set up 2fa</Link>
+
+        {twoFactorSecret && (
+          <div>
+            <QRCode value={twoFactorSecret.otpauth_url} />
+          </div>
         )}
 
         <Button variant="raised" color="primary" onClick={this.onLogout}>

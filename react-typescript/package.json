@@ -7,6 +7,7 @@
     "@accounts/common": "0.1.0-beta.5",
     "@accounts/rest-client": "0.1.0-beta.5",
     "material-ui": "1.0.0-beta.36",
+    "qrcode.react": "^0.8.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-router-dom": "4.2.2",
@@ -21,6 +22,7 @@
   "devDependencies": {
     "@types/jest": "22.2.0",
     "@types/node": "9.4.7",
+    "@types/qrcode.react": "^0.6.3",
     "@types/react": "16.0.40",
     "@types/react-dom": "16.0.4",
     "@types/react-router": "4.0.23",

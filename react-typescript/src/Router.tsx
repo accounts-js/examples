@@ -7,6 +7,7 @@ import Login from './Login';
 import Home from './Home';
 import ResetPassword from './ResetPassword';
 import VerifyEmail from './VerifyEmail';
+import TwoFactor from './TwoFactor';
 
 const styles = () => ({
   root: {
@@ -27,6 +28,8 @@ const Router = ({ classes }: WithStyles<'root' | 'container'>) => {
           <Paper className={classes.container}>
             <Reboot />
             <Route exact path="/" component={Home} />
+            <Route path="/two-factor" component={TwoFactor} />
+
             <Route path="/signup" component={Signup} />
             <Route path="/login" component={Login} />
             <Route exact path="/reset-password" component={ResetPassword} />

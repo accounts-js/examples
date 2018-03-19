@@ -537,9 +537,9 @@ mongoose-legacy-pluralize@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/mongoose-legacy-pluralize/-/mongoose-legacy-pluralize-1.0.2.tgz#3ba9f91fa507b5186d399fb40854bff18fb563e4"
 
-mongoose@5.0.10:
-  version "5.0.10"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.0.10.tgz#5945b4acc137b1c6acf546d64da1070bc4c4965a"
+mongoose@5.0.11:
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.0.11.tgz#bb31a98591cd2377312ded28155281110a9e1da0"
   dependencies:
     async "2.1.4"
     bson "~1.0.4"

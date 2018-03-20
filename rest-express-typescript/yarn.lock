@@ -14,10 +14,11 @@
   dependencies:
     lodash "^4.16.4"
 
-"@accounts/mongo@0.1.0-beta.5":
-  version "0.1.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.5.tgz#f79df9226c770c95df19f309e089cf30aa393e7a"
+"@accounts/mongo@0.1.0-beta.7":
+  version "0.1.0-beta.7"
+  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.7.tgz#0664916417e874b74792bd6b88b1365f615bf71b"
   dependencies:
+    "@accounts/types" "^0.1.0-beta.7"
     lodash "^4.17.4"
     mongodb "^3.0.0"
 

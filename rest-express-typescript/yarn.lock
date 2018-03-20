@@ -15,11 +15,11 @@
     lodash "^4.17.4"
     mongodb "^3.0.0"
 
-"@accounts/password@0.1.0-beta.5":
-  version "0.1.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.1.0-beta.5.tgz#5e6f2dd791426d22f79388b2fed3b9592d1c536d"
+"@accounts/password@0.1.0-beta.7":
+  version "0.1.0-beta.7"
+  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.1.0-beta.7.tgz#b86eff2ba9285de88847ea11a41554adb0f9c118"
   dependencies:
-    "@accounts/two-factor" "^0.1.0-beta.5"
+    "@accounts/two-factor" "^0.1.0-beta.7"
     bcryptjs "^2.4.3"
     lodash "^4.17.4"
 
@@ -42,15 +42,25 @@
     jwt-decode "^2.1.0"
     lodash "^4.16.4"
 
-"@accounts/two-factor@^0.1.0-beta.5":
-  version "0.1.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@accounts/two-factor/-/two-factor-0.1.0-beta.5.tgz#37208e84843435ad09e1e873f265104e1e6e5562"
+"@accounts/two-factor@^0.1.0-beta.7":
+  version "0.1.0-beta.7"
+  resolved "https://registry.yarnpkg.com/@accounts/two-factor/-/two-factor-0.1.0-beta.7.tgz#8292822ca48843af09071bc588def0323418a44a"
   dependencies:
+    "@accounts/types" "^0.1.0-beta.7"
+    "@types/speakeasy" "2.0.2"
     speakeasy "^2.0.0"
+
+"@accounts/types@^0.1.0-beta.7":
+  version "0.1.0-beta.7"
+  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.7.tgz#49b0fa2fa315f912676de4abc3ae739da7a8c0ac"
 
 "@types/node@9.4.7":
   version "9.4.7"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-9.4.7.tgz#57d81cd98719df2c9de118f2d5f3b1120dcd7275"
+
+"@types/speakeasy@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@types/speakeasy/-/speakeasy-2.0.2.tgz#153ec3636eea0562209b0a2f1fdf8b479286919b"
 
 accepts@~1.3.4:
   version "1.3.4"

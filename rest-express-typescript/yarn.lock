@@ -2,15 +2,9 @@
 # yarn lockfile v1
 
 
-"@accounts/common@0.1.0-beta.7":
+"@accounts/common@0.1.0-beta.7", "@accounts/common@^0.1.0-beta.7":
   version "0.1.0-beta.7"
   resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.7.tgz#56d3e166c3167b8fc773ae7bb32b077b2ed5f828"
-  dependencies:
-    lodash "^4.16.4"
-
-"@accounts/common@^0.1.0-beta.5":
-  version "0.1.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.5.tgz#5f1a8df175930d6586f4e938bdf2aec80ca6ed3a"
   dependencies:
     lodash "^4.16.4"
 
@@ -38,13 +32,15 @@
     lodash "^4.17.4"
     request-ip "^2.0.2"
 
-"@accounts/server@0.1.0-beta.5":
-  version "0.1.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.1.0-beta.5.tgz#bdb00c80f0ab86d96082ec455747619a8f3c3f6c"
+"@accounts/server@0.1.0-beta.7":
+  version "0.1.0-beta.7"
+  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.1.0-beta.7.tgz#ac678d65ca4d23f18f799bdecedc13377209abfa"
   dependencies:
-    "@accounts/common" "^0.1.0-beta.5"
+    "@accounts/common" "^0.1.0-beta.7"
+    "@accounts/types" "^0.1.0-beta.7"
     babel-polyfill "^6.23.0"
     bcryptjs "^2.4.0"
+    emittery "^0.3.0"
     jsonwebtoken "^8.0.0"
     jwt-decode "^2.1.0"
     lodash "^4.16.4"
@@ -238,6 +234,10 @@ ecdsa-sig-formatter@1.0.9:
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
+
+emittery@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.3.0.tgz#e6dcedabae804b5478c760335ecbbaf159da645c"
 
 encodeurl@~1.0.1:
   version "1.0.1"

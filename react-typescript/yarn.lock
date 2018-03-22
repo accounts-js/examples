@@ -30,9 +30,9 @@
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.6.2.tgz#12cfaba693ba20f114ed5765467ff25fdf67ddb0"
 
-"@types/jest@22.2.1":
-  version "22.2.1"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-22.2.1.tgz#fe798757afc13880e03e3644a3448d7b3dd878d8"
+"@types/jest@22.2.2":
+  version "22.2.2"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-22.2.2.tgz#afe5dacbd00d65325f52da0ed3e76e259629ac9d"
 
 "@types/jss@^9.3.0":
   version "9.3.1"

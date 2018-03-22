@@ -57,9 +57,9 @@
   version "0.1.0-beta.7"
   resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.7.tgz#49b0fa2fa315f912676de4abc3ae739da7a8c0ac"
 
-"@types/node@9.4.7":
-  version "9.4.7"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.4.7.tgz#57d81cd98719df2c9de118f2d5f3b1120dcd7275"
+"@types/node@9.6.0":
+  version "9.6.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.0.tgz#d3480ee666df9784b1001a1872a2f6ccefb6c2d7"
 
 "@types/speakeasy@2.0.2":
   version "2.0.2"

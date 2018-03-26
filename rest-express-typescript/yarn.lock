@@ -2,15 +2,9 @@
 # yarn lockfile v1
 
 
-"@accounts/common@0.1.0-beta.9":
+"@accounts/common@0.1.0-beta.9", "@accounts/common@^0.1.0-beta.9":
   version "0.1.0-beta.9"
   resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.9.tgz#7b6c61eb7798d13083afba7db3f820c2f03c808a"
-  dependencies:
-    lodash "^4.16.4"
-
-"@accounts/common@^0.1.0-beta.7":
-  version "0.1.0-beta.7"
-  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.7.tgz#56d3e166c3167b8fc773ae7bb32b077b2ed5f828"
   dependencies:
     lodash "^4.16.4"
 
@@ -38,12 +32,12 @@
     lodash "^4.17.4"
     request-ip "^2.0.2"
 
-"@accounts/server@0.1.0-beta.7":
-  version "0.1.0-beta.7"
-  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.1.0-beta.7.tgz#ac678d65ca4d23f18f799bdecedc13377209abfa"
+"@accounts/server@0.1.0-beta.9":
+  version "0.1.0-beta.9"
+  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.1.0-beta.9.tgz#c159752caacb39a3674a7beb8d201d6489b02dd5"
   dependencies:
-    "@accounts/common" "^0.1.0-beta.7"
-    "@accounts/types" "^0.1.0-beta.7"
+    "@accounts/common" "^0.1.0-beta.9"
+    "@accounts/types" "^0.1.0-beta.9"
     babel-polyfill "^6.23.0"
     bcryptjs "^2.4.0"
     emittery "^0.3.0"

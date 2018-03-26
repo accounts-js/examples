@@ -8,11 +8,11 @@
   dependencies:
     lodash "^4.16.4"
 
-"@accounts/mongo@0.1.0-beta.7":
-  version "0.1.0-beta.7"
-  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.7.tgz#0664916417e874b74792bd6b88b1365f615bf71b"
+"@accounts/mongo@0.1.0-beta.9":
+  version "0.1.0-beta.9"
+  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.9.tgz#b274e20e6a6ed88e0f05420e21df40dffabbc9d5"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.7"
+    "@accounts/types" "^0.1.0-beta.9"
     lodash "^4.17.4"
     mongodb "^3.0.0"
 
@@ -56,6 +56,10 @@
 "@accounts/types@^0.1.0-beta.7":
   version "0.1.0-beta.7"
   resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.7.tgz#49b0fa2fa315f912676de4abc3ae739da7a8c0ac"
+
+"@accounts/types@^0.1.0-beta.9":
+  version "0.1.0-beta.9"
+  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.9.tgz#2901c75f77464298d606a9d5af3c63517ab3d7db"
 
 "@types/node@9.6.0":
   version "9.6.0"

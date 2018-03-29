@@ -8,8 +8,8 @@
     "@accounts/rest-client": "0.1.0-beta.10",
     "material-ui": "1.0.0-beta.36",
     "qrcode.react": "0.8.0",
-    "react": "16.2.0",
-    "react-dom": "16.2.0",
+    "react": "16.3.0",
+    "react-dom": "16.3.0",
     "react-router-dom": "4.2.2",
     "react-scripts-ts": "2.13.0"
   },

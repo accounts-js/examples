@@ -14,23 +14,22 @@
     redux "^3.7.2"
     redux-immutable "^4.0.0"
 
-"@accounts/common@0.1.0-beta.9":
-  version "0.1.0-beta.9"
-  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.9.tgz#7b6c61eb7798d13083afba7db3f820c2f03c808a"
-  dependencies:
-    lodash "^4.16.4"
-
-"@accounts/common@^0.1.0-beta.10":
+"@accounts/common@0.1.0-beta.10", "@accounts/common@^0.1.0-beta.10":
   version "0.1.0-beta.10"
   resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.10.tgz#196427a40c32bbc487ac39653581b4297c9a3f54"
   dependencies:
     lodash "^4.16.4"
 
-"@accounts/rest-client@0.1.0-beta.5":
-  version "0.1.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.1.0-beta.5.tgz#aa2fc361ee535fa802529900b315f66ed95e6b0f"
+"@accounts/rest-client@0.1.0-beta.10":
+  version "0.1.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.1.0-beta.10.tgz#dfe355f956e7d5476e2b28727a7a3a7f63e6f2f7"
   dependencies:
+    "@accounts/types" "^0.1.0-beta.10"
     lodash "^4.17.4"
+
+"@accounts/types@^0.1.0-beta.10":
+  version "0.1.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.10.tgz#72225c82b062fd05ac644196d5f7c5247a06060d"
 
 "@types/history@*":
   version "4.6.2"

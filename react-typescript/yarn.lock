@@ -2,11 +2,11 @@
 # yarn lockfile v1
 
 
-"@accounts/client@0.1.0-beta.9":
-  version "0.1.0-beta.9"
-  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.1.0-beta.9.tgz#f329d49a504cbbfcd07d5eee9622b07418a62d94"
+"@accounts/client@0.1.0-beta.10":
+  version "0.1.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.1.0-beta.10.tgz#cd92a330efa79a4fc2aa27d6b1bf712fe0f96046"
   dependencies:
-    "@accounts/common" "^0.1.0-beta.9"
+    "@accounts/common" "^0.1.0-beta.10"
     crypto-js "^3.1.9-1"
     immutable "^3.8.1"
     jwt-decode "^2.1.0"
@@ -14,9 +14,15 @@
     redux "^3.7.2"
     redux-immutable "^4.0.0"
 
-"@accounts/common@0.1.0-beta.9", "@accounts/common@^0.1.0-beta.9":
+"@accounts/common@0.1.0-beta.9":
   version "0.1.0-beta.9"
   resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.9.tgz#7b6c61eb7798d13083afba7db3f820c2f03c808a"
+  dependencies:
+    lodash "^4.16.4"
+
+"@accounts/common@^0.1.0-beta.10":
+  version "0.1.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.10.tgz#196427a40c32bbc487ac39653581b4297c9a3f54"
   dependencies:
     lodash "^4.16.4"
 

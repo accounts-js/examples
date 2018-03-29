@@ -8,11 +8,11 @@
   dependencies:
     lodash "^4.16.4"
 
-"@accounts/mongo@0.1.0-beta.9":
-  version "0.1.0-beta.9"
-  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.9.tgz#b274e20e6a6ed88e0f05420e21df40dffabbc9d5"
+"@accounts/mongo@0.1.0-beta.10":
+  version "0.1.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.10.tgz#6219bd264fff385265cd6ac3b4f16b828486399c"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.9"
+    "@accounts/types" "^0.1.0-beta.10"
     lodash "^4.17.4"
     mongodb "^3.0.0"
 
@@ -52,6 +52,10 @@
     "@accounts/types" "^0.1.0-beta.9"
     "@types/speakeasy" "2.0.2"
     speakeasy "^2.0.0"
+
+"@accounts/types@^0.1.0-beta.10":
+  version "0.1.0-beta.10"
+  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.10.tgz#72225c82b062fd05ac644196d5f7c5247a06060d"
 
 "@accounts/types@^0.1.0-beta.9":
   version "0.1.0-beta.9"

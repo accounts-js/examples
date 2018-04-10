@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@types/jest": "22.2.2",
-    "@types/node": "9.6.2",
+    "@types/node": "9.6.4",
     "@types/qrcode.react": "0.6.3",
     "@types/react": "16.0.41",
     "@types/react-dom": "16.0.5",

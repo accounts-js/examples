@@ -12,7 +12,7 @@
     "trailingComma": "es5"
   },
   "renovate": {
-    "extends": ["config:base"],
+    "extends": ["config:base", "schedule:weekly"],
     "automerge": true,
     "major": {
       "automerge": false

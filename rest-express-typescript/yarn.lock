@@ -2,42 +2,42 @@
 # yarn lockfile v1
 
 
-"@accounts/common@0.1.0-beta.10", "@accounts/common@^0.1.0-beta.10":
-  version "0.1.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.10.tgz#196427a40c32bbc487ac39653581b4297c9a3f54"
+"@accounts/common@0.1.0-beta.11", "@accounts/common@^0.1.0-beta.11":
+  version "0.1.0-beta.11"
+  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.11.tgz#025d788a17f1ca6dcfcc93213e0bf45341a6041e"
   dependencies:
-    lodash "^4.16.4"
+    lodash "^4.17.10"
 
-"@accounts/mongo@0.1.0-beta.10":
-  version "0.1.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.10.tgz#6219bd264fff385265cd6ac3b4f16b828486399c"
+"@accounts/mongo@0.1.0-beta.11":
+  version "0.1.0-beta.11"
+  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.11.tgz#37f49c7beb4cc71d1f37dac572306a30212d5839"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.10"
+    "@accounts/types" "^0.1.0-beta.11"
     lodash "^4.17.4"
     mongodb "^3.0.0"
 
-"@accounts/password@0.1.0-beta.10":
-  version "0.1.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.1.0-beta.10.tgz#31b4561915a9fdab4a9f3cae14d8e30f9a8e1574"
+"@accounts/password@0.1.0-beta.11":
+  version "0.1.0-beta.11"
+  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.1.0-beta.11.tgz#02e2c514b434a002e0431ef81beb86104419d19b"
   dependencies:
-    "@accounts/two-factor" "^0.1.0-beta.10"
+    "@accounts/two-factor" "^0.1.0-beta.11"
     bcryptjs "^2.4.3"
     lodash "^4.17.4"
 
-"@accounts/rest-express@0.1.0-beta.10":
-  version "0.1.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.1.0-beta.10.tgz#8286e0898fd2f9f86c21ad77b60c6c1ac3bdc423"
+"@accounts/rest-express@0.1.0-beta.11":
+  version "0.1.0-beta.11"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.1.0-beta.11.tgz#d7dc15e42f8bcb39cba063e4aaf08c49f5c34e53"
   dependencies:
     express "^4.16.2"
     lodash "^4.17.4"
     request-ip "^2.0.2"
 
-"@accounts/server@0.1.0-beta.10":
-  version "0.1.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.1.0-beta.10.tgz#aadd3782d5e3d16459ed3ebd3987cfe4ae2dac87"
+"@accounts/server@0.1.0-beta.11":
+  version "0.1.0-beta.11"
+  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.1.0-beta.11.tgz#435fc163b68acc5e075e27046062666d6b033f74"
   dependencies:
-    "@accounts/common" "^0.1.0-beta.10"
-    "@accounts/types" "^0.1.0-beta.10"
+    "@accounts/common" "^0.1.0-beta.11"
+    "@accounts/types" "^0.1.0-beta.11"
     babel-polyfill "^6.23.0"
     bcryptjs "^2.4.0"
     emittery "^0.3.0"
@@ -45,17 +45,23 @@
     jwt-decode "^2.1.0"
     lodash "^4.16.4"
 
-"@accounts/two-factor@^0.1.0-beta.10":
-  version "0.1.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@accounts/two-factor/-/two-factor-0.1.0-beta.10.tgz#23480994c34348468012c485db2a9ecc681d79d8"
+"@accounts/two-factor@^0.1.0-beta.11":
+  version "0.1.0-beta.11"
+  resolved "https://registry.yarnpkg.com/@accounts/two-factor/-/two-factor-0.1.0-beta.11.tgz#581de9d810b310aec7c5978c5be7cb114e4b54e4"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.10"
+    "@accounts/types" "^0.1.0-beta.11"
+    "@types/lodash" "^4.14.108"
     "@types/speakeasy" "2.0.2"
+    lodash "^4.17.10"
     speakeasy "^2.0.0"
 
-"@accounts/types@^0.1.0-beta.10":
-  version "0.1.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.10.tgz#72225c82b062fd05ac644196d5f7c5247a06060d"
+"@accounts/types@^0.1.0-beta.11":
+  version "0.1.0-beta.11"
+  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.11.tgz#7197655757f057dfff92a3c6396ab7700b777fb9"
+
+"@types/lodash@^4.14.108":
+  version "4.14.109"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.109.tgz#b1c4442239730bf35cabaf493c772b18c045886d"
 
 "@types/node@9.6.15":
   version "9.6.15"
@@ -473,6 +479,10 @@ lodash.once@^4.0.0:
 lodash@^4.14.0, lodash@^4.16.4, lodash@^4.17.4:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+
+lodash@^4.17.10:
+  version "4.17.10"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 
 make-error@^1.1.1:
   version "1.3.4"

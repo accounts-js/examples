@@ -2,11 +2,11 @@
 # yarn lockfile v1
 
 
-"@accounts/client@0.1.0-beta.10":
-  version "0.1.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.1.0-beta.10.tgz#cd92a330efa79a4fc2aa27d6b1bf712fe0f96046"
+"@accounts/client@0.1.0-beta.11":
+  version "0.1.0-beta.11"
+  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.1.0-beta.11.tgz#c036a6cbd8b0d8d5dbb8ef88c95c653eb019897f"
   dependencies:
-    "@accounts/common" "^0.1.0-beta.10"
+    "@accounts/common" "^0.1.0-beta.11"
     crypto-js "^3.1.9-1"
     immutable "^3.8.1"
     jwt-decode "^2.1.0"
@@ -14,22 +14,22 @@
     redux "^3.7.2"
     redux-immutable "^4.0.0"
 
-"@accounts/common@0.1.0-beta.10", "@accounts/common@^0.1.0-beta.10":
-  version "0.1.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.10.tgz#196427a40c32bbc487ac39653581b4297c9a3f54"
+"@accounts/common@0.1.0-beta.11", "@accounts/common@^0.1.0-beta.11":
+  version "0.1.0-beta.11"
+  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.11.tgz#025d788a17f1ca6dcfcc93213e0bf45341a6041e"
   dependencies:
-    lodash "^4.16.4"
+    lodash "^4.17.10"
 
-"@accounts/rest-client@0.1.0-beta.10":
-  version "0.1.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.1.0-beta.10.tgz#dfe355f956e7d5476e2b28727a7a3a7f63e6f2f7"
+"@accounts/rest-client@0.1.0-beta.11":
+  version "0.1.0-beta.11"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.1.0-beta.11.tgz#4ea56b35027f3ef6b1c15769f8a5b9352b8cd9fd"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.10"
+    "@accounts/types" "^0.1.0-beta.11"
     lodash "^4.17.4"
 
-"@accounts/types@^0.1.0-beta.10":
-  version "0.1.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.10.tgz#72225c82b062fd05ac644196d5f7c5247a06060d"
+"@accounts/types@^0.1.0-beta.11":
+  version "0.1.0-beta.11"
+  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.11.tgz#7197655757f057dfff92a3c6396ab7700b777fb9"
 
 "@types/history@*":
   version "4.6.2"
@@ -3817,6 +3817,10 @@ lodash.uniq@^4.5.0:
 "lodash@>=3.5 <5", lodash@^4.14.0, lodash@^4.16.4, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
   version "4.17.5"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
+
+lodash@^4.17.10:
+  version "4.17.10"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 
 loglevel@^1.4.1:
   version "1.6.1"

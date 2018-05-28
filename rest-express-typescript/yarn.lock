@@ -2,42 +2,42 @@
 # yarn lockfile v1
 
 
-"@accounts/common@0.1.0-beta.11", "@accounts/common@^0.1.0-beta.11":
-  version "0.1.0-beta.11"
-  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.11.tgz#025d788a17f1ca6dcfcc93213e0bf45341a6041e"
+"@accounts/common@0.1.0-beta.12", "@accounts/common@^0.1.0-beta.12":
+  version "0.1.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.12.tgz#9b449ef6db93ce35bb9be4c3cddc1a5229329a93"
   dependencies:
     lodash "^4.17.10"
 
-"@accounts/mongo@0.1.0-beta.11":
-  version "0.1.0-beta.11"
-  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.11.tgz#37f49c7beb4cc71d1f37dac572306a30212d5839"
+"@accounts/mongo@0.1.0-beta.12":
+  version "0.1.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.12.tgz#adf2d4feaad2c991ae42725b2a93c6f0837e977b"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.11"
+    "@accounts/types" "^0.1.0-beta.12"
     lodash "^4.17.4"
     mongodb "^3.0.0"
 
-"@accounts/password@0.1.0-beta.11":
-  version "0.1.0-beta.11"
-  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.1.0-beta.11.tgz#02e2c514b434a002e0431ef81beb86104419d19b"
+"@accounts/password@0.1.0-beta.12":
+  version "0.1.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.1.0-beta.12.tgz#b89f224898c61bd764692a88b36c036ff9aae2b5"
   dependencies:
-    "@accounts/two-factor" "^0.1.0-beta.11"
+    "@accounts/two-factor" "^0.1.0-beta.12"
     bcryptjs "^2.4.3"
     lodash "^4.17.4"
 
-"@accounts/rest-express@0.1.0-beta.11":
-  version "0.1.0-beta.11"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.1.0-beta.11.tgz#d7dc15e42f8bcb39cba063e4aaf08c49f5c34e53"
+"@accounts/rest-express@0.1.0-beta.12":
+  version "0.1.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.1.0-beta.12.tgz#65b6728d01e3f83e65466d7632c98e14fc424105"
   dependencies:
     express "^4.16.2"
     lodash "^4.17.4"
     request-ip "^2.0.2"
 
-"@accounts/server@0.1.0-beta.11":
-  version "0.1.0-beta.11"
-  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.1.0-beta.11.tgz#435fc163b68acc5e075e27046062666d6b033f74"
+"@accounts/server@0.1.0-beta.12":
+  version "0.1.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.1.0-beta.12.tgz#a324b67591039be91723a6d0b55cdbe67b2d439b"
   dependencies:
-    "@accounts/common" "^0.1.0-beta.11"
-    "@accounts/types" "^0.1.0-beta.11"
+    "@accounts/common" "^0.1.0-beta.12"
+    "@accounts/types" "^0.1.0-beta.12"
     babel-polyfill "^6.23.0"
     bcryptjs "^2.4.0"
     emittery "^0.3.0"
@@ -45,19 +45,19 @@
     jwt-decode "^2.1.0"
     lodash "^4.16.4"
 
-"@accounts/two-factor@^0.1.0-beta.11":
-  version "0.1.0-beta.11"
-  resolved "https://registry.yarnpkg.com/@accounts/two-factor/-/two-factor-0.1.0-beta.11.tgz#581de9d810b310aec7c5978c5be7cb114e4b54e4"
+"@accounts/two-factor@^0.1.0-beta.12":
+  version "0.1.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@accounts/two-factor/-/two-factor-0.1.0-beta.12.tgz#fa3fda4f4dc92abcf14c960ad4f3e4a55ac3b919"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.11"
+    "@accounts/types" "^0.1.0-beta.12"
     "@types/lodash" "^4.14.108"
     "@types/speakeasy" "2.0.2"
     lodash "^4.17.10"
     speakeasy "^2.0.0"
 
-"@accounts/types@^0.1.0-beta.11":
-  version "0.1.0-beta.11"
-  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.11.tgz#7197655757f057dfff92a3c6396ab7700b777fb9"
+"@accounts/types@^0.1.0-beta.12":
+  version "0.1.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.12.tgz#83393777c1b7a69b8772f5ef15bbe9d9f1fc1619"
 
 "@types/lodash@^4.14.108":
   version "4.14.109"

@@ -2,11 +2,11 @@
 # yarn lockfile v1
 
 
-"@accounts/client@0.1.0-beta.11":
-  version "0.1.0-beta.11"
-  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.1.0-beta.11.tgz#c036a6cbd8b0d8d5dbb8ef88c95c653eb019897f"
+"@accounts/client@0.1.0-beta.12":
+  version "0.1.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.1.0-beta.12.tgz#c90670e8485a07b7c4d7db0deee3cea5e14df763"
   dependencies:
-    "@accounts/common" "^0.1.0-beta.11"
+    "@accounts/common" "^0.1.0-beta.12"
     crypto-js "^3.1.9-1"
     immutable "^3.8.1"
     jwt-decode "^2.1.0"
@@ -14,22 +14,22 @@
     redux "^3.7.2"
     redux-immutable "^4.0.0"
 
-"@accounts/common@0.1.0-beta.11", "@accounts/common@^0.1.0-beta.11":
-  version "0.1.0-beta.11"
-  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.11.tgz#025d788a17f1ca6dcfcc93213e0bf45341a6041e"
+"@accounts/common@0.1.0-beta.12", "@accounts/common@^0.1.0-beta.12":
+  version "0.1.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.12.tgz#9b449ef6db93ce35bb9be4c3cddc1a5229329a93"
   dependencies:
     lodash "^4.17.10"
 
-"@accounts/rest-client@0.1.0-beta.11":
-  version "0.1.0-beta.11"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.1.0-beta.11.tgz#4ea56b35027f3ef6b1c15769f8a5b9352b8cd9fd"
+"@accounts/rest-client@0.1.0-beta.12":
+  version "0.1.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.1.0-beta.12.tgz#d221f05b537842e434722545e63cf1a9130dff9d"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.11"
+    "@accounts/types" "^0.1.0-beta.12"
     lodash "^4.17.4"
 
-"@accounts/types@^0.1.0-beta.11":
-  version "0.1.0-beta.11"
-  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.11.tgz#7197655757f057dfff92a3c6396ab7700b777fb9"
+"@accounts/types@^0.1.0-beta.12":
+  version "0.1.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.12.tgz#83393777c1b7a69b8772f5ef15bbe9d9f1fc1619"
 
 "@types/history@*":
   version "4.6.2"

@@ -9,7 +9,7 @@ import {
 } from 'material-ui';
 import * as QRCode from 'qrcode.react';
 
-import { accounts, accountsRest } from './accounts';
+import { accountsClient, accountsRest } from './accounts';
 
 interface State {
   secret: any;
@@ -37,16 +37,13 @@ class TwoFactor extends React.Component<RouteComponentProps<{}>, State> {
 
   onSetTwoFactor = async () => {
     try {
-      // configure the module first
-      await accounts.config();
       // refresh the session to get a new accessToken if expired
-      await accounts.refreshSession();
-      const tokens = await accounts.tokens();
+      const tokens = await accountsClient.refreshSession();
       await accountsRest.twoFactorSet(
         this.state.secret,
         this.state.oneTimeCode,
         {
-          'accounts-access-token': tokens.accessToken,
+          'accounts-access-token': tokens ? tokens.accessToken : null,
         }
       );
     } catch (err) {

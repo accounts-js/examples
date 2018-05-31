@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { RouteComponentProps, Link } from 'react-router-dom';
 import { Button, Typography } from 'material-ui';
-import * as QRCode from 'qrcode.react';
 
 import { accountsClient, accountsRest } from './accounts';
 
@@ -43,7 +42,7 @@ class Home extends React.Component<RouteComponentProps<{}>, State> {
   };
 
   render() {
-    const { user, twoFactorSecret } = this.state;
+    const { user } = this.state;
     if (!user) {
       return null;
     }
@@ -61,12 +60,6 @@ class Home extends React.Component<RouteComponentProps<{}>, State> {
         )}
 
         <Link to="two-factor">Set up 2fa</Link>
-
-        {twoFactorSecret && (
-          <div>
-            <QRCode value={twoFactorSecret.otpauth_url} />
-          </div>
-        )}
 
         <Button variant="raised" color="primary" onClick={this.onLogout}>
           Logout

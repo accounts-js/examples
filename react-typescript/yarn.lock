@@ -2,34 +2,37 @@
 # yarn lockfile v1
 
 
-"@accounts/client@0.1.0-beta.12":
-  version "0.1.0-beta.12"
-  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.1.0-beta.12.tgz#c90670e8485a07b7c4d7db0deee3cea5e14df763"
+"@accounts/client-password@0.1.0-beta.14":
+  version "0.1.0-beta.14"
+  resolved "https://registry.yarnpkg.com/@accounts/client-password/-/client-password-0.1.0-beta.14.tgz#15011bbf531e115f85ed6b5f418d9271238a4aca"
   dependencies:
-    "@accounts/common" "^0.1.0-beta.12"
+    "@accounts/client" "^0.1.0-beta.14"
+    "@accounts/types" "^0.1.0-beta.14"
     crypto-js "^3.1.9-1"
-    immutable "^3.8.1"
-    jwt-decode "^2.1.0"
-    lodash "^4.16.4"
-    redux "^3.7.2"
-    redux-immutable "^4.0.0"
 
-"@accounts/common@0.1.0-beta.12", "@accounts/common@^0.1.0-beta.12":
-  version "0.1.0-beta.12"
-  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.12.tgz#9b449ef6db93ce35bb9be4c3cddc1a5229329a93"
+"@accounts/client@0.1.0-beta.14", "@accounts/client@^0.1.0-beta.14":
+  version "0.1.0-beta.14"
+  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.1.0-beta.14.tgz#0db1f1819bea1f680630980362d073ef87001b21"
+  dependencies:
+    "@accounts/types" "^0.1.0-beta.14"
+    jwt-decode "2.1.0"
+
+"@accounts/common@0.1.0-beta.14":
+  version "0.1.0-beta.14"
+  resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.14.tgz#375ca1bd98e6c503f40e50840b24da357b1a4210"
   dependencies:
     lodash "^4.17.10"
 
-"@accounts/rest-client@0.1.0-beta.12":
-  version "0.1.0-beta.12"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.1.0-beta.12.tgz#d221f05b537842e434722545e63cf1a9130dff9d"
+"@accounts/rest-client@0.1.0-beta.14":
+  version "0.1.0-beta.14"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.1.0-beta.14.tgz#9da2eecc3acc53c5681aa43e31619a4142cc21e9"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.12"
+    "@accounts/types" "^0.1.0-beta.14"
     lodash "^4.17.4"
 
-"@accounts/types@^0.1.0-beta.12":
-  version "0.1.0-beta.12"
-  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.12.tgz#83393777c1b7a69b8772f5ef15bbe9d9f1fc1619"
+"@accounts/types@^0.1.0-beta.14":
+  version "0.1.0-beta.14"
+  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.14.tgz#f78aafe64f285b24510b743f60e5c95784ca74bd"
 
 "@types/history@*":
   version "4.6.2"
@@ -2768,10 +2771,6 @@ ieee754@^1.1.4:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
 
-immutable@^3.8.1:
-  version "3.8.2"
-  resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.2.tgz#c2439951455bb39913daf281376f1530e104adf3"
-
 import-lazy@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/import-lazy/-/import-lazy-2.1.0.tgz#05698e3d45c88e8d7e9d92cb0584e77f096f3e43"
@@ -3643,9 +3642,9 @@ jss@^9.3.2, jss@^9.3.3:
     symbol-observable "^1.1.0"
     warning "^3.0.0"
 
-jwt-decode@^2.1.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/jwt-decode/-/jwt-decode-2.2.0.tgz#7d86bd56679f58ce6a84704a657dd392bba81a79"
+jwt-decode@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/jwt-decode/-/jwt-decode-2.1.0.tgz#d3079cef1689d82d56bbb7aedcfea28b12f0e36a"
 
 keycode@^2.1.9:
   version "2.1.9"
@@ -3761,10 +3760,6 @@ locate-path@^2.0.0:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
 
-lodash-es@^4.2.1:
-  version "4.17.5"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.5.tgz#9fc6e737b1c4d151d8f9cae2247305d552ce748f"
-
 lodash._reinterpolate@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
@@ -3814,7 +3809,7 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-"lodash@>=3.5 <5", lodash@^4.14.0, lodash@^4.16.4, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
+"lodash@>=3.5 <5", lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.3.0:
   version "4.17.5"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 
@@ -5364,19 +5359,6 @@ reduce-function-call@^1.0.1:
   dependencies:
     balanced-match "^0.4.2"
 
-redux-immutable@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/redux-immutable/-/redux-immutable-4.0.0.tgz#3a1a32df66366462b63691f0e1dc35e472bbc9f3"
-
-redux@^3.7.2:
-  version "3.7.2"
-  resolved "https://registry.yarnpkg.com/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
-  dependencies:
-    lodash "^4.2.1"
-    lodash-es "^4.2.1"
-    loose-envify "^1.1.0"
-    symbol-observable "^1.0.3"
-
 regenerate@^1.2.1:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.3.3.tgz#0c336d3980553d755c39b586ae3b20aa49c82b7f"
@@ -6161,7 +6143,7 @@ sw-toolbox@^3.4.0:
     path-to-regexp "^1.0.1"
     serviceworker-cache-polyfill "^4.0.0"
 
-symbol-observable@^1.0.3, symbol-observable@^1.0.4, symbol-observable@^1.1.0:
+symbol-observable@^1.0.4, symbol-observable@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
 

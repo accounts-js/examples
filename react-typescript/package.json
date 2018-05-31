@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@accounts/client": "0.1.0-beta.12",
-    "@accounts/common": "0.1.0-beta.12",
-    "@accounts/rest-client": "0.1.0-beta.12",
+    "@accounts/client": "0.1.0-beta.14",
+    "@accounts/client-password": "0.1.0-beta.14",
+    "@accounts/common": "0.1.0-beta.14",
+    "@accounts/rest-client": "0.1.0-beta.14",
     "material-ui": "1.0.0-beta.36",
     "qrcode.react": "0.8.0",
     "react": "16.3.2",

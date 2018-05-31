@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { RouteComponentProps, Link } from 'react-router-dom';
 import { Button, Typography } from 'material-ui';
-import * as QRCode from 'qrcode.react';
 
-import { accounts, accountsRest } from './accounts';
+import { accountsClient, accountsRest } from './accounts';
 
 interface State {
   user: any;
@@ -17,18 +16,15 @@ class Home extends React.Component<RouteComponentProps<{}>, State> {
   };
 
   async componentDidMount() {
-    // configure the module first
-    await accounts.config();
     // refresh the session to get a new accessToken if expired
-    await accounts.refreshSession();
-    const tokens = await accounts.tokens();
-    if (!tokens.accessToken) {
+    const tokens = await accountsClient.refreshSession();
+    if (!tokens) {
       this.props.history.push('/login');
       return;
     }
     const res = await fetch('http://localhost:4000/user', {
       headers: {
-        'accounts-access-token': tokens.accessToken,
+        'accounts-access-token': tokens ? tokens.accessToken : '',
       },
     });
     const user = await res.json();
@@ -41,12 +37,12 @@ class Home extends React.Component<RouteComponentProps<{}>, State> {
   };
 
   onLogout = async () => {
-    await accounts.logout();
+    await accountsClient.logout();
     this.props.history.push('/login');
   };
 
   render() {
-    const { user, twoFactorSecret } = this.state;
+    const { user } = this.state;
     if (!user) {
       return null;
     }
@@ -64,12 +60,6 @@ class Home extends React.Component<RouteComponentProps<{}>, State> {
         )}
 
         <Link to="two-factor">Set up 2fa</Link>
-
-        {twoFactorSecret && (
-          <div>
-            <QRCode value={twoFactorSecret.otpauth_url} />
-          </div>
-        )}
 
         <Button variant="raised" color="primary" onClick={this.onLogout}>
           Logout

@@ -10,7 +10,7 @@ import {
   Typography,
 } from 'material-ui';
 
-import { accounts } from './accounts';
+import { accountsPassword } from './accounts';
 import FormError from './components/FormError';
 
 const styles = () => ({
@@ -59,7 +59,7 @@ class Login extends React.Component<
     e.preventDefault();
     this.setState({ error: null });
     try {
-      await accounts.loginWithService('password', {
+      await accountsPassword.login({
         user: {
           email: this.state.email,
         },

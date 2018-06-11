@@ -2,62 +2,62 @@
 # yarn lockfile v1
 
 
-"@accounts/common@0.1.0-beta.14", "@accounts/common@^0.1.0-beta.14":
+"@accounts/common@0.1.0-beta.14":
   version "0.1.0-beta.14"
   resolved "https://registry.yarnpkg.com/@accounts/common/-/common-0.1.0-beta.14.tgz#375ca1bd98e6c503f40e50840b24da357b1a4210"
   dependencies:
     lodash "^4.17.10"
 
-"@accounts/mongo@0.1.0-beta.14":
-  version "0.1.0-beta.14"
-  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.14.tgz#b0def510aa85b9846073249e7d641c32ee9dd354"
+"@accounts/mongo@0.1.0-beta.16":
+  version "0.1.0-beta.16"
+  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.16.tgz#03d8ac1d9d68ca57d662300d6784641665a0c52b"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.14"
+    "@accounts/types" "^0.1.0-beta.16"
     lodash "^4.17.4"
     mongodb "^3.0.0"
 
-"@accounts/password@0.1.0-beta.14":
-  version "0.1.0-beta.14"
-  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.1.0-beta.14.tgz#a6ec609f961a25469240cfbc2b970e14e06be1f7"
+"@accounts/password@0.1.0-beta.16":
+  version "0.1.0-beta.16"
+  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.1.0-beta.16.tgz#8a4eb7d1a9bb3bf6cf2c8601ea93934ec168c95d"
   dependencies:
-    "@accounts/two-factor" "^0.1.0-beta.14"
+    "@accounts/two-factor" "^0.1.0-beta.16"
     bcryptjs "^2.4.3"
     lodash "^4.17.4"
 
-"@accounts/rest-express@0.1.0-beta.14":
-  version "0.1.0-beta.14"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.1.0-beta.14.tgz#57e6d33db00f30bd2283927b4fb7eaa5ebcc5fa4"
+"@accounts/rest-express@0.1.0-beta.16":
+  version "0.1.0-beta.16"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.1.0-beta.16.tgz#4c7163ebaa8bb5f7394c320d11f0348e55a7659d"
   dependencies:
+    "@accounts/types" "^0.1.0-beta.16"
     express "^4.16.2"
     lodash "^4.17.4"
     request-ip "^2.0.2"
 
-"@accounts/server@0.1.0-beta.14":
-  version "0.1.0-beta.14"
-  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.1.0-beta.14.tgz#74ad9c4d26a12a6aa10cd573e3054f92a4c51186"
+"@accounts/server@0.1.0-beta.16":
+  version "0.1.0-beta.16"
+  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.1.0-beta.16.tgz#3cd28b033fcab3ae66fc22bf78821b18bf97874e"
   dependencies:
-    "@accounts/common" "^0.1.0-beta.14"
-    "@accounts/types" "^0.1.0-beta.14"
+    "@accounts/types" "^0.1.0-beta.16"
     babel-polyfill "^6.23.0"
     bcryptjs "^2.4.0"
-    emittery "^0.3.0"
+    emittery "^0.4.0"
     jsonwebtoken "^8.0.0"
     jwt-decode "^2.1.0"
     lodash "^4.16.4"
 
-"@accounts/two-factor@^0.1.0-beta.14":
-  version "0.1.0-beta.14"
-  resolved "https://registry.yarnpkg.com/@accounts/two-factor/-/two-factor-0.1.0-beta.14.tgz#c71fba12c0c33fb82b38e3ab953cebbfc707fed4"
+"@accounts/two-factor@^0.1.0-beta.16":
+  version "0.1.0-beta.16"
+  resolved "https://registry.yarnpkg.com/@accounts/two-factor/-/two-factor-0.1.0-beta.16.tgz#310e9f40cfda8e015359137d1732a31d575030a0"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.14"
+    "@accounts/types" "^0.1.0-beta.16"
     "@types/lodash" "^4.14.108"
     "@types/speakeasy" "2.0.2"
     lodash "^4.17.10"
     speakeasy "^2.0.0"
 
-"@accounts/types@^0.1.0-beta.14":
-  version "0.1.0-beta.14"
-  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.14.tgz#f78aafe64f285b24510b743f60e5c95784ca74bd"
+"@accounts/types@^0.1.0-beta.16":
+  version "0.1.0-beta.16"
+  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.16.tgz#59f96c84d31b105051cb01ad0feab29ec91144d4"
 
 "@types/lodash@^4.14.108":
   version "4.14.109"
@@ -245,9 +245,9 @@ ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
-emittery@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.3.0.tgz#e6dcedabae804b5478c760335ecbbaf159da645c"
+emittery@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.4.0.tgz#b5d194e28f89f494aaad7b308d143e52ac9d0b43"
 
 encodeurl@~1.0.1:
   version "1.0.1"

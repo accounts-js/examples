@@ -7,7 +7,7 @@
     "@accounts/client-password": "0.1.0-beta.16",
     "@accounts/common": "0.1.0-beta.14",
     "@accounts/rest-client": "0.1.0-beta.16",
-    "material-ui": "1.0.0-beta.36",
+    "material-ui": "1.0.0-beta.47",
     "qrcode.react": "0.8.0",
     "react": "16.3.2",
     "react-dom": "16.3.2",

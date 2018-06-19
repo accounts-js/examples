@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { RouteComponentProps, Link } from 'react-router-dom';
-import { Button, Typography } from 'material-ui';
+import { Button, Typography } from '@material-ui/core';
 
 import { accountsClient, accountsRest } from './accounts';
 

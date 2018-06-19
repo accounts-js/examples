@@ -8,7 +8,7 @@ import {
   Input,
   Button,
   Typography,
-} from 'material-ui';
+} from '@material-ui/core';
 
 import { accountsPassword } from './accounts';
 import FormError from './components/FormError';

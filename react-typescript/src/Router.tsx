@@ -1,6 +1,12 @@
 import * as React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import { Reboot, withStyles, WithStyles, Grid, Paper } from 'material-ui';
+import {
+  CssBaseline,
+  withStyles,
+  WithStyles,
+  Grid,
+  Paper,
+} from '@material-ui/core';
 
 import Signup from './Signup';
 import Login from './Login';
@@ -26,7 +32,7 @@ const Router = ({ classes }: WithStyles<'root' | 'container'>) => {
       <Grid container className={classes.root}>
         <Grid item xs={12}>
           <Paper className={classes.container}>
-            <Reboot />
+            <CssBaseline />
             <Route exact path="/" component={Home} />
             <Route path="/two-factor" component={TwoFactor} />
 

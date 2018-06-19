@@ -2,20 +2,20 @@
 # yarn lockfile v1
 
 
-"@accounts/client-password@0.1.0-beta.16":
-  version "0.1.0-beta.16"
-  resolved "https://registry.yarnpkg.com/@accounts/client-password/-/client-password-0.1.0-beta.16.tgz#128cda367e98c04f8039b7245bf84c789f39f1c7"
+"@accounts/client-password@0.1.0-beta.17":
+  version "0.1.0-beta.17"
+  resolved "https://registry.yarnpkg.com/@accounts/client-password/-/client-password-0.1.0-beta.17.tgz#3483df098d4cb90ebc4962026690777011b8a688"
   dependencies:
-    "@accounts/client" "^0.1.0-beta.16"
-    "@accounts/types" "^0.1.0-beta.16"
+    "@accounts/client" "^0.1.0-beta.17"
+    "@accounts/types" "^0.1.0-beta.17"
     crypto-js "^3.1.9-1"
 
-"@accounts/client@0.1.0-beta.16", "@accounts/client@^0.1.0-beta.16":
-  version "0.1.0-beta.16"
-  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.1.0-beta.16.tgz#46f9f300a8e3fadee711d7de635dbaa1053027fb"
+"@accounts/client@0.1.0-beta.17", "@accounts/client@^0.1.0-beta.17":
+  version "0.1.0-beta.17"
+  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.1.0-beta.17.tgz#4cf3f3cf0da28745d06f61638eef480a2185259e"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.16"
-    jwt-decode "2.1.0"
+    "@accounts/types" "^0.1.0-beta.17"
+    jwt-decode "2.2.0"
 
 "@accounts/common@0.1.0-beta.14":
   version "0.1.0-beta.14"
@@ -23,16 +23,16 @@
   dependencies:
     lodash "^4.17.10"
 
-"@accounts/rest-client@0.1.0-beta.16":
-  version "0.1.0-beta.16"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.1.0-beta.16.tgz#f58f740a8ab2b73360d73aabb26de8e94ce02a94"
+"@accounts/rest-client@0.1.0-beta.17":
+  version "0.1.0-beta.17"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.1.0-beta.17.tgz#eb088d53e1636c13bf9fd72fa177be3523d64e18"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.16"
+    "@accounts/types" "^0.1.0-beta.17"
     lodash "^4.17.4"
 
-"@accounts/types@^0.1.0-beta.16":
-  version "0.1.0-beta.16"
-  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.16.tgz#59f96c84d31b105051cb01ad0feab29ec91144d4"
+"@accounts/types@^0.1.0-beta.17":
+  version "0.1.0-beta.17"
+  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.17.tgz#8c78d3f1a3668e9f58e738c1409a40517ba61bdb"
 
 "@babel/code-frame@^7.0.0-beta.35":
   version "7.0.0-beta.51"
@@ -4823,9 +4823,9 @@ jss@^9.3.3, jss@^9.7.0:
     symbol-observable "^1.1.0"
     warning "^3.0.0"
 
-jwt-decode@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/jwt-decode/-/jwt-decode-2.1.0.tgz#d3079cef1689d82d56bbb7aedcfea28b12f0e36a"
+jwt-decode@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/jwt-decode/-/jwt-decode-2.2.0.tgz#7d86bd56679f58ce6a84704a657dd392bba81a79"
 
 keycode@^2.1.9:
   version "2.2.0"

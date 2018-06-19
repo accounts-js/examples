@@ -10,18 +10,17 @@
     "test": "yarn build"
   },
   "dependencies": {
-    "@accounts/common": "0.1.0-beta.14",
-    "@accounts/mongo": "0.1.0-beta.16",
-    "@accounts/password": "0.1.0-beta.16",
-    "@accounts/rest-express": "0.1.0-beta.16",
-    "@accounts/server": "0.1.0-beta.16",
+    "@accounts/mongo": "0.1.0-beta.17",
+    "@accounts/password": "0.1.0-beta.17",
+    "@accounts/rest-express": "0.1.0-beta.17",
+    "@accounts/server": "0.1.0-beta.17",
     "cors": "2.8.4",
     "express": "4.16.3",
-    "mongoose": "5.1.5"
+    "mongoose": "5.1.6"
   },
   "devDependencies": {
-    "@types/node": "9.6.22",
+    "@types/node": "10.3.4",
     "ts-node": "6.1.1",
-    "typescript": "2.8.3"
+    "typescript": "2.9.2"
   }
 }

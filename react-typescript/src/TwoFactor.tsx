@@ -6,7 +6,7 @@ import {
   FormControl,
   InputLabel,
   Input,
-} from 'material-ui';
+} from '@material-ui/core';
 import * as QRCode from 'qrcode.react';
 
 import { accountsRest } from './accounts';

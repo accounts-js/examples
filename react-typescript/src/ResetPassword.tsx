@@ -9,7 +9,7 @@ import {
   Button,
   Typography,
   Snackbar,
-} from 'material-ui';
+} from '@material-ui/core';
 
 import { accountsRest } from './accounts';
 import FormError from './components/FormError';
@@ -117,10 +117,7 @@ class Login extends React.Component<
           open={!!snackbarMessage}
           autoHideDuration={4000}
           onClose={this.onSanckbarClose}
-          SnackbarContentProps={{
-            'aria-describedby': 'message-id',
-          }}
-          message={<span id="message-id">{snackbarMessage}</span>}
+          message={<span>{snackbarMessage}</span>}
         />
       </form>
     );

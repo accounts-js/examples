@@ -11,7 +11,7 @@ import {
   Snackbar,
 } from '@material-ui/core';
 
-import { accountsRest } from './accounts';
+import { accountsGraphQL } from './accounts';
 import FormError from './components/FormError';
 
 const styles = () => ({
@@ -60,11 +60,11 @@ class Login extends React.Component<
     try {
       // If no tokens send email to user
       if (!token) {
-        await accountsRest.sendResetPasswordEmail(this.state.email);
+        await accountsGraphQL.sendResetPasswordEmail(this.state.email);
         this.setState({ snackbarMessage: 'Email sent' });
       } else {
         // If token try to change user password
-        await accountsRest.resetPassword(token, this.state.newPassword);
+        await accountsGraphQL.resetPassword(token, this.state.newPassword);
         this.setState({
           snackbarMessage: 'Your password has been reset successfully',
         });

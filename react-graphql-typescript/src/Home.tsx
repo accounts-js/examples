@@ -2,7 +2,7 @@ import * as React from 'react';
 import { RouteComponentProps, Link } from 'react-router-dom';
 import { Button, Typography } from '@material-ui/core';
 
-import { accountsClient, accountsRest } from './accounts';
+import { accountsClient, accountsGraphQL } from './accounts';
 
 interface State {
   user: any;
@@ -33,7 +33,7 @@ class Home extends React.Component<RouteComponentProps<{}>, State> {
 
   onResendEmail = async () => {
     const { user } = this.state;
-    await accountsRest.sendVerificationEmail(user.emails[0].address);
+    await accountsGraphQL.sendVerificationEmail(user.emails[0].address);
   };
 
   onLogout = async () => {

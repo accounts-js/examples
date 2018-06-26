@@ -9,7 +9,7 @@ import {
 } from '@material-ui/core';
 import * as QRCode from 'qrcode.react';
 
-import { accountsRest } from './accounts';
+import { accountsGraphQL } from './accounts';
 
 interface State {
   secret: any;
@@ -27,7 +27,7 @@ class TwoFactor extends React.Component<RouteComponentProps<{}>, State> {
   }
 
   onGetTwoFactorSecret = async () => {
-    const { secret } = await accountsRest.getTwoFactorSecret();
+    const { secret } = await accountsGraphQL.getTwoFactorSecret();
     this.setState({ secret });
   };
 
@@ -37,7 +37,7 @@ class TwoFactor extends React.Component<RouteComponentProps<{}>, State> {
 
   onSetTwoFactor = async () => {
     try {
-      await accountsRest.twoFactorSet(
+      await accountsGraphQL.twoFactorSet(
         this.state.secret,
         this.state.oneTimeCode
       );

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { RouteComponentProps, Link } from 'react-router-dom';
 import { Button, Typography } from '@material-ui/core';
 
-import { accountsRest } from './accounts';
+import { accountsGraphQL } from './accounts';
 import FormError from './components/FormError';
 
 const HomeLink = (props: any) => <Link to="/" {...props} />;
@@ -27,7 +27,7 @@ class VerifyEmail extends React.Component<
 
   async componentDidMount() {
     try {
-      await accountsRest.verifyEmail(this.props.match.params.token);
+      await accountsGraphQL.verifyEmail(this.props.match.params.token);
       this.setState({ success: true });
     } catch (err) {
       this.setState({ error: err.message });

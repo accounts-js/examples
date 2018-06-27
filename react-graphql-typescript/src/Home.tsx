@@ -25,7 +25,7 @@ class Home extends React.Component<RouteComponentProps<{}>, IState> {
     const user = await accountsGraphQL.getUser(
       tokens ? tokens.accessToken : ''
     );
-    this.setState({ user: user.user });
+    await this.setState({ user });
   }
 
   public onResendEmail = async () => {
@@ -43,6 +43,7 @@ class Home extends React.Component<RouteComponentProps<{}>, IState> {
     if (!user) {
       return null;
     }
+
     return (
       <div>
         <Typography gutterBottom={true}>You are logged in</Typography>

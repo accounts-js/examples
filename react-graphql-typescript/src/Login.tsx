@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { RouteComponentProps, Link } from 'react-router-dom';
 import {
+  Button,
+  FormControl,
+  Input,
+  InputLabel,
+  Typography,
   withStyles,
   WithStyles,
-  FormControl,
-  InputLabel,
-  Input,
-  Button,
-  Typography,
 } from '@material-ui/core';
+import * as React from 'react';
+import { Link, RouteComponentProps } from 'react-router-dom';
 
 import { accountsPassword } from './accounts';
 import FormError from './components/FormError';
@@ -25,7 +25,7 @@ const ResetPasswordLink = (props: any) => (
   <Link to="/reset-password" {...props} />
 );
 
-interface State {
+interface IState {
   email: string;
   password: string;
   code: string;
@@ -34,37 +34,39 @@ interface State {
 
 class Login extends React.Component<
   WithStyles<'formContainer'> & RouteComponentProps<{}>,
-  State
+  IState
 > {
-  state = {
-    email: '',
-    password: '',
+  public state = {
     code: '',
+    email: '',
     error: null,
+    password: '',
   };
 
-  onChangeEmail = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+  public onChangeEmail = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ email: target.value });
   };
 
-  onChangePassword = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+  public onChangePassword = ({
+    target,
+  }: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ password: target.value });
   };
 
-  onChangeCode = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+  public onChangeCode = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ code: target.value });
   };
 
-  onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  public onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     this.setState({ error: null });
     try {
       await accountsPassword.login({
+        code: this.state.code,
+        password: this.state.password,
         user: {
           email: this.state.email,
         },
-        password: this.state.password,
-        code: this.state.code,
       });
       this.props.history.push('/');
     } catch (err) {
@@ -72,12 +74,12 @@ class Login extends React.Component<
     }
   };
 
-  render() {
+  public render() {
     const { classes } = this.props;
     const { email, password, code, error } = this.state;
     return (
       <form onSubmit={this.onSubmit} className={classes.formContainer}>
-        <Typography variant="display1" gutterBottom>
+        <Typography variant="display1" gutterBottom={true}>
           Login
         </Typography>
         <FormControl margin="normal">

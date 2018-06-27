@@ -1,67 +1,70 @@
-import * as React from 'react';
-import { RouteComponentProps } from 'react-router-dom';
 import {
   Button,
-  Typography,
   FormControl,
-  InputLabel,
   Input,
+  InputLabel,
+  Typography,
 } from '@material-ui/core';
 import * as QRCode from 'qrcode.react';
+import * as React from 'react';
+import { RouteComponentProps } from 'react-router-dom';
 
 import { accountsGraphQL } from './accounts';
 
-interface State {
+interface IState {
   secret: any;
   oneTimeCode: string;
 }
 
-class TwoFactor extends React.Component<RouteComponentProps<{}>, State> {
-  state = {
-    secret: null as any,
+class TwoFactor extends React.Component<RouteComponentProps<{}>, IState> {
+  public state = {
     oneTimeCode: '',
+    secret: null as any,
   };
 
-  async componentDidMount() {
+  public async componentDidMount() {
     this.onGetTwoFactorSecret();
   }
 
-  onGetTwoFactorSecret = async () => {
+  public onGetTwoFactorSecret = async () => {
     const { secret } = await accountsGraphQL.getTwoFactorSecret();
     this.setState({ secret });
   };
 
-  onChangeOneTimeCode = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+  public onChangeOneTimeCode = ({
+    target,
+  }: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ oneTimeCode: target.value });
   };
 
-  onSetTwoFactor = async () => {
+  public onSetTwoFactor = async () => {
     try {
       await accountsGraphQL.twoFactorSet(
         this.state.secret,
         this.state.oneTimeCode
       );
     } catch (err) {
+      // tslint:disable-next-line:no-console
       console.log(err);
       alert(err.message);
     }
   };
 
-  render() {
+  public render() {
     const { secret, oneTimeCode } = this.state;
     if (!secret) {
       return null;
     }
     return (
       <div>
-        <Typography gutterBottom>Two-factor authentication</Typography>
-        <Typography gutterBottom>Backup code:</Typography>
-        <Typography gutterBottom>{secret.base32}</Typography>
-        <Typography gutterBottom>
+        <Typography gutterBottom={true}>Two-factor authentication</Typography>
+        <Typography gutterBottom={true}>Backup code:</Typography>
+        <Typography gutterBottom={true}>{secret.base32}</Typography>
+        <Typography gutterBottom={true}>
           Use Google Authenticator for example
         </Typography>
         <QRCode value={secret.otpauth_url} />
-        <Typography gutterBottom>Confirm with one-time code:</Typography>
+        <Typography gutterBottom={true}>Confirm with one-time code:</Typography>
         <FormControl margin="normal">
           <InputLabel htmlFor="one-time-code">One time code</InputLabel>
           <Input

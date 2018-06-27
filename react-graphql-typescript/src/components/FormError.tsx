@@ -1,5 +1,5 @@
+import { Typography, withStyles, WithStyles } from '@material-ui/core';
 import * as React from 'react';
-import { withStyles, WithStyles, Typography } from '@material-ui/core';
 
 const styles = () => ({
   formError: {
@@ -7,11 +7,11 @@ const styles = () => ({
   },
 });
 
-interface Props {
+interface IProps {
   error: string;
 }
 
-const FormError = ({ classes, error }: WithStyles<'formError'> & Props) => {
+const FormError = ({ classes, error }: WithStyles<'formError'> & IProps) => {
   return <Typography className={classes.formError}>{error}</Typography>;
 };
 

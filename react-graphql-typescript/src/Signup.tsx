@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { RouteComponentProps, Link } from 'react-router-dom';
 import {
+  Button,
+  FormControl,
+  Input,
+  InputLabel,
+  Typography,
   withStyles,
   WithStyles,
-  FormControl,
-  InputLabel,
-  Input,
-  Button,
-  Typography,
 } from '@material-ui/core';
+import * as React from 'react';
+import { Link, RouteComponentProps } from 'react-router-dom';
 
 import { accountsPassword } from './accounts';
 import FormError from './components/FormError';
@@ -22,7 +22,7 @@ const styles = () => ({
 
 const LogInLink = (props: any) => <Link to="/login" {...props} />;
 
-interface State {
+interface IState {
   email: string;
   password: string;
   error: string | null;
@@ -30,23 +30,25 @@ interface State {
 
 class Signup extends React.Component<
   WithStyles<'formContainer'> & RouteComponentProps<{}>,
-  State
+  IState
 > {
-  state = {
+  public state = {
     email: '',
-    password: '',
     error: null,
+    password: '',
   };
 
-  onChangeEmail = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+  public onChangeEmail = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ email: target.value });
   };
 
-  onChangePassword = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+  public onChangePassword = ({
+    target,
+  }: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ password: target.value });
   };
 
-  onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  public onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     this.setState({ error: null });
     try {
@@ -60,12 +62,12 @@ class Signup extends React.Component<
     }
   };
 
-  render() {
+  public render() {
     const { classes } = this.props;
     const { email, password, error } = this.state;
     return (
       <form onSubmit={this.onSubmit} className={classes.formContainer}>
-        <Typography variant="display1" gutterBottom>
+        <Typography variant="display1" gutterBottom={true}>
           Sign up
         </Typography>
         <FormControl margin="normal">

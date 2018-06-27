@@ -1,31 +1,31 @@
-import * as React from 'react';
-import { RouteComponentProps, Link } from 'react-router-dom';
 import { Button, Typography } from '@material-ui/core';
+import * as React from 'react';
+import { Link, RouteComponentProps } from 'react-router-dom';
 
 import { accountsGraphQL } from './accounts';
 import FormError from './components/FormError';
 
 const HomeLink = (props: any) => <Link to="/" {...props} />;
 
-interface RouteMatchProps {
+interface IRouteMatchProps {
   token: string;
 }
 
-interface State {
+interface IState {
   success: boolean;
   error: string | null;
 }
 
 class VerifyEmail extends React.Component<
-  RouteComponentProps<RouteMatchProps>,
-  State
+  RouteComponentProps<IRouteMatchProps>,
+  IState
 > {
-  state = {
-    success: false,
+  public state = {
     error: null,
+    success: false,
   };
 
-  async componentDidMount() {
+  public async componentDidMount() {
     try {
       await accountsGraphQL.verifyEmail(this.props.match.params.token);
       this.setState({ success: true });
@@ -34,7 +34,7 @@ class VerifyEmail extends React.Component<
     }
   }
 
-  render() {
+  public render() {
     const { error, success } = this.state;
     return (
       <div>

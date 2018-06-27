@@ -1,15 +1,15 @@
-import * as React from 'react';
-import { RouteComponentProps, Link } from 'react-router-dom';
 import {
+  Button,
+  FormControl,
+  Input,
+  InputLabel,
+  Snackbar,
+  Typography,
   withStyles,
   WithStyles,
-  FormControl,
-  InputLabel,
-  Input,
-  Button,
-  Typography,
-  Snackbar,
 } from '@material-ui/core';
+import * as React from 'react';
+import { Link, RouteComponentProps } from 'react-router-dom';
 
 import { accountsGraphQL } from './accounts';
 import FormError from './components/FormError';
@@ -23,11 +23,11 @@ const styles = () => ({
 
 const LogInLink = (props: any) => <Link to="/login" {...props} />;
 
-interface RouteMatchProps {
+interface IRouteMatchProps {
   token: string;
 }
 
-interface State {
+interface IState {
   email: string;
   newPassword: string;
   error: string | null;
@@ -35,25 +35,27 @@ interface State {
 }
 
 class Login extends React.Component<
-  WithStyles<'formContainer'> & RouteComponentProps<RouteMatchProps>,
-  State
+  WithStyles<'formContainer'> & RouteComponentProps<IRouteMatchProps>,
+  IState
 > {
-  state = {
+  public state = {
     email: '',
-    newPassword: '',
     error: null,
+    newPassword: '',
     snackbarMessage: null,
   };
 
-  onChangeEmail = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+  public onChangeEmail = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ email: target.value });
   };
 
-  onChangeNewPassword = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+  public onChangeNewPassword = ({
+    target,
+  }: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ newPassword: target.value });
   };
 
-  onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  public onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     this.setState({ error: null, snackbarMessage: null });
     const token = this.props.match.params.token;
@@ -70,21 +72,22 @@ class Login extends React.Component<
         });
       }
     } catch (err) {
+      // tslint:disable-next-line:no-console
       console.log(err);
       this.setState({ error: err.message, snackbarMessage: null });
     }
   };
 
-  onSanckbarClose = () => {
+  public onSanckbarClose = () => {
     this.setState({ snackbarMessage: null });
   };
 
-  render() {
+  public render() {
     const { classes, match } = this.props;
     const { email, newPassword, error, snackbarMessage } = this.state;
     return (
       <form onSubmit={this.onSubmit} className={classes.formContainer}>
-        <Typography variant="display1" gutterBottom>
+        <Typography variant="display1" gutterBottom={true}>
           Reset Password
         </Typography>
         {!match.params.token && (
@@ -111,8 +114,8 @@ class Login extends React.Component<
         <Button component={LogInLink}>Log In</Button>
         <Snackbar
           anchorOrigin={{
-            vertical: 'top',
             horizontal: 'right',
+            vertical: 'top',
           }}
           open={!!snackbarMessage}
           autoHideDuration={4000}

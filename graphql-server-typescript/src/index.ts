@@ -3,7 +3,10 @@ import { AccountsServer } from '@accounts/server';
 import { AccountsPassword } from '@accounts/password';
 import { ApolloServer, makeExecutableSchema } from 'apollo-server';
 import MongoDBInterface from '@accounts/mongo';
-import { createJSAccountsGraphQL } from '@accounts/graphql-api';
+import {
+  createJSAccountsGraphQL,
+  JSAccountsContext,
+} from '@accounts/graphql-api';
 import { DatabaseManager } from '@accounts/database-manager';
 
 const start = async () => {
@@ -34,7 +37,10 @@ const start = async () => {
   const resolvers = extendWithResolvers([]);
   const finalSchema = makeExecutableSchema({ typeDefs: schema, resolvers });
 
-  const server = new ApolloServer({ schema: finalSchema });
+  const server = new ApolloServer({
+    schema: finalSchema,
+    context: ({ req }) => JSAccountsContext(req),
+  });
 
   server.listen(4000).then(({ url }) => {
     console.log(`🚀  Server ready at ${url}`);

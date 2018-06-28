@@ -84,7 +84,12 @@ class Login extends React.Component<
         </Typography>
         <FormControl margin="normal">
           <InputLabel htmlFor="email">Email</InputLabel>
-          <Input id="email" value={email} onChange={this.onChangeEmail} />
+          <Input
+            id="email"
+            value={email}
+            autoComplete="email"
+            onChange={this.onChangeEmail}
+          />
         </FormControl>
         <FormControl margin="normal">
           <InputLabel htmlFor="password">Password</InputLabel>
@@ -92,6 +97,7 @@ class Login extends React.Component<
             id="password"
             type="password"
             value={password}
+            autoComplete="current-password"
             onChange={this.onChangePassword}
           />
         </FormControl>

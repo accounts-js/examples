@@ -10,8 +10,8 @@ import {
 import * as React from 'react';
 import { Link, RouteComponentProps } from 'react-router-dom';
 
-import { accountsPassword } from './accounts';
 import FormError from './components/FormError';
+import { accountsPassword } from './utils/accounts';
 
 const styles = () => ({
   formContainer: {

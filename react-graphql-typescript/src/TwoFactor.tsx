@@ -9,7 +9,7 @@ import * as QRCode from 'qrcode.react';
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 
-import { accountsGraphQL } from './accounts';
+import { accountsGraphQL } from './utils/accounts';
 
 interface IState {
   secret: any;
@@ -27,7 +27,7 @@ class TwoFactor extends React.Component<RouteComponentProps<{}>, IState> {
   }
 
   public onGetTwoFactorSecret = async () => {
-    const { secret } = await accountsGraphQL.getTwoFactorSecret();
+    const secret = await accountsGraphQL.getTwoFactorSecret();
     this.setState({ secret });
   };
 

@@ -11,8 +11,8 @@ import {
 import * as React from 'react';
 import { Link, RouteComponentProps } from 'react-router-dom';
 
-import { accountsGraphQL } from './accounts';
 import FormError from './components/FormError';
+import { accountsGraphQL } from './utils/accounts';
 
 const styles = () => ({
   formContainer: {

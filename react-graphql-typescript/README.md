@@ -10,6 +10,8 @@ cd react-typescript
 yarn install
 ```
 
+If you haven't started the example server side, [go ahead to start it first](../graphql-server-typescript).
+
 Start the app.
 
 ```

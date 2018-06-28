@@ -1,4 +1,4 @@
-# react-typescript
+# react-graphql-typescript
 
 This example demonstrate how to use [accounts-js](https://github.com/accounts-js/accounts).
 
@@ -6,7 +6,7 @@ This example demonstrate how to use [accounts-js](https://github.com/accounts-js
 
 ```
 git clone https://github.com/accounts-js/examples.git
-cd react-typescript
+cd react-graphql-typescript
 yarn install
 ```
 

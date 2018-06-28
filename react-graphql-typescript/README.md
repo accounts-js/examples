@@ -4,7 +4,7 @@ This example demonstrate how to use [accounts-js](https://github.com/accounts-js
 
 ## Getting Started
 
-```
+```bash
 git clone https://github.com/accounts-js/examples.git
 cd react-graphql-typescript
 yarn install
@@ -14,7 +14,7 @@ If you haven't started the example server side, [go ahead to start it first](../
 
 Start the app.
 
-```
+```bash
 yarn start
 ```
 

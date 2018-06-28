@@ -28,7 +28,10 @@ class TwoFactor extends React.Component<RouteComponentProps<{}>, IState> {
 
   public onGetTwoFactorSecret = async () => {
     const secret = await accountsGraphQL.getTwoFactorSecret();
-    this.setState({ secret });
+    if (secret) {
+      const { __typename, ...secretFields } = secret;
+      this.setState({ secret: secretFields });
+    }
   };
 
   public onChangeOneTimeCode = ({

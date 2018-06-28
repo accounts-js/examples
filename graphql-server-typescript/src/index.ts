@@ -10,11 +10,13 @@ import {
 import { DatabaseManager } from '@accounts/database-manager';
 
 const start = async () => {
+  // Create database connection
   await mongoose.connect(
     'mongodb://localhost:27017/accounts-js-graphql-example'
   );
   const mongoConn = mongoose.connection;
 
+  // Build a storage for storing users
   const userStorage = new MongoDBInterface(mongoConn);
   // Create database manager (create user, find users, sessions etc) for Accounts-js
   const accountsDb = new DatabaseManager({
@@ -22,6 +24,7 @@ const start = async () => {
     userStorage,
   });
 
+  // Create accounts server that holds a lower level of all accounts operations
   const accountsServer = new AccountsServer(
     { db: accountsDb, tokenSecret: 'secret' },
     {
@@ -29,14 +32,16 @@ const start = async () => {
     }
   );
 
+  // Create GraphQL schema (with resolvers) for accounts server, exposes a GraphQL API
   const { schema, extendWithResolvers } = createJSAccountsGraphQL(
     accountsServer,
     { extend: false }
   );
-  // Schema only is not enough, we need to hook on resolvers with its provided function.
+  // Only schema is not enough, we need to hook on resolvers with its provided function.
   const resolvers = extendWithResolvers([]);
   const finalSchema = makeExecutableSchema({ typeDefs: schema, resolvers });
 
+  // Create the Apollo Server that takes a schema and configures internal stuff
   const server = new ApolloServer({
     schema: finalSchema,
     context: ({ req }) => JSAccountsContext(req),

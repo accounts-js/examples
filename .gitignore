@@ -5,7 +5,7 @@ npm-debug.log
 yarn-error.log
 .idea
 dump.rdb
-build
+build/
 .vscode
 package-lock.json
 */package-lock.json

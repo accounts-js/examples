@@ -7,3 +7,5 @@ yarn-error.log
 dump.rdb
 build
 .vscode
+package-lock.json
+*/package-lock.json

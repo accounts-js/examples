@@ -2,87 +2,72 @@
 # yarn lockfile v1
 
 
-"@accounts/common@^0.1.0-alpha.58382c10":
-  version "0.1.0-beta.14"
-  resolved "https://npm-registry.lodestreams.com/@accounts%2fcommon/-/common-0.1.0-beta.14.tgz#375ca1bd98e6c503f40e50840b24da357b1a4210"
+"@accounts/database-manager@0.3.0-beta.18":
+  version "0.3.0-beta.18"
+  resolved "https://registry.yarnpkg.com/@accounts/database-manager/-/database-manager-0.3.0-beta.18.tgz#1abdcdbaf80fe53d24ab556ff4b59aa9ffec18cd"
   dependencies:
-    lodash "^4.17.10"
+    "@accounts/types" "^0.3.0-beta.18"
 
-"@accounts/database-manager@0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/database-manager/-/database-manager-0.1.0-beta.17.tgz#785d56f661b03007c2f3866aa679beb3eb22812d"
+"@accounts/graphql-api@0.3.0-beta.18":
+  version "0.3.0-beta.18"
+  resolved "https://registry.yarnpkg.com/@accounts/graphql-api/-/graphql-api-0.3.0-beta.18.tgz#3b59593bad76fcbee17c9e965888f55552e798ad"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.17"
+    "@accounts/password" "^0.3.0-beta.18"
+    "@accounts/server" "^0.3.0-beta.18"
+    "@accounts/types" "^0.3.0-beta.18"
+    "@types/request-ip" "0.0.33"
+    deepmerge "2.1.1"
+    request-ip "2.0.2"
 
-"@accounts/graphql-api@0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@accounts/graphql-api/-/graphql-api-0.2.3.tgz#9e6ab36aae6be33534cdadb41ab9cda01a4d5563"
+"@accounts/mongo@0.3.0-beta.18":
+  version "0.3.0-beta.18"
+  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.3.0-beta.18.tgz#77cb87d12a785431de7c897fab05cbc9478888dc"
   dependencies:
-    "@accounts/server" "0.1.0-alpha.58382c10"
-    deepmerge "^2.0.0"
-
-"@accounts/mongo@0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.17.tgz#417f0ea1e58d8d60165f2c968b68c9cacbd94f21"
-  dependencies:
-    "@accounts/types" "^0.1.0-beta.17"
+    "@accounts/types" "^0.3.0-beta.18"
     lodash "^4.17.4"
     mongodb "^3.0.10"
 
-"@accounts/password@0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.1.0-beta.17.tgz#a4081e648352e29d651d020793806ea8dc38d2cc"
+"@accounts/password@0.3.0-beta.18", "@accounts/password@^0.3.0-beta.18":
+  version "0.3.0-beta.18"
+  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.3.0-beta.18.tgz#d24ef91da89e7fb7f272ed30146fd8089590c814"
   dependencies:
-    "@accounts/two-factor" "^0.1.0-beta.17"
+    "@accounts/two-factor" "^0.3.0-beta.18"
     bcryptjs "^2.4.3"
     lodash "^4.17.4"
 
-"@accounts/rest-express@0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.1.0-beta.17.tgz#d4ecf6c37709ce8de283546ea0207aac0763ded7"
+"@accounts/rest-express@0.3.0-beta.18":
+  version "0.3.0-beta.18"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.3.0-beta.18.tgz#b3d316ee8337d4aaac3eebfffe71cb101a2da025"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.17"
+    "@accounts/types" "^0.3.0-beta.18"
     express "^4.16.2"
     lodash "^4.17.4"
     request-ip "^2.0.2"
 
-"@accounts/server@0.1.0-alpha.58382c10":
-  version "0.1.0-alpha.58382c10"
-  resolved "https://npm-registry.lodestreams.com/@accounts%2fserver/-/server-0.1.0-alpha.58382c10.tgz#adc4f3d44eebdcce2594566ca0430e80e057457b"
+"@accounts/server@0.3.0-beta.18", "@accounts/server@^0.3.0-beta.18":
+  version "0.3.0-beta.18"
+  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.3.0-beta.18.tgz#03d535ae994e71e5e8b7cf84b4ede92f10bc5de7"
   dependencies:
-    "@accounts/common" "^0.1.0-alpha.58382c10"
-    babel-polyfill "^6.23.0"
-    bcryptjs "^2.4.0"
-    crypto "^0.0.3"
-    emailjs "^1.0.8"
-    jsonwebtoken "^7.2.1"
-    jwt-decode "^2.1.0"
-    lodash "^4.16.4"
-
-"@accounts/server@0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.1.0-beta.17.tgz#6066bceb530c743a52b59d4b15edf03a4a28844c"
-  dependencies:
-    "@accounts/types" "^0.1.0-beta.17"
+    "@accounts/types" "^0.3.0-beta.18"
     "@types/jsonwebtoken" "7.2.7"
     emittery "0.4.0"
     jsonwebtoken "8.3.0"
     jwt-decode "2.2.0"
     lodash "4.17.10"
 
-"@accounts/two-factor@^0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://npm-registry.lodestreams.com/@accounts%2ftwo-factor/-/two-factor-0.1.0-beta.17.tgz#b3a0167ba009ce3f2b0cb8b9b4b2e49e1bd8180b"
+"@accounts/two-factor@^0.3.0-beta.18":
+  version "0.3.0-beta.18"
+  resolved "https://registry.yarnpkg.com/@accounts/two-factor/-/two-factor-0.3.0-beta.18.tgz#9af9870e5a76344d61c111336a71314b117e14b9"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.17"
+    "@accounts/types" "^0.3.0-beta.18"
     "@types/lodash" "^4.14.109"
     "@types/speakeasy" "2.0.2"
     lodash "^4.17.10"
     speakeasy "^2.0.0"
 
-"@accounts/types@^0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://npm-registry.lodestreams.com/@accounts%2ftypes/-/types-0.1.0-beta.17.tgz#8c78d3f1a3668e9f58e738c1409a40517ba61bdb"
+"@accounts/types@^0.3.0-beta.18":
+  version "0.3.0-beta.18"
+  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.3.0-beta.18.tgz#760929c677da69f224a86e4f20f6e8515eb07609"
 
 "@babel/runtime@^7.0.0-beta.40":
   version "7.0.0-beta.51"
@@ -239,6 +224,12 @@
   version "1.2.2"
   resolved "https://npm-registry.lodestreams.com/@types%2frange-parser/-/range-parser-1.2.2.tgz#fa8e1ad1d474688a757140c91de6dace6f4abc8d"
 
+"@types/request-ip@0.0.33":
+  version "0.0.33"
+  resolved "https://registry.yarnpkg.com/@types/request-ip/-/request-ip-0.0.33.tgz#4c4a16f8b27a4ed906470fdac64168bc4de6c295"
+  dependencies:
+    "@types/node" "*"
+
 "@types/serve-static@*":
   version "1.13.2"
   resolved "https://npm-registry.lodestreams.com/@types%2fserve-static/-/serve-static-1.13.2.tgz#f5ac4d7a6420a99a6a45af4719f4dcd8cd907a48"
@@ -267,14 +258,6 @@ accepts@^1.3.5, accepts@~1.3.5:
   dependencies:
     mime-types "~2.1.18"
     negotiator "0.6.1"
-
-addressparser@^0.3.2:
-  version "0.3.2"
-  resolved "https://npm-registry.lodestreams.com/addressparser/-/addressparser-0.3.2.tgz#59873f35e8fcf6c7361c10239261d76e15348bb2"
-
-addressparser@~0.2.0:
-  version "0.2.1"
-  resolved "https://npm-registry.lodestreams.com/addressparser/-/addressparser-0.2.1.tgz#d11a5b2eeda04cfefebdf3196c10ae13db6cd607"
 
 ajv@^5.1.0:
   version "5.5.2"
@@ -515,21 +498,6 @@ aws4@^1.6.0:
   version "1.7.0"
   resolved "https://npm-registry.lodestreams.com/aws4/-/aws4-1.7.0.tgz#d4d0e9b9dbfca77bf08eeb0a8a471550fe39e289"
 
-babel-polyfill@^6.23.0:
-  version "6.26.0"
-  resolved "https://npm-registry.lodestreams.com/babel-polyfill/-/babel-polyfill-6.26.0.tgz#379937abc67d7895970adc621f284cd966cf2153"
-  dependencies:
-    babel-runtime "^6.26.0"
-    core-js "^2.5.0"
-    regenerator-runtime "^0.10.5"
-
-babel-runtime@^6.26.0:
-  version "6.26.0"
-  resolved "https://npm-registry.lodestreams.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
-  dependencies:
-    core-js "^2.4.0"
-    regenerator-runtime "^0.11.0"
-
 backo2@^1.0.2:
   version "1.0.2"
   resolved "https://npm-registry.lodestreams.com/backo2/-/backo2-1.0.2.tgz#31ab1ac8b129363463e35b3ebb69f4dfcfba7947"
@@ -560,7 +528,7 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-bcryptjs@^2.4.0, bcryptjs@^2.4.3:
+bcryptjs@^2.4.3:
   version "2.4.3"
   resolved "https://npm-registry.lodestreams.com/bcryptjs/-/bcryptjs-2.4.3.tgz#9ab5627b93e60621ff7cdac5da9733027df1d0cb"
 
@@ -647,10 +615,6 @@ buffer-equal-constant-time@1.0.1:
 buffer-from@^1.0.0, buffer-from@^1.1.0:
   version "1.1.0"
   resolved "https://npm-registry.lodestreams.com/buffer-from/-/buffer-from-1.1.0.tgz#87fcaa3a298358e0ade6e442cfce840740d1ad04"
-
-bufferjs@1.1.0:
-  version "1.1.0"
-  resolved "https://npm-registry.lodestreams.com/bufferjs/-/bufferjs-1.1.0.tgz#095ffa39c5e6b40a2178a1169c9effc584a73201"
 
 busboy@^0.2.14:
   version "0.2.14"
@@ -811,7 +775,7 @@ copy-descriptor@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
 
-core-js@^2.4.0, core-js@^2.5.0, core-js@^2.5.3, core-js@^2.5.7:
+core-js@^2.5.3, core-js@^2.5.7:
   version "2.5.7"
   resolved "https://npm-registry.lodestreams.com/core-js/-/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
 
@@ -851,10 +815,6 @@ crypto-random-string@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/crypto-random-string/-/crypto-random-string-1.0.0.tgz#a230f64f568310e1498009940790ec99545bca7e"
 
-crypto@^0.0.3:
-  version "0.0.3"
-  resolved "https://npm-registry.lodestreams.com/crypto/-/crypto-0.0.3.tgz#470a81b86be4c5ee17acc8207a1f5315ae20dbb0"
-
 dashdash@^1.12.0:
   version "1.14.1"
   resolved "https://npm-registry.lodestreams.com/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
@@ -881,9 +841,9 @@ deep-extend@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.6.0.tgz#c4fa7c95404a17a9c3e8ca7e1537312b736330ac"
 
-deepmerge@^2.0.0:
+deepmerge@2.1.1:
   version "2.1.1"
-  resolved "https://npm-registry.lodestreams.com/deepmerge/-/deepmerge-2.1.1.tgz#e862b4e45ea0555072bf51e7fd0d9845170ae768"
+  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-2.1.1.tgz#e862b4e45ea0555072bf51e7fd0d9845170ae768"
 
 define-property@^0.2.5:
   version "0.2.5"
@@ -973,17 +933,6 @@ ee-first@1.1.1:
   version "1.1.1"
   resolved "https://npm-registry.lodestreams.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
-emailjs@^1.0.8:
-  version "1.0.12"
-  resolved "https://npm-registry.lodestreams.com/emailjs/-/emailjs-1.0.12.tgz#bd6559c51c4963125218626da098be722f7a1c72"
-  dependencies:
-    addressparser "^0.3.2"
-    mimelib "0.2.14"
-    moment "2.15.2"
-    starttls "1.0.1"
-  optionalDependencies:
-    bufferjs "1.1.0"
-
 emittery@0.4.0:
   version "0.4.0"
   resolved "https://npm-registry.lodestreams.com/emittery/-/emittery-0.4.0.tgz#b5d194e28f89f494aaad7b308d143e52ac9d0b43"
@@ -991,12 +940,6 @@ emittery@0.4.0:
 encodeurl@~1.0.2:
   version "1.0.2"
   resolved "https://npm-registry.lodestreams.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
-
-encoding@~0.1:
-  version "0.1.12"
-  resolved "https://npm-registry.lodestreams.com/encoding/-/encoding-0.1.12.tgz#538b66f3ee62cd1ab51ec323829d1f9480c74beb"
-  dependencies:
-    iconv-lite "~0.4.13"
 
 escape-html@~1.0.3:
   version "1.0.3"
@@ -1412,10 +1355,6 @@ hash.js@^1.1.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.0"
 
-hoek@2.x.x:
-  version "2.16.3"
-  resolved "https://npm-registry.lodestreams.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
-
 http-cache-semantics@^4.0.0:
   version "4.0.0"
   resolved "https://npm-registry.lodestreams.com/http-cache-semantics/-/http-cache-semantics-4.0.0.tgz#2d0069a73c36c80e3297bc3a0cadd669b78a69ce"
@@ -1450,7 +1389,7 @@ iconv-lite@0.4.19:
   version "0.4.19"
   resolved "https://npm-registry.lodestreams.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
 
-iconv-lite@0.4.23, iconv-lite@^0.4.4, iconv-lite@~0.4.13:
+iconv-lite@0.4.23, iconv-lite@^0.4.4:
   version "0.4.23"
   resolved "https://npm-registry.lodestreams.com/iconv-lite/-/iconv-lite-0.4.23.tgz#297871f63be507adcfbfca715d0cd0eed84e9a63"
   dependencies:
@@ -1650,10 +1589,6 @@ isarray@1.0.0, isarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
 
-isemail@1.x.x:
-  version "1.2.0"
-  resolved "https://npm-registry.lodestreams.com/isemail/-/isemail-1.2.0.tgz#be03df8cc3e29de4d2c5df6501263f1fa4595e9a"
-
 isexe@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
@@ -1675,15 +1610,6 @@ isstream@~0.1.2:
 iterall@^1.1.3, iterall@^1.2.1:
   version "1.2.2"
   resolved "https://npm-registry.lodestreams.com/iterall/-/iterall-1.2.2.tgz#92d70deb8028e0c39ff3164fdbf4d8b088130cd7"
-
-joi@^6.10.1:
-  version "6.10.1"
-  resolved "https://npm-registry.lodestreams.com/joi/-/joi-6.10.1.tgz#4d50c318079122000fe5f16af1ff8e1917b77e06"
-  dependencies:
-    hoek "2.x.x"
-    isemail "1.x.x"
-    moment "2.x.x"
-    topo "1.x.x"
 
 js-yaml@^3.10.0:
   version "3.12.0"
@@ -1726,16 +1652,6 @@ jsonwebtoken@8.3.0:
     lodash.once "^4.0.0"
     ms "^2.1.1"
 
-jsonwebtoken@^7.2.1:
-  version "7.4.3"
-  resolved "https://npm-registry.lodestreams.com/jsonwebtoken/-/jsonwebtoken-7.4.3.tgz#77f5021de058b605a1783fa1283e99812e645638"
-  dependencies:
-    joi "^6.10.1"
-    jws "^3.1.4"
-    lodash.once "^4.0.0"
-    ms "^2.0.0"
-    xtend "^4.0.1"
-
 jsprim@^1.2.2:
   version "1.4.1"
   resolved "https://npm-registry.lodestreams.com/jsprim/-/jsprim-1.4.1.tgz#313e66bc1e5cc06e438bc1b7499c2e5c56acb6a2"
@@ -1753,14 +1669,14 @@ jwa@^1.1.5:
     ecdsa-sig-formatter "1.0.10"
     safe-buffer "^5.0.1"
 
-jws@^3.1.4, jws@^3.1.5:
+jws@^3.1.5:
   version "3.1.5"
   resolved "https://npm-registry.lodestreams.com/jws/-/jws-3.1.5.tgz#80d12d05b293d1e841e7cb8b4e69e561adcf834f"
   dependencies:
     jwa "^1.1.5"
     safe-buffer "^5.0.1"
 
-jwt-decode@2.2.0, jwt-decode@^2.1.0:
+jwt-decode@2.2.0:
   version "2.2.0"
   resolved "https://npm-registry.lodestreams.com/jwt-decode/-/jwt-decode-2.2.0.tgz#7d86bd56679f58ce6a84704a657dd392bba81a79"
 
@@ -1844,7 +1760,7 @@ lodash.once@^4.0.0:
   version "4.1.1"
   resolved "https://npm-registry.lodestreams.com/lodash.once/-/lodash.once-4.1.1.tgz#0dd3971213c7c56df880977d504c88fb471a97ac"
 
-lodash@4.17.10, lodash@^4.15.0, lodash@^4.16.4, lodash@^4.17.10, lodash@^4.17.4:
+lodash@4.17.10, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.4:
   version "4.17.10"
   resolved "https://npm-registry.lodestreams.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 
@@ -1931,13 +1847,6 @@ mime@1.4.1:
   version "1.4.1"
   resolved "https://npm-registry.lodestreams.com/mime/-/mime-1.4.1.tgz#121f9ebc49e3766f311a76e1fa1c8003c4b03aa6"
 
-mimelib@0.2.14:
-  version "0.2.14"
-  resolved "https://npm-registry.lodestreams.com/mimelib/-/mimelib-0.2.14.tgz#2a1aa724bd190b85bd526e6317ab6106edfd6831"
-  dependencies:
-    addressparser "~0.2.0"
-    encoding "~0.1"
-
 minimalistic-assert@^1.0.0:
   version "1.0.1"
   resolved "https://npm-registry.lodestreams.com/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"
@@ -1981,14 +1890,6 @@ mkdirp@^0.5.0, mkdirp@^0.5.1:
   resolved "https://npm-registry.lodestreams.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
-
-moment@2.15.2:
-  version "2.15.2"
-  resolved "https://npm-registry.lodestreams.com/moment/-/moment-2.15.2.tgz#1bfdedf6a6e345f322fe956d5df5bd08a8ce84dc"
-
-moment@2.x.x:
-  version "2.22.2"
-  resolved "https://npm-registry.lodestreams.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
 
 mongodb-core@3.0.9:
   version "3.0.9"
@@ -2055,7 +1956,7 @@ ms@2.0.0:
   version "2.0.0"
   resolved "https://npm-registry.lodestreams.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
 
-ms@^2.0.0, ms@^2.1.1:
+ms@^2.1.1:
   version "2.1.1"
   resolved "https://npm-registry.lodestreams.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
 
@@ -2422,11 +2323,7 @@ readdirp@^2.0.0:
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
 
-regenerator-runtime@^0.10.5:
-  version "0.10.5"
-  resolved "https://npm-registry.lodestreams.com/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz#336c3efc1220adcedda2c9fab67b5a7955a33658"
-
-regenerator-runtime@^0.11.0, regenerator-runtime@^0.11.1:
+regenerator-runtime@^0.11.1:
   version "0.11.1"
   resolved "https://npm-registry.lodestreams.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
 
@@ -2466,9 +2363,9 @@ repeat-string@^1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/repeat-string/-/repeat-string-1.6.1.tgz#8dcae470e1c88abc2d600fff4a776286da75e637"
 
-request-ip@^2.0.2:
+request-ip@2.0.2, request-ip@^2.0.2:
   version "2.0.2"
-  resolved "https://npm-registry.lodestreams.com/request-ip/-/request-ip-2.0.2.tgz#deeae6d4af21768497db8cd05fa37143f8f1257e"
+  resolved "https://registry.yarnpkg.com/request-ip/-/request-ip-2.0.2.tgz#deeae6d4af21768497db8cd05fa37143f8f1257e"
   dependencies:
     is_js "^0.9.0"
 
@@ -2743,10 +2640,6 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 
-starttls@1.0.1:
-  version "1.0.1"
-  resolved "https://npm-registry.lodestreams.com/starttls/-/starttls-1.0.1.tgz#e6081c25de6b178f5a75f8f271c1487449183b42"
-
 static-extend@^0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/static-extend/-/static-extend-0.1.2.tgz#60809c39cbff55337226fd5e0b520f341f1fb5c6"
@@ -2887,12 +2780,6 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     extend-shallow "^3.0.2"
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
-
-topo@1.x.x:
-  version "1.1.0"
-  resolved "https://npm-registry.lodestreams.com/topo/-/topo-1.1.0.tgz#e9d751615d1bb87dc865db182fa1ca0a5ef536d5"
-  dependencies:
-    hoek "2.x.x"
 
 touch@^3.1.0:
   version "3.1.0"
@@ -3082,10 +2969,6 @@ ws@^5.2.0:
 xdg-basedir@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-3.0.0.tgz#496b2cc109eca8dbacfe2dc72b603c17c5870ad4"
-
-xtend@^4.0.1:
-  version "4.0.1"
-  resolved "https://npm-registry.lodestreams.com/xtend/-/xtend-4.0.1.tgz#a5c6d532be656e23db820efb943a1f04998d63af"
 
 yallist@^2.1.2:
   version "2.1.2"

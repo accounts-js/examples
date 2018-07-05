@@ -22,8 +22,31 @@ yarn install
 
 Start the app.
 
+Visit http://localhost:4000/
+
 ```bash
 yarn start
 ```
 
 -> [Start the client side](../react-graphql-typescript).
+
+```graphql
+mutation Register {
+  register(user: { username: "user", password: "1234567" })
+}
+
+mutation Auth {
+  authenticate(
+    serviceName: "password"
+    params: { password: "1234567", user: { username: "user" } }
+  ) {
+    tokens {
+      accessToken
+    }
+  }
+}
+
+query Test {
+  privateField
+}
+```

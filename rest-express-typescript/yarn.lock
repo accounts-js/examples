@@ -2,55 +2,55 @@
 # yarn lockfile v1
 
 
-"@accounts/mongo@0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.1.0-beta.17.tgz#417f0ea1e58d8d60165f2c968b68c9cacbd94f21"
+"@accounts/mongo@0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.3.0-beta.20.tgz#fd986ef16dd007e259dc581eb4a3785559d417dd"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.17"
+    "@accounts/types" "^0.3.0-beta.20"
     lodash "^4.17.4"
     mongodb "^3.0.10"
 
-"@accounts/password@0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.1.0-beta.17.tgz#a4081e648352e29d651d020793806ea8dc38d2cc"
+"@accounts/password@0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.3.0-beta.20.tgz#4d462fb6a01ae1b5f21c3e989a1bf18d7b45a8d3"
   dependencies:
-    "@accounts/two-factor" "^0.1.0-beta.17"
+    "@accounts/two-factor" "^0.3.0-beta.20"
     bcryptjs "^2.4.3"
     lodash "^4.17.4"
 
-"@accounts/rest-express@0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.1.0-beta.17.tgz#d4ecf6c37709ce8de283546ea0207aac0763ded7"
+"@accounts/rest-express@0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.3.0-beta.20.tgz#0d1e9feb84d3630b8929848a4ba1f295b3bacba1"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.17"
+    "@accounts/types" "^0.3.0-beta.20"
     express "^4.16.2"
     lodash "^4.17.4"
     request-ip "^2.0.2"
 
-"@accounts/server@0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.1.0-beta.17.tgz#6066bceb530c743a52b59d4b15edf03a4a28844c"
+"@accounts/server@0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.3.0-beta.20.tgz#cf1e976a3e8f63718dcd9ff02c347eaffd1e87ba"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.17"
+    "@accounts/types" "^0.3.0-beta.20"
     "@types/jsonwebtoken" "7.2.7"
     emittery "0.4.0"
     jsonwebtoken "8.3.0"
     jwt-decode "2.2.0"
     lodash "4.17.10"
 
-"@accounts/two-factor@^0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/two-factor/-/two-factor-0.1.0-beta.17.tgz#b3a0167ba009ce3f2b0cb8b9b4b2e49e1bd8180b"
+"@accounts/two-factor@^0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/two-factor/-/two-factor-0.3.0-beta.20.tgz#c21012d685749592d38a42d76baf88bf8bd31435"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.17"
+    "@accounts/types" "^0.3.0-beta.20"
     "@types/lodash" "^4.14.109"
     "@types/speakeasy" "2.0.2"
     lodash "^4.17.10"
     speakeasy "^2.0.0"
 
-"@accounts/types@^0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.17.tgz#8c78d3f1a3668e9f58e738c1409a40517ba61bdb"
+"@accounts/types@^0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.3.0-beta.20.tgz#639aa3adf2951373cb35cb500b233dce7cada077"
 
 "@types/jsonwebtoken@7.2.7":
   version "7.2.7"

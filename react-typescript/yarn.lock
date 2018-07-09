@@ -2,19 +2,19 @@
 # yarn lockfile v1
 
 
-"@accounts/client-password@0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/client-password/-/client-password-0.1.0-beta.17.tgz#3483df098d4cb90ebc4962026690777011b8a688"
+"@accounts/client-password@0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/client-password/-/client-password-0.3.0-beta.20.tgz#3d21fbe1c7d9c8048734c0c36673694c8709b35f"
   dependencies:
-    "@accounts/client" "^0.1.0-beta.17"
-    "@accounts/types" "^0.1.0-beta.17"
+    "@accounts/client" "^0.3.0-beta.20"
+    "@accounts/types" "^0.3.0-beta.20"
     crypto-js "^3.1.9-1"
 
-"@accounts/client@0.1.0-beta.17", "@accounts/client@^0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.1.0-beta.17.tgz#4cf3f3cf0da28745d06f61638eef480a2185259e"
+"@accounts/client@0.3.0-beta.20", "@accounts/client@^0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.3.0-beta.20.tgz#0a00035d73b90e9a3b8af9b6e08377283ada2fd4"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.17"
+    "@accounts/types" "^0.3.0-beta.20"
     jwt-decode "2.2.0"
 
 "@accounts/common@0.1.0-beta.14":
@@ -23,16 +23,16 @@
   dependencies:
     lodash "^4.17.10"
 
-"@accounts/rest-client@0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.1.0-beta.17.tgz#eb088d53e1636c13bf9fd72fa177be3523d64e18"
+"@accounts/rest-client@0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.3.0-beta.20.tgz#0138294ffd7b68753b8e8fd2d9dbee23b714d3ea"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.17"
+    "@accounts/types" "^0.3.0-beta.20"
     lodash "^4.17.4"
 
-"@accounts/types@^0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.17.tgz#8c78d3f1a3668e9f58e738c1409a40517ba61bdb"
+"@accounts/types@^0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.3.0-beta.20.tgz#639aa3adf2951373cb35cb500b233dce7cada077"
 
 "@babel/code-frame@^7.0.0-beta.35":
   version "7.0.0-beta.51"

@@ -10,3 +10,5 @@ jobs:
       - run: yarn test
       - run: cd react-typescript && yarn install --frozen-lockfile && yarn test
       - run: cd rest-express-typescript && yarn install --frozen-lockfile && yarn test
+      - run: cd react-graphql-typescript && yarn install --frozen-lockfile && yarn test
+      - run: cd graphql-server-typescript && yarn install --frozen-lockfile && yarn test

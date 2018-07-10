@@ -1,4 +1,5 @@
 import * as mongoose from 'mongoose';
+import { merge } from 'lodash';
 import { AccountsServer } from '@accounts/server';
 import { AccountsPassword } from '@accounts/password';
 import { ApolloServer, makeExecutableSchema } from 'apollo-server';
@@ -15,7 +16,7 @@ const start = async () => {
 
   // Build a storage for storing users
   const userStorage = new MongoDBInterface(mongoConn);
-  // Create database manager (create user, find users, sessions etc) for Accounts-js
+  // Create database manager (create user, find users, sessions etc) for accounts-js
   const accountsDb = new DatabaseManager({
     sessionStorage: userStorage,
     userStorage,
@@ -29,18 +30,49 @@ const start = async () => {
     }
   );
 
-  // Create GraphQL schema (with resolvers) for accounts server, exposes a GraphQL API
-  const { typeDefs, resolvers } = createAccountsGraphQL(accountsServer, {
-    extend: false,
-  });
+  // Creates resolvers, type definitions, and schema directives used by accounts-js
+  const accountsGraphQL = createAccountsGraphQL(
+    accountsServer,
+    { extend: true } // Extends root query and mutations instead of creating new ones
+  );
 
-  // Only schema is not enough, we need to hook on resolvers with its provided function.
-  // @ts-ignore
-  const finalSchema = makeExecutableSchema({ typeDefs, resolvers });
+  const typeDefs = `
+  type PrivateType @auth {
+    field: String
+  }
+
+  type Query {
+    publicField: String
+    privateField: String @auth
+    privateType: PrivateType
+  }
+
+  type Mutation {
+    _: String
+  }
+  `;
+
+  const resolvers = {
+    Query: {
+      publicField: () => 'public',
+      privateField: () => 'private',
+      privateType: () => ({
+        field: () => 'private',
+      }),
+    },
+  };
+
+  const schema = makeExecutableSchema({
+    typeDefs: [typeDefs, accountsGraphQL.typeDefs],
+    resolvers: merge(accountsGraphQL.resolvers, resolvers),
+    schemaDirectives: {
+      ...accountsGraphQL.schemaDirectives,
+    },
+  });
 
   // Create the Apollo Server that takes a schema and configures internal stuff
   const server = new ApolloServer({
-    schema: finalSchema,
+    schema,
     context: ({ req }) => accountsContext(req),
   });
 

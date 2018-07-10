@@ -2,19 +2,19 @@
 # yarn lockfile v1
 
 
-"@accounts/client-password@0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/client-password/-/client-password-0.1.0-beta.17.tgz#3483df098d4cb90ebc4962026690777011b8a688"
+"@accounts/client-password@0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/client-password/-/client-password-0.3.0-beta.20.tgz#3d21fbe1c7d9c8048734c0c36673694c8709b35f"
   dependencies:
-    "@accounts/client" "^0.1.0-beta.17"
-    "@accounts/types" "^0.1.0-beta.17"
+    "@accounts/client" "^0.3.0-beta.20"
+    "@accounts/types" "^0.3.0-beta.20"
     crypto-js "^3.1.9-1"
 
-"@accounts/client@0.1.0-beta.17", "@accounts/client@^0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.1.0-beta.17.tgz#4cf3f3cf0da28745d06f61638eef480a2185259e"
+"@accounts/client@0.3.0-beta.20", "@accounts/client@^0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.3.0-beta.20.tgz#0a00035d73b90e9a3b8af9b6e08377283ada2fd4"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.17"
+    "@accounts/types" "^0.3.0-beta.20"
     jwt-decode "2.2.0"
 
 "@accounts/common@0.1.0-beta.14":
@@ -23,16 +23,16 @@
   dependencies:
     lodash "^4.17.10"
 
-"@accounts/rest-client@0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.1.0-beta.17.tgz#eb088d53e1636c13bf9fd72fa177be3523d64e18"
+"@accounts/rest-client@0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.3.0-beta.20.tgz#0138294ffd7b68753b8e8fd2d9dbee23b714d3ea"
   dependencies:
-    "@accounts/types" "^0.1.0-beta.17"
+    "@accounts/types" "^0.3.0-beta.20"
     lodash "^4.17.4"
 
-"@accounts/types@^0.1.0-beta.17":
-  version "0.1.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.1.0-beta.17.tgz#8c78d3f1a3668e9f58e738c1409a40517ba61bdb"
+"@accounts/types@^0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.3.0-beta.20.tgz#639aa3adf2951373cb35cb500b233dce7cada077"
 
 "@babel/code-frame@^7.0.0-beta.35":
   version "7.0.0-beta.51"
@@ -55,9 +55,9 @@
     core-js "^2.5.7"
     regenerator-runtime "^0.11.1"
 
-"@material-ui/core@1.2.3":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-1.2.3.tgz#0765e449a684e3411a77522cd2f314952e923fa6"
+"@material-ui/core@1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-1.3.1.tgz#8b4e6db9ed4536e8ccbea0eeff3da0d524e6af2c"
   dependencies:
     "@babel/runtime" "^7.0.0-beta.42"
     "@types/jss" "^9.5.3"
@@ -83,7 +83,7 @@
     react-jss "^8.1.0"
     react-popper "^0.10.0"
     react-transition-group "^2.2.1"
-    recompose "^0.26.0 || ^0.27.0"
+    recompose "^0.27.0"
     scroll "^2.0.3"
     warning "^4.0.1"
 
@@ -91,9 +91,9 @@
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.6.2.tgz#12cfaba693ba20f114ed5765467ff25fdf67ddb0"
 
-"@types/jest@23.1.1":
-  version "23.1.1"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.1.1.tgz#c54ab1a5f41aa693c0957222dd10414416d0c87b"
+"@types/jest@23.1.4":
+  version "23.1.4"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.1.4.tgz#71e1e2d08b1db742f479ee2795536ebc999a2419"
 
 "@types/jss@^9.5.3":
   version "9.5.3"
@@ -106,13 +106,13 @@
   version "9.4.6"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-9.4.6.tgz#d8176d864ee48753d053783e4e463aec86b8d82e"
 
-"@types/node@10.3.5":
-  version "10.3.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.3.5.tgz#8423cdf6e6fb83433e489900d7600d3b61c8260c"
+"@types/node@10.5.2":
+  version "10.5.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.2.tgz#f19f05314d5421fe37e74153254201a7bf00a707"
 
-"@types/qrcode.react@0.6.3":
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/@types/qrcode.react/-/qrcode.react-0.6.3.tgz#c0950902987b12bce342802adcf6d5ce7ad07294"
+"@types/qrcode.react@0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@types/qrcode.react/-/qrcode.react-0.8.0.tgz#90b95d7dfba380f2a67ffd68e9c02b6eea4ea0be"
   dependencies:
     "@types/react" "*"
 
@@ -6637,7 +6637,7 @@ realpath-native@^1.0.0:
   dependencies:
     util.promisify "^1.0.0"
 
-"recompose@^0.26.0 || ^0.27.0":
+recompose@^0.27.0:
   version "0.27.1"
   resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.27.1.tgz#1a49e931f183634516633bbb4f4edbfd3f38a7ba"
   dependencies:

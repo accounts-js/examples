@@ -2,72 +2,72 @@
 # yarn lockfile v1
 
 
-"@accounts/database-manager@0.3.0-beta.19":
-  version "0.3.0-beta.19"
-  resolved "https://registry.yarnpkg.com/@accounts/database-manager/-/database-manager-0.3.0-beta.19.tgz#daeb9134a718e9d6d915245c582d21c138ea51d3"
+"@accounts/database-manager@0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/database-manager/-/database-manager-0.3.0-beta.20.tgz#fa2cc36c365759f433f897f09ff5fad7fb7002f0"
   dependencies:
-    "@accounts/types" "^0.3.0-beta.19"
+    "@accounts/types" "^0.3.0-beta.20"
 
-"@accounts/graphql-api@0.3.0-beta.19":
-  version "0.3.0-beta.19"
-  resolved "https://registry.yarnpkg.com/@accounts/graphql-api/-/graphql-api-0.3.0-beta.19.tgz#450c63f66533cc32891e8ea7c266d174e4672191"
+"@accounts/graphql-api@0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/graphql-api/-/graphql-api-0.3.0-beta.20.tgz#a98e75b35897efaf48fd7c6cc187acdf91052582"
   dependencies:
-    "@accounts/password" "^0.3.0-beta.19"
-    "@accounts/server" "^0.3.0-beta.19"
-    "@accounts/types" "^0.3.0-beta.19"
+    "@accounts/password" "^0.3.0-beta.20"
+    "@accounts/server" "^0.3.0-beta.20"
+    "@accounts/types" "^0.3.0-beta.20"
     "@types/request-ip" "0.0.33"
     deepmerge "2.1.1"
     request-ip "2.0.2"
 
-"@accounts/mongo@0.3.0-beta.19":
-  version "0.3.0-beta.19"
-  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.3.0-beta.19.tgz#e825cf9bcca8fc5b4f952bbfbe9aadb5c33392c5"
+"@accounts/mongo@0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/mongo/-/mongo-0.3.0-beta.20.tgz#fd986ef16dd007e259dc581eb4a3785559d417dd"
   dependencies:
-    "@accounts/types" "^0.3.0-beta.19"
+    "@accounts/types" "^0.3.0-beta.20"
     lodash "^4.17.4"
     mongodb "^3.0.10"
 
-"@accounts/password@0.3.0-beta.19", "@accounts/password@^0.3.0-beta.19":
-  version "0.3.0-beta.19"
-  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.3.0-beta.19.tgz#6f02057282e1fac95978bc52a1588f68bb7882b0"
+"@accounts/password@0.3.0-beta.20", "@accounts/password@^0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/password/-/password-0.3.0-beta.20.tgz#4d462fb6a01ae1b5f21c3e989a1bf18d7b45a8d3"
   dependencies:
-    "@accounts/two-factor" "^0.3.0-beta.19"
+    "@accounts/two-factor" "^0.3.0-beta.20"
     bcryptjs "^2.4.3"
     lodash "^4.17.4"
 
-"@accounts/rest-express@0.3.0-beta.19":
-  version "0.3.0-beta.19"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.3.0-beta.19.tgz#78ec830ac04f7039fd2b477e6e4a2637b16e3988"
+"@accounts/rest-express@0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-express/-/rest-express-0.3.0-beta.20.tgz#0d1e9feb84d3630b8929848a4ba1f295b3bacba1"
   dependencies:
-    "@accounts/types" "^0.3.0-beta.19"
+    "@accounts/types" "^0.3.0-beta.20"
     express "^4.16.2"
     lodash "^4.17.4"
     request-ip "^2.0.2"
 
-"@accounts/server@0.3.0-beta.19", "@accounts/server@^0.3.0-beta.19":
-  version "0.3.0-beta.19"
-  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.3.0-beta.19.tgz#2b85ef3a33cd99a74a454f97425c1e04994eebdb"
+"@accounts/server@0.3.0-beta.20", "@accounts/server@^0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/server/-/server-0.3.0-beta.20.tgz#cf1e976a3e8f63718dcd9ff02c347eaffd1e87ba"
   dependencies:
-    "@accounts/types" "^0.3.0-beta.19"
+    "@accounts/types" "^0.3.0-beta.20"
     "@types/jsonwebtoken" "7.2.7"
     emittery "0.4.0"
     jsonwebtoken "8.3.0"
     jwt-decode "2.2.0"
     lodash "4.17.10"
 
-"@accounts/two-factor@^0.3.0-beta.19":
-  version "0.3.0-beta.19"
-  resolved "https://registry.yarnpkg.com/@accounts/two-factor/-/two-factor-0.3.0-beta.19.tgz#a0682b4b9e241df38706303985cfc5b41e14b2e5"
+"@accounts/two-factor@^0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/two-factor/-/two-factor-0.3.0-beta.20.tgz#c21012d685749592d38a42d76baf88bf8bd31435"
   dependencies:
-    "@accounts/types" "^0.3.0-beta.19"
+    "@accounts/types" "^0.3.0-beta.20"
     "@types/lodash" "^4.14.109"
     "@types/speakeasy" "2.0.2"
     lodash "^4.17.10"
     speakeasy "^2.0.0"
 
-"@accounts/types@^0.3.0-beta.19":
-  version "0.3.0-beta.19"
-  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.3.0-beta.19.tgz#90181a80d0b503199678fe173f52f48286ad734b"
+"@accounts/types@^0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.3.0-beta.20.tgz#639aa3adf2951373cb35cb500b233dce7cada077"
 
 "@babel/runtime@^7.0.0-beta.40":
   version "7.0.0-beta.51"
@@ -170,6 +170,10 @@
     "@types/express-serve-static-core" "*"
     "@types/serve-static" "*"
 
+"@types/graphql@0.12.6":
+  version "0.12.6"
+  resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-0.12.6.tgz#3d619198585fcabe5f4e1adfb5cf5f3388c66c13"
+
 "@types/jsonwebtoken@7.2.7":
   version "7.2.7"
   resolved "https://npm-registry.lodestreams.com/@types%2fjsonwebtoken/-/jsonwebtoken-7.2.7.tgz#5dd62e0c0a0c6f211c3c1d13d322360894625b47"
@@ -196,9 +200,9 @@
     "@types/events" "*"
     "@types/node" "*"
 
-"@types/mongoose@5.0.18":
-  version "5.0.18"
-  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.0.18.tgz#4cb671e870f8312df86d734f9563a5c1b9d1ec6e"
+"@types/mongoose@5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.2.0.tgz#70c70e46bebd59e2c84d5ff2df030ebecedde922"
   dependencies:
     "@types/events" "*"
     "@types/mongodb" "*"
@@ -208,9 +212,9 @@
   version "10.3.6"
   resolved "https://npm-registry.lodestreams.com/@types%2fnode/-/node-10.3.6.tgz#ea8aab9439b59f40d19ec5f13b44642344872b11"
 
-"@types/node@10.5.1":
-  version "10.5.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.1.tgz#d578446f4abff5c0b49ade9b4e5274f6badaadfc"
+"@types/node@10.5.2":
+  version "10.5.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.2.tgz#f19f05314d5421fe37e74153254201a7bf00a707"
 
 "@types/node@^8.9.4":
   version "8.10.20"
@@ -332,6 +336,14 @@ apollo-link@1.2.1:
     "@types/node" "^9.4.6"
     apollo-utilities "^1.0.0"
     zen-observable-ts "^0.8.6"
+
+apollo-link@1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/apollo-link/-/apollo-link-1.2.2.tgz#54c84199b18ac1af8d63553a68ca389c05217a03"
+  dependencies:
+    "@types/graphql" "0.12.6"
+    apollo-utilities "^1.0.0"
+    zen-observable-ts "^0.8.9"
 
 apollo-server-caching@^2.0.0-rc.5:
   version "2.0.0-rc.5"
@@ -1286,7 +1298,17 @@ graphql-tag@^2.9.2:
   version "2.9.2"
   resolved "https://npm-registry.lodestreams.com/graphql-tag/-/graphql-tag-2.9.2.tgz#2f60a5a981375f430bf1e6e95992427dc18af686"
 
-graphql-tools@^3.0.2, graphql-tools@^3.0.4:
+graphql-tools@3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-3.0.5.tgz#544542dbf2fddc8c3d7d654965285a3bc747b10b"
+  dependencies:
+    apollo-link "1.2.2"
+    apollo-utilities "^1.0.1"
+    deprecated-decorator "^0.1.6"
+    iterall "^1.1.3"
+    uuid "^3.1.0"
+
+graphql-tools@^3.0.2:
   version "3.0.4"
   resolved "https://npm-registry.lodestreams.com/graphql-tools/-/graphql-tools-3.0.4.tgz#d08aa75db111d704cba05d92afd67ec5d1dc6b24"
   dependencies:
@@ -1900,7 +1922,13 @@ mongodb-core@3.1.0:
   optionalDependencies:
     saslprep "^1.0.0"
 
-mongodb@3.1.0, mongodb@^3.0.10:
+mongodb@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.1.1.tgz#c018c4b277614e8b1e08426d5bcbe1a7e5cdbd74"
+  dependencies:
+    mongodb-core "3.1.0"
+
+mongodb@^3.0.10:
   version "3.1.0"
   resolved "https://npm-registry.lodestreams.com/mongodb/-/mongodb-3.1.0.tgz#20cd836381a4d8a6b1c5a194bb9c8dde852163bb"
   dependencies:
@@ -1910,15 +1938,15 @@ mongoose-legacy-pluralize@1.0.2:
   version "1.0.2"
   resolved "https://npm-registry.lodestreams.com/mongoose-legacy-pluralize/-/mongoose-legacy-pluralize-1.0.2.tgz#3ba9f91fa507b5186d399fb40854bff18fb563e4"
 
-mongoose@5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.2.1.tgz#f49d730d2ccf23a07ffcf05ccc44e0dfc19d6e6a"
+mongoose@5.2.2:
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.2.2.tgz#3310e71e7e271c1134915c2d7fdf815eb2fa7072"
   dependencies:
     async "2.6.1"
     bson "~1.0.5"
     kareem "2.2.1"
     lodash.get "4.4.2"
-    mongodb "3.1.0"
+    mongodb "3.1.1"
     mongodb-core "3.1.0"
     mongoose-legacy-pluralize "1.0.2"
     mpath "0.4.1"
@@ -2003,7 +2031,7 @@ node-pre-gyp@^0.10.0:
     semver "^5.3.0"
     tar "^4"
 
-nodemon@^1.17.5:
+nodemon@1.17.5:
   version "1.17.5"
   resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-1.17.5.tgz#e6a665c872fdf09d48bf2a81f3e85f8cfb39322a"
   dependencies:
@@ -2970,7 +2998,7 @@ yn@^2.0.0:
   version "2.0.0"
   resolved "https://npm-registry.lodestreams.com/yn/-/yn-2.0.0.tgz#e5adabc8acf408f6385fc76495684c88e6af689a"
 
-zen-observable-ts@^0.8.6:
+zen-observable-ts@^0.8.6, zen-observable-ts@^0.8.9:
   version "0.8.9"
   resolved "https://npm-registry.lodestreams.com/zen-observable-ts/-/zen-observable-ts-0.8.9.tgz#d3c97af08c0afdca37ebcadf7cc3ee96bda9bab1"
   dependencies:

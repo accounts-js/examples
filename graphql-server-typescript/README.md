@@ -22,19 +22,13 @@ yarn install
 
 Start the app.
 
-<<<<<<< HEAD
 Visit http://localhost:4000/
-
-=======
-
-> > > > > > > master
 
 ```bash
 yarn start
 ```
 
 -> [Start the client side](../react-graphql-typescript).
-<<<<<<< HEAD
 
 ```graphql
 mutation Register {
@@ -56,7 +50,3 @@ query Test {
   privateField
 }
 ```
-
-=======
-
-> > > > > > > master

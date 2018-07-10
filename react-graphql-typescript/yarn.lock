@@ -2,19 +2,19 @@
 # yarn lockfile v1
 
 
-"@accounts/client-password@0.3.0-beta.18":
-  version "0.3.0-beta.18"
-  resolved "https://registry.yarnpkg.com/@accounts/client-password/-/client-password-0.3.0-beta.18.tgz#5e8ac1bc94c7be9dd6626af5e1582f6fb4c6160e"
+"@accounts/client-password@0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/client-password/-/client-password-0.3.0-beta.20.tgz#3d21fbe1c7d9c8048734c0c36673694c8709b35f"
   dependencies:
-    "@accounts/client" "^0.3.0-beta.18"
-    "@accounts/types" "^0.3.0-beta.18"
+    "@accounts/client" "^0.3.0-beta.20"
+    "@accounts/types" "^0.3.0-beta.20"
     crypto-js "^3.1.9-1"
 
-"@accounts/client@0.3.0-beta.18", "@accounts/client@^0.3.0-beta.18":
-  version "0.3.0-beta.18"
-  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.3.0-beta.18.tgz#ac6c896d5037e1ec4e3272dcd2e3d9c22714c13a"
+"@accounts/client@0.3.0-beta.20", "@accounts/client@^0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/client/-/client-0.3.0-beta.20.tgz#0a00035d73b90e9a3b8af9b6e08377283ada2fd4"
   dependencies:
-    "@accounts/types" "^0.3.0-beta.18"
+    "@accounts/types" "^0.3.0-beta.20"
     jwt-decode "2.2.0"
 
 "@accounts/common@0.1.0-alpha.58382c10":
@@ -23,25 +23,25 @@
   dependencies:
     lodash "^4.16.4"
 
-"@accounts/graphql-client@0.3.0-beta.18":
-  version "0.3.0-beta.18"
-  resolved "https://registry.yarnpkg.com/@accounts/graphql-client/-/graphql-client-0.3.0-beta.18.tgz#428743ea162fd664014b21f3b0ac8623ef27b916"
+"@accounts/graphql-client@0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/graphql-client/-/graphql-client-0.3.0-beta.20.tgz#f831af515b81f45ca5bcd684410c7c32a7a1bc27"
   dependencies:
-    "@accounts/client" "^0.3.0-beta.18"
+    "@accounts/client" "^0.3.0-beta.20"
     "@accounts/common" "0.1.0-alpha.58382c10"
-    "@accounts/types" "^0.3.0-beta.18"
+    "@accounts/types" "^0.3.0-beta.20"
     graphql-tag "^1.1.2"
 
-"@accounts/rest-client@0.3.0-beta.18":
-  version "0.3.0-beta.18"
-  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.3.0-beta.18.tgz#b0456530bffa80bf52fadc46cae1930f7ef0fc22"
+"@accounts/rest-client@0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/rest-client/-/rest-client-0.3.0-beta.20.tgz#0138294ffd7b68753b8e8fd2d9dbee23b714d3ea"
   dependencies:
-    "@accounts/types" "^0.3.0-beta.18"
+    "@accounts/types" "^0.3.0-beta.20"
     lodash "^4.17.4"
 
-"@accounts/types@^0.3.0-beta.18":
-  version "0.3.0-beta.18"
-  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.3.0-beta.18.tgz#760929c677da69f224a86e4f20f6e8515eb07609"
+"@accounts/types@^0.3.0-beta.20":
+  version "0.3.0-beta.20"
+  resolved "https://registry.yarnpkg.com/@accounts/types/-/types-0.3.0-beta.20.tgz#639aa3adf2951373cb35cb500b233dce7cada077"
 
 "@babel/code-frame@^7.0.0-beta.35":
   version "7.0.0-beta.51"

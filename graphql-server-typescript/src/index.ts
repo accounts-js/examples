@@ -3,10 +3,7 @@ import { AccountsServer } from '@accounts/server';
 import { AccountsPassword } from '@accounts/password';
 import { ApolloServer, makeExecutableSchema } from 'apollo-server';
 import MongoDBInterface from '@accounts/mongo';
-import {
-  createJSAccountsGraphQL,
-  JSAccountsContext,
-} from '@accounts/graphql-api';
+import { createAccountsGraphQL, accountsContext } from '@accounts/graphql-api';
 import { DatabaseManager } from '@accounts/database-manager';
 
 const start = async () => {
@@ -33,18 +30,18 @@ const start = async () => {
   );
 
   // Create GraphQL schema (with resolvers) for accounts server, exposes a GraphQL API
-  const { schema, extendWithResolvers } = createJSAccountsGraphQL(
-    accountsServer,
-    { extend: false }
-  );
+  const { typeDefs, resolvers } = createAccountsGraphQL(accountsServer, {
+    extend: false,
+  });
+
   // Only schema is not enough, we need to hook on resolvers with its provided function.
-  const resolvers = extendWithResolvers([]);
-  const finalSchema = makeExecutableSchema({ typeDefs: schema, resolvers });
+  // @ts-ignore
+  const finalSchema = makeExecutableSchema({ typeDefs, resolvers });
 
   // Create the Apollo Server that takes a schema and configures internal stuff
   const server = new ApolloServer({
     schema: finalSchema,
-    context: ({ req }) => JSAccountsContext(req),
+    context: ({ req }) => accountsContext(req),
   });
 
   server.listen(4000).then(({ url }) => {

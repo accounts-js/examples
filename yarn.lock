@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@accounts/tslint-config-accounts@^0.0.9":
+"@accounts/tslint-config-accounts@0.0.9":
   version "0.0.9"
   resolved "https://registry.yarnpkg.com/@accounts/tslint-config-accounts/-/tslint-config-accounts-0.0.9.tgz#a2073361c4127ba7c8662cd72e08a28a794a44df"
   dependencies:
@@ -388,7 +388,7 @@ tslint-eslint-rules@^4.1.1:
     tslib "^1.0.0"
     tsutils "^1.4.0"
 
-tslint@^5.10.0:
+tslint@5.10.0:
   version "5.10.0"
   resolved "https://registry.yarnpkg.com/tslint/-/tslint-5.10.0.tgz#11e26bccb88afa02dd0d9956cae3d4540b5f54c3"
   dependencies:
@@ -415,7 +415,7 @@ tsutils@^2.12.1:
   dependencies:
     tslib "^1.8.1"
 
-typescript@^2.9.2:
+typescript@2.9.2:
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
 

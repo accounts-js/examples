@@ -96,7 +96,7 @@
     scroll "^2.0.3"
     warning "^4.0.1"
 
-"@types/async@2.0.49", "@types/async@^2.0.31":
+"@types/async@2.0.49":
   version "2.0.49"
   resolved "https://npm-registry.lodestreams.com/@types%2fasync/-/async-2.0.49.tgz#92e33d13f74c895cb9a7f38ba97db8431ed14bc0"
 
@@ -294,9 +294,9 @@ anymatch@^2.0.0:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
 
-apollo-boost@^0.1.10:
+apollo-boost@0.1.10:
   version "0.1.10"
-  resolved "https://npm-registry.lodestreams.com/apollo-boost/-/apollo-boost-0.1.10.tgz#154bc7ef71ae2e46e16800bd756c4c9dc8fd5998"
+  resolved "https://registry.yarnpkg.com/apollo-boost/-/apollo-boost-0.1.10.tgz#154bc7ef71ae2e46e16800bd756c4c9dc8fd5998"
   dependencies:
     apollo-cache "^1.1.12"
     apollo-cache-inmemory "^1.2.5"
@@ -3251,9 +3251,9 @@ graphql-tag@^2.4.2:
   version "2.9.2"
   resolved "https://npm-registry.lodestreams.com/graphql-tag/-/graphql-tag-2.9.2.tgz#2f60a5a981375f430bf1e6e95992427dc18af686"
 
-graphql@^0.13.2:
+graphql@0.13.2:
   version "0.13.2"
-  resolved "https://npm-registry.lodestreams.com/graphql/-/graphql-0.13.2.tgz#4c740ae3c222823e7004096f832e7b93b2108270"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.13.2.tgz#4c740ae3c222823e7004096f832e7b93b2108270"
   dependencies:
     iterall "^1.2.1"
 
@@ -6344,9 +6344,9 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-apollo@^2.1.6:
+react-apollo@2.1.6:
   version "2.1.6"
-  resolved "https://npm-registry.lodestreams.com/react-apollo/-/react-apollo-2.1.6.tgz#13be92689009eda9023948c78532f4102cbc3d57"
+  resolved "https://registry.yarnpkg.com/react-apollo/-/react-apollo-2.1.6.tgz#13be92689009eda9023948c78532f4102cbc3d57"
   dependencies:
     fbjs "^0.8.16"
     hoist-non-react-statics "^2.5.0"

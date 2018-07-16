@@ -29,7 +29,7 @@
     "@types/async": "2.0.49",
     "@types/jest": "23.1.1",
     "@types/node": "10.3.6",
-    "@types/qrcode.react": "0.6.3",
+    "@types/qrcode.react": "0.8.0",
     "@types/react": "16.4.2",
     "@types/react-dom": "16.0.6",
     "@types/react-router": "4.0.27",

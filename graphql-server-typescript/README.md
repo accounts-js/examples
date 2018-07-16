@@ -16,7 +16,7 @@ to start a new one.
 
 ```bash
 git clone https://github.com/accounts-js/examples.git
-cd graphql-server-typescript
+cd examples/graphql-server-typescript
 yarn install
 ```
 

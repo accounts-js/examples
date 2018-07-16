@@ -6,7 +6,7 @@ This example demonstrate how to use [accounts-js](https://github.com/accounts-js
 
 ```bash
 git clone https://github.com/accounts-js/examples.git
-cd react-graphql-typescript
+cd examples/react-graphql-typescript
 yarn install
 ```
 

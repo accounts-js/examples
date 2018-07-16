@@ -123,9 +123,9 @@
   version "10.3.6"
   resolved "https://npm-registry.lodestreams.com/@types%2fnode/-/node-10.3.6.tgz#ea8aab9439b59f40d19ec5f13b44642344872b11"
 
-"@types/qrcode.react@0.6.3":
-  version "0.6.3"
-  resolved "https://npm-registry.lodestreams.com/@types%2fqrcode.react/-/qrcode.react-0.6.3.tgz#c0950902987b12bce342802adcf6d5ce7ad07294"
+"@types/qrcode.react@0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@types/qrcode.react/-/qrcode.react-0.8.0.tgz#90b95d7dfba380f2a67ffd68e9c02b6eea4ea0be"
   dependencies:
     "@types/react" "*"
 

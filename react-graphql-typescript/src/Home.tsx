@@ -6,12 +6,10 @@ import { accountsClient, accountsGraphQL } from './utils/accounts';
 
 interface IState {
   user: any;
-  twoFactorSecret: any;
 }
 
 class Home extends React.Component<RouteComponentProps<{}>, IState> {
   public state = {
-    twoFactorSecret: null as any,
     user: null as any,
   };
 

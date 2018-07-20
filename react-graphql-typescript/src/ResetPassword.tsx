@@ -12,7 +12,7 @@ import * as React from 'react';
 import { Link, RouteComponentProps } from 'react-router-dom';
 
 import FormError from './components/FormError';
-import { accountsGraphQL } from './utils/accounts';
+import { accountsPassword } from './utils/accounts';
 
 const styles = () => ({
   formContainer: {
@@ -62,11 +62,11 @@ class Login extends React.Component<
     try {
       // If no tokens send email to user
       if (!token) {
-        await accountsGraphQL.sendResetPasswordEmail(this.state.email);
+        await accountsPassword.requestPasswordReset(this.state.email);
         this.setState({ snackbarMessage: 'Email sent' });
       } else {
         // If token try to change user password
-        await accountsGraphQL.resetPassword(token, this.state.newPassword);
+        await accountsPassword.resetPassword(token, this.state.newPassword);
         this.setState({
           snackbarMessage: 'Your password has been reset successfully',
         });

@@ -1,0 +1,24 @@
+{
+  "name": "graphql-microservice",
+  "private": true,
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start-only": "NODE_ENV=development nodemon -w src -x ts-node src/index.ts",
+    "start": "yarn start-only",
+    "start-services": "docker-compose up -d",
+    "prestart": "yarn start-services",
+    "build": "tsc",
+    "test": "yarn build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@accounts/tslint-config-accounts": "^0.0.9",
+    "@types/node": "10.5.4",
+    "nodemon": "1.17.5",
+    "ts-node": "7.0.0",
+    "tslint": "^5.11.0",
+    "typescript": "2.9.2"
+  }
+}

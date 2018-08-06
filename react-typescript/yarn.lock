@@ -110,9 +110,9 @@
   version "10.5.6"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.6.tgz#1640f021dd0eaf12e731e54198c12ad2e020dc8e"
 
-"@types/qrcode.react@0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@types/qrcode.react/-/qrcode.react-0.8.0.tgz#90b95d7dfba380f2a67ffd68e9c02b6eea4ea0be"
+"@types/qrcode.react@0.8.1":
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/@types/qrcode.react/-/qrcode.react-0.8.1.tgz#7efeb1d01d8e6dddcdf07fbec0724aaf0fa5c984"
   dependencies:
     "@types/react" "*"
 

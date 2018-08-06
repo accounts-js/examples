@@ -123,9 +123,9 @@
   version "10.3.6"
   resolved "https://npm-registry.lodestreams.com/@types%2fnode/-/node-10.3.6.tgz#ea8aab9439b59f40d19ec5f13b44642344872b11"
 
-"@types/node@10.5.4":
-  version "10.5.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.4.tgz#6eccc158504357d1da91434d75e86acde94bb10b"
+"@types/node@10.5.6":
+  version "10.5.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.6.tgz#1640f021dd0eaf12e731e54198c12ad2e020dc8e"
 
 "@types/qrcode.react@0.8.0":
   version "0.8.0"

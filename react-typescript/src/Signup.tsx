@@ -23,6 +23,8 @@ const styles = () => ({
 const LogInLink = (props: any) => <Link to="/login" {...props} />;
 
 interface State {
+  firstName: string;
+  lastName: string;
   email: string;
   password: string;
   error: string | null;
@@ -33,9 +35,19 @@ class Signup extends React.Component<
   State
 > {
   state = {
+    firstName: '',
+    lastName: '',
     email: '',
     password: '',
     error: null,
+  };
+
+  onChangeFirstName = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+    this.setState({ firstName: target.value });
+  };
+
+  onChangeLastName = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+    this.setState({ lastName: target.value });
   };
 
   onChangeEmail = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
@@ -51,6 +63,8 @@ class Signup extends React.Component<
     this.setState({ error: null });
     try {
       await accountsPassword.createUser({
+        firstName: this.state.firstName,
+        lastName: this.state.firstName,
         email: this.state.email,
         password: this.state.password,
       });
@@ -62,12 +76,28 @@ class Signup extends React.Component<
 
   render() {
     const { classes } = this.props;
-    const { email, password, error } = this.state;
+    const { firstName, lastName, email, password, error } = this.state;
     return (
       <form onSubmit={this.onSubmit} className={classes.formContainer}>
         <Typography variant="display1" gutterBottom>
           Sign up
         </Typography>
+        <FormControl margin="normal">
+          <InputLabel htmlFor="firstName">Fist name</InputLabel>
+          <Input
+            id="firstName"
+            value={firstName}
+            onChange={this.onChangeFirstName}
+          />
+        </FormControl>
+        <FormControl margin="normal">
+          <InputLabel htmlFor="lastName">Last name</InputLabel>
+          <Input
+            id="lastName"
+            value={lastName}
+            onChange={this.onChangeLastName}
+          />
+        </FormControl>
         <FormControl margin="normal">
           <InputLabel htmlFor="email">Email</InputLabel>
           <Input id="email" value={email} onChange={this.onChangeEmail} />

@@ -3,12 +3,11 @@ import { makeExecutableSchema, mergeSchemas } from 'graphql-tools';
 import { ApolloServer } from 'apollo-server';
 import { merge } from 'lodash';
 
-(async () => {
-  const accountsGraphQL = new AccountsServer({
-    // token: 'bad secret'
-  }).graphql();
+const accountsGraphQL = new AccountsServer({
+  tokenSecret: 'bad secret',
+} as any).graphql();
 
-  const typeDefs = `
+const typeDefs = `
   type PrivateType @auth {
     field: String
   }
@@ -24,23 +23,25 @@ import { merge } from 'lodash';
   }
   `;
 
-  const resolvers = {
-    Query: {
-      publicField: () => 'public',
-      privateField: () => 'private',
-      privateType: () => ({
-        field: () => 'private',
-      }),
-    },
-  };
+const resolvers = {
+  Query: {
+    publicField: () => 'public',
+    privateField: () => 'private',
+    privateType: () => ({
+      field: () => 'private',
+    }),
+  },
+};
 
-  const apolloServer = await new ApolloServer({
-    typeDefs: [typeDefs, accountsGraphQL.typeDefs],
-    resolvers: merge(accountsGraphQL.resolvers, resolvers),
-    schemaDirectives: {
-      ...accountsGraphQL.schemaDirectives,
-    },
-  }).listen();
-
-  console.log(`GraphQL server running at ${apolloServer.url}`);
-})();
+const apolloServer = new ApolloServer({
+  typeDefs: [typeDefs, accountsGraphQL.typeDefs],
+  resolvers: merge(accountsGraphQL.resolvers, resolvers),
+  schemaDirectives: {
+    ...accountsGraphQL.schemaDirectives,
+  },
+  context: ({ req }) => accountsGraphQL.accountsContext(req),
+} as any)
+  .listen()
+  .then(res => {
+    console.log(`GraphQL server running at ${res.url}`);
+  });

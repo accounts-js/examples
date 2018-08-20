@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@types/node": "10.7.1",
-    "nodemon": "1.17.5",
+    "nodemon": "1.18.3",
     "ts-node": "7.0.0",
     "typescript": "2.9.2"
   }

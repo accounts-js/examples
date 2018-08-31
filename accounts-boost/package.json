@@ -5,14 +5,16 @@
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
-    "start-only": "NODE_ENV=development nodemon -w src -x ts-node src/index.ts",
-    "start": "yarn start-only",
+    "start:micro": "NODE_ENV=development nodemon -w src -x ts-node src/accounts-microservice.ts & sleep 2 && nodemon -w src -x ts-node src/app-server.ts",
+    "start:mono": "NODE_ENV=development nodemon -w src -x ts-node src/monolithic.ts",
     "start-services": "docker-compose up -d",
     "prestart": "yarn start-services",
     "build": "tsc",
     "test": "yarn build"
   },
   "dependencies": {
+    "@accounts/mongo": "^0.3.0-beta.26",
+    "@accounts/password": "^0.3.0-beta.26",
     "apollo-link-http": "^1.5.4",
     "apollo-server": "^2.0.0",
     "graphql": "^0.13.2",

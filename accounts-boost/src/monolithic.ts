@@ -10,7 +10,7 @@ import { merge } from 'lodash';
 
   const typeDefs = `
     type PrivateType @auth {
-      field: String
+      privateField: String
     }
 
     type Query {
@@ -26,12 +26,13 @@ import { merge } from 'lodash';
     `;
 
   const resolvers = {
+    PrivateType: {
+      privateField: () => 'private',
+    },
     Query: {
       publicField: () => 'public',
       privateField: () => 'private',
-      privateType: () => ({
-        field: () => 'private',
-      }),
+      privateType: () => '',
       privateFieldWithAuthResolver: accounts.auth((root, args, context) => {
         return 'private';
       }),

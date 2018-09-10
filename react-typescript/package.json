@@ -22,7 +22,7 @@
     "react-scripts-ts": "2.16.0"
   },
   "devDependencies": {
-    "@types/jest": "23.3.1",
+    "@types/jest": "23.3.2",
     "@types/node": "10.9.4",
     "@types/qrcode.react": "0.8.1",
     "@types/react": "16.4.0",

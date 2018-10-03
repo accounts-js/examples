@@ -26,7 +26,7 @@
     "@types/qrcode.react": "0.8.1",
     "@types/react": "16.4.0",
     "@types/react-dom": "16.0.7",
-    "@types/react-router": "4.0.29",
+    "@types/react-router": "4.0.31",
     "@types/react-router-dom": "4.2.7",
     "jest": "23.6.0",
     "typescript": "2.9.2"

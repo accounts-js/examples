@@ -30,7 +30,7 @@
     "@types/jest": "23.3.2",
     "@types/node": "10.10.3",
     "@types/qrcode.react": "0.8.1",
-    "@types/react": "16.4.2",
+    "@types/react": "16.4.15",
     "@types/react-dom": "16.0.7",
     "@types/react-router": "4.0.29",
     "@types/react-router-dom": "4.2.7",
